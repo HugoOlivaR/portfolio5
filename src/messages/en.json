@@ -1,0 +1,218 @@
+{
+  "profile": {
+    "name": "Hugo Oliva",
+    "title": "Full-Stack Engineer · AI-Native",
+    "location": "Madrid, Spain",
+    "email": "hugoliva158@gmail.com",
+    "availability": "Open for projects",
+    "copied": "Copied!",
+    "getTemplate": "Get Template",
+    "downloadCV": "Download CV"
+  },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "education": "Education",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About me",
+    "paragraph1": "I specialize in building intelligent, full-stack applications that leverage AI to enhance user experiences, optimize functionalities, and solve real-world problems.",
+    "paragraph2": "With expertise in React, TypeScript, Node.js, and AI integrations. I focus on creating scalable solutions from ideation to deployment—prioritizing clarity, performance, and innovative details.",
+    "paragraph3": "I'm deeply passionate about AI research and staying at the forefront of emerging technologies, constantly exploring how AI can transform apps beyond traditional coding. This drive extends to personal development, which I see as a never-ending journey."
+  },
+  "experience": {
+    "title": "Experience",
+    "viewAll": "View all",
+    "present": "Present",
+    "jobs": [
+      {
+        "title": "Frontend Engineer",
+        "company": "Globant · Iberia",
+        "companyUrl": "https://globant.com",
+        "period": "2025 - Present",
+        "description": "Working directly on the Iberia airline account, developing and maintaining large-scale, enterprise-grade web applications. I build new features, resolve complex issues, and optimize performance in mission-critical systems used by millions of users. Tech stack includes Angular 15 for modern development and AngularJS for legacy components and migrations."
+      },
+      {
+        "title": "Founder & Lead Full-Stack Developer",
+        "company": "Evolvio",
+        "companyUrl": "https://evolvio.digital/en",
+        "period": "2024 - Present",
+        "description": "Founder and lead developer at Evolvio, a digital development agency specialized in full-stack projects with a strong focus on artificial intelligence. I lead the complete process: from understanding client problems, ideation, and solution design to full development, deployment, and optimization of web and mobile applications."
+      },
+      {
+        "title": "Frontend Developer",
+        "company": "HMY",
+        "companyUrl": "https://hmy-group.com",
+        "period": "2024 - 2025",
+        "description": "Development of full-stack applications with Next.js and React. Implementation of design systems and reusable components. API integration and performance optimization. Collaboration in software architecture and best practices."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "viewAll": "View all",
+    "readMore": "Read more",
+    "viewProject": "View project",
+    "backToHome": "Back to home",
+    "backToProjects": "Back to projects",
+    "items": [
+      {
+        "slug": "tesora",
+        "title": "Tesora",
+        "link": "https://tesora.app",
+        "year": "2025 - 2026",
+        "image": "/projects/tesora-main.webp",
+        "description": "AI-powered financial management platform: connect your banks, unify your wealth, and receive intelligent advice.",
+        "content": "Tesora is an AI-powered personal finance platform that helps you control, understand, and grow your wealth more intelligently.\n\nSecurely connect banks, investments, and crypto, visualize your real net worth (assets minus debts), and receive personalized guidance from an AI assistant that truly knows your financial situation.\n\nMain features:\n- Secure account aggregation and unified wealth with history\n- Smart expense analysis and automatic categorization\n- Advanced debt management with Avalanche/Snowball simulations and personalized recommendations\n- Marketplace of certified financial advisors with chat and granular permissions\n- Conversational AI assistant with contextual access to your data\n- Savings planning with realistic scenarios and projections\n- Dynamic Financial Health Score and proactive alerts\n\nWith Tesora I've learned to see my money in a completely different way: I no longer just look at scattered balances, but understand how my income, expenses, debts, and investments relate in real time. I've discovered spending patterns I used to ignore, optimized my debt payments saving thousands of euros in interest, and started making much more conscious investment decisions thanks to the simulations and context the AI provides. Most importantly, I've gone from feeling lost with finances to having a real sense of control and clear direction toward my goals.",
+        "tags": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "TailwindCSS",
+          "OpenAI",
+          "PostgreSQL"
+        ]
+      },
+      {
+        "slug": "cosmo-ai",
+        "title": "Cosmo AI",
+        "link": "https://cosmo.hugooliva.com",
+        "year": "2024 - 2025",
+        "image": "/projects/cosmo-main.webp",
+        "description": "AI productivity assistant: centralize your tasks, projects, and apps in a single personalized chat.",
+        "content": "Cosmo is a JARVIS-like AI productivity assistant that centralizes your tasks, projects, clients, and notes in a single web tool, currently in beta and 100% free.\n\nThink of Cosmo as your personal mini ERP: a place where you can talk naturally with your AI assistant and, at the same time, manage your entire workflow without switching apps.\n\nMain features:\n- Intelligent conversational chat (talk to Cosmo like a teammate)\n- Task management with priorities, dates, reminders, and visual tracking\n- Centralized projects: all related information, tasks, notes, and clients in one place\n- Personal mini ERP: integrated management of clients, projects, and notes with shared context\n- Persistent memory: remembers your preferences, previous decisions, and work style\n- Internet search when updated information is needed\n- Integrations with your usual tools to maintain your workflow\n- Experience (Exp) system and gamified statistics to track your progress\n- Automatic weekly routine generator based on your priorities and goals\n\nWith this project I learned how valuable it is to connect an AI model in a real application and how it can solve different problems.",
+        "tags": [
+          "React",
+          "TypeScript",
+          "Next.js",
+          "TailwindCSS",
+          "OpenAI"
+        ]
+      },
+      {
+        "slug": "roundtable",
+        "title": "Roundtable",
+        "link": "https://roundtable.hugooliva.com",
+        "year": "2026",
+        "image": "/projects/roundtable-main.webp",
+        "description": "AI-powered thinking tool: configure a personal roundtable of historical and modern thinkers to debate ideas and improve decision-making.",
+        "content": "Roundtable is a thinking and decision-making tool inspired by a practice described by Napoleon Hill: sitting with a personal council of trusted references to debate ideas and gain clarity.\n\nThe app allows you to create your own roundtable of historical and modern figures — philosophers, entrepreneurs, scientists, and leaders — each represented by an AI agent trained on their mental models and decision frameworks.\n\nThrough an orchestrated multi-agent debate, agents don't just respond to the user, they challenge each other, surface trade-offs, and expose blind spots.\n\nMain features:\n- Configurable roundtables with multiple AI agents\n- Distinct mental models and perspectives per agent\n- Orchestrated debates and moderated discussions\n- Decision-focused conversations, not generic answers\n- Designed for clarity, reflection, and better thinking",
+        "tags": [
+          "Vite",
+          "React",
+          "TypeScript",
+          "TailwindCSS",
+          "OpenAI",
+          "PostHog"
+        ]
+      },
+      {
+        "slug": "evolvio-website",
+        "title": "Evolvio Website",
+        "link": "https://evolvio.digital/en",
+        "image": "/projects/evolvio-main.webp",
+        "year": "2025",
+        "description": "Website for the digital development agency Evolvio.",
+        "content": "Evolvio is a digital innovation agency that designs and develops custom solutions for SMEs and companies: websites that convert, AI automations, and online presence strategies that drive real growth (up to x10, according to their claim).\n\nThey specialize in transforming typical problems ('your website doesn't sell', time wasted on repetitive tasks, inefficient management) into competitive advantages through custom development and intelligent technology.\n\nMain features:\n- Modern web development: responsive sites, optimized for conversion (UX, powerful CTAs, on-page SEO, behavior analysis)\n- AI automations and integrations: smart integrations to save hours and improve customer experience\n- Online presence and digital marketing (coming soon expanded): visibility, qualified traffic, and digital branding\n- Professional websites from €500 (offer): responsive, basic SEO, hosting + SSL 1 year, 24/7 support and high availability\n- Clear iterative process: Discovery → Strategy → Implementation → Continuous optimization\n- Focus on measurable results: more visits, more sales, 99.99% online, secure and fast solutions\n- Real social proof: testimonials and case studies from clients like Suicalsa, Tierra de Fuego, RCI, or Motoreciclajesp\n\nWith Evolvio I've learned to see digital presence not as an expense, but as a direct growth lever. Understanding that a well-made website (that actually sells and isn't just 'there') combined with smart automations can free up valuable time and multiply results without needing huge internal teams. It has changed my way of thinking about digital projects: less 'make it pretty' and more 'make it generate money and efficiency'.",
+        "tags": [
+          "Next.js",
+          "TailwindCSS",
+          "TypeScript"
+        ]
+      },
+      {
+        "slug": "zentunes",
+        "title": "Zentunes",
+        "link": "https://zentunes.hugooliva.com",
+        "image": "/projects/zentunes-main.webp",
+        "year": "2023",
+        "description": "Web player of relaxing sounds for working, sleeping, or relaxing.",
+        "content": "ZenTunes is a high-quality relaxing sounds web player, designed to help you focus, relax, or sleep with ambiances like rain, forest, waves, or coffee shop.\n\nIt's a side project created by Hugo in 24 hours as a quick demo, designed to be simple, beautiful, and effective.\n\nMain features:\n- High-quality ambient sounds for background (rain, wind, nature, coffee, etc.)\n- Mix multiple sounds simultaneously with individual volume control\n- Background playback (you can continue browsing or working with the sound active)\n- Minimalist and intuitive interface: choose a sound and start listening in seconds\n- Light and fast: no installation required, works directly in the browser\n\nWith ZenTunes I've learned how valuable it is to have a simple, distraction-free tool to improve focus or disconnect. It has helped me create personalized sound environments that really work for me (for example, soft rain + coffee background) and I've discovered that sometimes fewer options and more simplicity is exactly what I need to focus or relax without complications.",
+        "tags": [
+          "Vite",
+          "TailwindCSS",
+          "TypeScript"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools & Others",
+    "categories": {
+      "frontend": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Angular"
+      ],
+      "backend": [
+        "Node.js",
+        "PostgreSQL",
+        "MongoDB",
+        "GraphQL"
+      ]
+    }
+  },
+  "education": {
+    "title": "Education",
+    "items": [
+      {
+        "degree": "Communication Institute",
+        "institution": "Comprehensive training in effective communication, sales techniques, and interpersonal relationship development.",
+        "period": "2025"
+      },
+      {
+        "degree": "Master in AI and Big Data",
+        "institution": "Master's degree in Artificial Intelligence and Big Data at the distance university of Madrid.",
+        "period": "2023 - 2024"
+      },
+      {
+        "degree": "Higher Degree in Application Development",
+        "institution": "Higher Technician in multiplatform application development.",
+        "period": "2022 - 2024"
+      },
+      {
+        "degree": "Intermediate Degree in IT Systems",
+        "institution": "Technician in microcomputer systems and networks.",
+        "period": "2020 - 2022"
+      }
+    ]
+  },
+  "blog": {
+    "title": "Blog",
+    "viewAll": "View all",
+    "readMore": "Read more",
+    "backToHome": "Back to home",
+    "backToBlog": "Back to blog",
+    "summarizeWith": "Summarize with",
+    "summarizePrompt": "Summarize this article and give me the key points:"
+  },
+  "contact": {
+    "title": "Let's work together",
+    "description": "If you have a project in mind or just want to chat about technology, I'd love to hear from you.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send message",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "your@email.com",
+      "messagePlaceholder": "Your message..."
+    }
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  }
+}

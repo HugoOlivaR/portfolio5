@@ -1,0 +1,218 @@
+{
+  "profile": {
+    "name": "Hugo Oliva",
+    "title": "Ingeniero Full-Stack · AI-Native",
+    "location": "Madrid, España",
+    "email": "hugoliva158@gmail.com",
+    "availability": "Disponible para proyectos",
+    "copied": "¡Copiado!",
+    "getTemplate": "Obtener plantilla",
+    "downloadCV": "Descargar CV"
+  },
+  "nav": {
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "education": "Formación",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "paragraph1": "Me especializo en construir aplicaciones inteligentes full-stack que aprovechan la IA para mejorar experiencias de usuario, optimizar funcionalidades y resolver problemas del mundo real.",
+    "paragraph2": "Con experiencia en React, TypeScript, Node.js e integraciones de IA. Me enfoco en crear soluciones escalables desde la ideación hasta el despliegue, priorizando claridad, rendimiento y detalles innovadores.",
+    "paragraph3": "Soy un apasionado por la investigación en inteligencia artificial y en mantenerme a la vanguardia de las tecnologías emergentes, explorando constantemente cómo la IA puede transformar las aplicaciones más allá de la programación tradicional. Esta motivación se extiende al desarrollo personal, que veo como un viaje interminable."
+  },
+  "experience": {
+    "title": "Experiencia",
+    "viewAll": "Ver todo",
+    "present": "Presente",
+    "jobs": [
+      {
+        "title": "Frontend Engineer",
+        "company": "Globant · Iberia",
+        "companyUrl": "https://globant.com",
+        "period": "2025 - Presente",
+        "description": "Trabajo directamente en la cuenta de Iberia, desarrollando y manteniendo aplicaciones web empresariales a gran escala. Construyo nuevas funcionalidades, resuelvo problemas complejos y optimizo el rendimiento en sistemas de misión crítica usados por millones de usuarios. El stack tecnológico incluye Angular 15 para desarrollo moderno y AngularJS para componentes legacy y migraciones."
+      },
+      {
+        "title": "Fundador & Lead Full-Stack Developer",
+        "company": "Evolvio",
+        "companyUrl": "https://evolvio.digital/en",
+        "period": "2024 - Presente",
+        "description": "Fundador y desarrollador principal en Evolvio, una agencia de desarrollo digital especializada en proyectos full-stack con un fuerte enfoque en inteligencia artificial. Lidero el proceso completo: desde entender los problemas del cliente, ideación y diseño de soluciones hasta el desarrollo completo, despliegue y optimización de aplicaciones web y móviles."
+      },
+      {
+        "title": "Frontend Developer",
+        "company": "HMY",
+        "companyUrl": "https://hmy-group.com",
+        "period": "2024 - 2025",
+        "description": "Desarrollo de aplicaciones full-stack con Next.js y React. Implementación de sistemas de diseño y componentes reutilizables. Integración de APIs y optimización de rendimiento. Colaboración en arquitectura de software y mejores prácticas."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos",
+    "viewAll": "Ver todos",
+    "readMore": "Leer más",
+    "viewProject": "Ver proyecto",
+    "backToHome": "Volver a inicio",
+    "backToProjects": "Volver a proyectos",
+    "items": [
+      {
+        "slug": "tesora",
+        "title": "Tesora",
+        "link": "https://tesora.app",
+        "year": "2025 - 2026",
+        "image": "/projects/tesora-main.webp",
+        "description": "Plataforma de gestión financiera con IA: conecta tus bancos, unifica tu patrimonio y recibe asesoramiento inteligente.",
+        "content": "Tesora es una plataforma de finanzas personales impulsada por IA que te ayuda a controlar, entender y hacer crecer tu patrimonio de forma más inteligente.\n\nConecta bancos, inversiones y cripto de manera segura, visualiza tu riqueza neta real (activos menos deudas) y recibe orientación personalizada gracias a un asistente IA que realmente conoce tu situación financiera.\n\nCaracterísticas principales:\n- Agregación segura de cuentas y patrimonio unificado con histórico\n- Análisis inteligente de gastos y categorización automática\n- Gestión avanzada de deudas con simulaciones Avalanche/Snowball y recomendaciones personalizadas\n- Marketplace de asesores financieros certificados con chat y permisos granulares\n- Asistente IA conversacional con acceso contextual a tus datos\n- Planificación de ahorro con escenarios realistas y proyecciones\n- Financial Health Score dinámico y alertas proactivas\n\nCon Tesora he aprendido a ver mi dinero de una forma completamente distinta: ya no solo miro saldos sueltos, sino que entiendo cómo se relacionan mis ingresos, gastos, deudas e inversiones en tiempo real. He descubierto patrones de gasto que antes ignoraba, he optimizado mis pagos de deudas ahorrando miles de euros en intereses, y he empezado a tomar decisiones de inversión mucho más conscientes gracias a las simulaciones y al contexto que me da la IA. Sobre todo, he pasado de sentirme perdido con las finanzas a tener una sensación real de control y dirección clara hacia mis objetivos.",
+        "tags": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "TailwindCSS",
+          "OpenAI",
+          "PostgreSQL"
+        ]
+      },
+      {
+        "slug": "cosmo-ai",
+        "title": "Cosmo AI",
+        "link": "https://cosmo.hugooliva.com",
+        "year": "2024 - 2025",
+        "image": "/projects/cosmo-main.webp",
+        "description": "Asistente de productividad con IA: centraliza tus tareas, proyectos y apps en un solo chat personalizado.",
+        "content": "Cosmo es un asistente de productividad con inteligencia artificial tipo «JARVIS» que centraliza tus tareas, proyectos, clientes y notas en una sola herramienta web, actualmente en fase beta y 100% gratuita.\n\nPiensa en Cosmo como tu mini ERP personal: un lugar donde puedes hablar de forma natural con tu asistente IA y, al mismo tiempo, gestionar todo tu flujo de trabajo sin cambiar de aplicación.\n\nCaracterísticas principales:\n- Chat conversacional inteligente (hablas con Cosmo como si fuera un compañero de equipo)\n- Gestión de tareas con prioridades, fechas, recordatorios y seguimiento visual\n- Proyectos centralizados: toda la información, tareas, notas y clientes relacionados en un solo sitio\n- Mini ERP personal: gestión integrada de clientes, proyectos y notas con contexto compartido\n- Memoria persistente: recuerda tus preferencias, decisiones anteriores y forma de trabajar\n- Búsqueda en internet cuando necesita información actualizada\n- Integraciones con tus herramientas habituales para mantener tu flujo de trabajo\n- Sistema de experiencia (Exp) y estadísticas gamificadas para ver tu progreso\n- Generador automático de rutinas semanales según tus prioridades y objetivos\n\nCon este proyecto he podido aprender lo valioso que es poder conectar un modelo de inteligencia artificial en una aplicación real y cómo esto puede resolver distintos problemas.",
+        "tags": [
+          "React",
+          "TypeScript",
+          "Next.js",
+          "TailwindCSS",
+          "OpenAI"
+        ]
+      },
+      {
+        "slug": "roundtable",
+        "title": "Roundtable",
+        "link": "https://roundtable.hugooliva.com",
+        "year": "2026",
+        "image": "/projects/roundtable-main.webp",
+        "description": "Herramienta de pensamiento con IA: configura una mesa redonda personal de pensadores históricos y modernos para debatir ideas y mejorar la toma de decisiones.",
+        "content": "Roundtable es una herramienta de pensamiento y toma de decisiones inspirada en una práctica descrita por Napoleon Hill: sentarse con un consejo personal de referencias de confianza para debatir ideas y ganar claridad.\n\nLa app te permite crear tu propia mesa redonda de figuras históricas y modernas — filósofos, emprendedores, científicos y líderes — cada uno representado por un agente de IA entrenado en sus modelos mentales y marcos de decisión.\n\nA través de un debate multi-agente orquestado, los agentes no solo responden al usuario, se desafían entre sí, sacan a la luz compromisos y exponen puntos ciegos.\n\nCaracterísticas principales:\n- Mesas redondas configurables con múltiples agentes de IA\n- Modelos mentales y perspectivas distintas por agente\n- Debates orquestados y discusiones moderadas\n- Conversaciones enfocadas en decisiones, no respuestas genéricas\n- Diseñado para claridad, reflexión y mejor pensamiento",
+        "tags": [
+          "Vite",
+          "React",
+          "TypeScript",
+          "TailwindCSS",
+          "OpenAI",
+          "PostHog"
+        ]
+      },
+      {
+        "slug": "evolvio-website",
+        "title": "Evolvio Website",
+        "link": "https://evolvio.digital/en",
+        "image": "/projects/evolvio-main.webp",
+        "year": "2025",
+        "description": "Sitio web de la agencia de desarrollo digital Evolvio.",
+        "content": "Evolvio es una agencia de innovación digital que diseña y desarrolla soluciones a medida para pymes y empresas: webs que convierten, automatizaciones con IA y estrategias de presencia online que impulsan el crecimiento real (hasta x10, según su claim).\n\nSe especializan en transformar problemas típicos ('tu web no vende', pérdida de tiempo en tareas repetitivas, gestión ineficiente) en ventajas competitivas mediante desarrollo personalizado y tecnología inteligente.\n\nCaracterísticas principales:\n- Desarrollo web moderno: sitios responsive, optimizados para conversión (UX, CTAs potentes, SEO on-page, análisis de comportamiento)\n- Automatizaciones e IA: integraciones inteligentes para ahorrar horas y mejorar la experiencia del cliente\n- Presencia online y marketing digital (próximamente ampliado): visibilidad, tráfico cualificado y branding digital\n- Webs profesionales desde 500 € (oferta): responsive, SEO básico, hosting + SSL 1 año, soporte 24/7 y alta disponibilidad\n- Proceso iterativo claro: Discovery → Estrategia → Implementación → Optimización continua\n- Enfoque en resultados medibles: más visitas, más ventas, online 99.99%, soluciones seguras y rápidas\n- Prueba social real: testimonios y casos de clientes como Suicalsa, Tierra de Fuego, RCI o Motoreciclajesp\n\nCon Evolvio he aprendido a ver la presencia digital no como un gasto, sino como una palanca de crecimiento directo. Entender que una web bien hecha (que realmente vende y no solo 'está ahí') combinada con automatizaciones inteligentes puede liberar tiempo valioso y multiplicar resultados sin necesidad de equipos internos enormes. Ha cambiado mi forma de pensar en proyectos digitales: menos 'hacer bonito' y más 'hacer que genere dinero y eficiencia'.",
+        "tags": [
+          "Next.js",
+          "TailwindCSS",
+          "TypeScript"
+        ]
+      },
+      {
+        "slug": "zentunes",
+        "title": "Zentunes",
+        "link": "https://zentunes.hugooliva.com",
+        "image": "/projects/zentunes-main.webp",
+        "year": "2023",
+        "description": "Reproductor web de sonidos relajantes para trabajar, dormir o relajarse.",
+        "content": "ZenTunes es un reproductor web de sonidos relajantes de alta calidad, diseñado para ayudarte a concentrarte, relajarte o dormir con ambientes como lluvia, bosque, olas o cafetería.\n\nEs un side project creado por Hugo en 24 horas como demostración rápida, pensado para ser simple, bonito y efectivo.\n\nCaracterísticas principales:\n- Sonidos ambientales en alta calidad para fondo (lluvia, viento, naturaleza, café, etc.)\n- Mezcla de varios sonidos simultáneamente con control de volumen individual\n- Reproducción en segundo plano (puedes seguir navegando o trabajar con el sonido activo)\n- Interfaz minimalista e intuitiva: elige un sonido y empieza a escucharlo en segundos\n- Ligero y rápido: no requiere instalación, funciona directamente en el navegador\n\nCon ZenTunes he aprendido lo valioso que es tener una herramienta sencilla y sin distracciones para mejorar el foco o desconectar. Me ha ayudado a crear entornos sonoros personalizados que realmente funcionan para mí (por ejemplo, lluvia suave + café de fondo) y he descubierto que a veces menos opciones y más simplicidad es justo lo que necesito para concentrarme o relajarme sin complicaciones.",
+        "tags": [
+          "Vite",
+          "TailwindCSS",
+          "TypeScript"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Habilidades",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Herramientas y Otros",
+    "categories": {
+      "frontend": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Angular"
+      ],
+      "backend": [
+        "Node.js",
+        "PostgreSQL",
+        "MongoDB",
+        "GraphQL"
+      ]
+    }
+  },
+  "education": {
+    "title": "Formación",
+    "items": [
+      {
+        "degree": "Instituto de Comunicación",
+        "institution": "Formación integral en comunicación efectiva, técnicas de ventas y desarrollo de relaciones interpersonales.",
+        "period": "2025"
+      },
+      {
+        "degree": "Máster en IA y Big Data",
+        "institution": "Máster en Inteligencia Artificial y Big Data en la universidad a distancia de Madrid.",
+        "period": "2023 - 2024"
+      },
+      {
+        "degree": "Grado Superior en Desarrollo de Aplicaciones",
+        "institution": "Técnico Superior en desarrollo de aplicaciones multiplataforma.",
+        "period": "2022 - 2024"
+      },
+      {
+        "degree": "Grado Medio en Sistemas Informáticos",
+        "institution": "Técnico en sistemas microinformáticos y redes.",
+        "period": "2020 - 2022"
+      }
+    ]
+  },
+  "blog": {
+    "title": "Blog",
+    "viewAll": "Ver todos",
+    "readMore": "Leer más",
+    "backToHome": "Volver a inicio",
+    "backToBlog": "Volver al blog",
+    "summarizeWith": "Resumir con",
+    "summarizePrompt": "Resume este artículo y dame los puntos clave:"
+  },
+  "contact": {
+    "title": "¿Trabajamos juntos?",
+    "description": "Si tienes un proyecto en mente o simplemente quieres charlar sobre tecnología, estaré encantado de escucharte.",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "message": "Mensaje",
+      "send": "Enviar mensaje",
+      "namePlaceholder": "Tu nombre",
+      "emailPlaceholder": "tu@email.com",
+      "messagePlaceholder": "Tu mensaje..."
+    }
+  },
+  "theme": {
+    "light": "Claro",
+    "dark": "Oscuro"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados"
+  }
+}
