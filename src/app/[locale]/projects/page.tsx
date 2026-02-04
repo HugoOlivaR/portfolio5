@@ -1,7 +1,32 @@
+import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import SimpleFooter from "@/components/layout/SimpleFooter";
+
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://hugooliva.com";
+
+export const metadata: Metadata = {
+  title: "Proyectos full‑stack y AI-native | Hugo Oliva",
+  description:
+    "Selección de proyectos reales desarrollados por Hugo Oliva: productos full‑stack, integraciones de IA y herramientas de productividad.",
+  alternates: {
+    canonical: "/projects",
+  },
+  openGraph: {
+    type: "website",
+    url: `${BASE_URL}/projects`,
+    title: "Proyectos full‑stack y AI-native | Hugo Oliva",
+    description:
+      "Explora proyectos de finanzas con IA, asistentes de productividad, herramientas de pensamiento y más.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Proyectos full‑stack y AI-native | Hugo Oliva",
+    description:
+      "Portfolio de proyectos que combinan desarrollo full‑stack moderno con inteligencia artificial aplicada.",
+  },
+};
 
 export default async function ProjectsPage({
   params,

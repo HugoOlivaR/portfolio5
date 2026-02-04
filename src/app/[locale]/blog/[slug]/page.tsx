@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
@@ -22,6 +23,55 @@ export async function generateStaticParams() {
   }
 
   return params;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; slug: string }>;
+}): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const post = getBlogPost(locale, slug);
+
+  if (!post) {
+    return {};
+  }
+
+  const url = `${BASE_URL}/${locale}/blog/${slug}`;
+  const title = `${post.title} | Blog de Hugo Oliva`;
+  const description =
+    post.excerpt ||
+    "Artículo del blog de Hugo Oliva sobre desarrollo full‑stack, IA aplicada y producto digital.";
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      type: "article",
+      url,
+      title,
+      description,
+      publishedTime: post.date || undefined,
+      authors: ["Hugo Oliva"],
+      images: post.image
+        ? [
+            {
+              url: post.image,
+              alt: post.title,
+            },
+          ]
+        : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: post.image ? [post.image] : undefined,
+    },
+  };
 }
 
 export default async function BlogPostPage({
