@@ -10,6 +10,8 @@ export type BlogPost = {
   excerpt: string;
   date: string;
   image?: string;
+  aiUsed?: string;
+  aiReason?: string;
   content: string;
 };
 
@@ -36,6 +38,8 @@ export function getBlogPosts(locale: string): BlogPost[] {
         excerpt: data.excerpt || "",
         date: data.date || "",
         image: data.image,
+        aiUsed: data.aiUsed,
+        aiReason: data.aiReason,
         content,
       };
     })
@@ -60,6 +64,8 @@ export function getBlogPost(locale: string, slug: string): BlogPost | null {
     excerpt: data.excerpt || "",
     date: data.date || "",
     image: data.image,
+    aiUsed: data.aiUsed,
+    aiReason: data.aiReason,
     content,
   };
 }

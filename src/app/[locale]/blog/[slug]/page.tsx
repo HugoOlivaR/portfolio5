@@ -7,6 +7,7 @@ import { getBlogPost, getAllBlogSlugs } from "@/lib/blog";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Image from "next/image";
 import { SummarizeWith } from "@/components/blog/SummarizeWith";
+import { AiQuizCard } from "@/components/blog/AiQuizCard";
 import SimpleFooter from "@/components/layout/SimpleFooter";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://hugooliva.com";
@@ -146,6 +147,16 @@ export default async function BlogPostPage({
           ">
             <MDXRemote source={post.content} />
           </div>
+          {post.aiUsed && (
+            <AiQuizCard
+              aiUsed={post.aiUsed}
+              aiReason={post.aiReason ?? ""}
+              title={t("quiz.title")}
+              subtitle={t("quiz.subtitle")}
+              successText={t("quiz.success")}
+              retryText={t("quiz.retry")}
+            />
+          )}
         </article>
         <SimpleFooter />
       </div>

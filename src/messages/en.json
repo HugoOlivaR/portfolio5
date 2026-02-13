@@ -193,7 +193,13 @@
     "backToHome": "Back to home",
     "backToBlog": "Back to blog",
     "summarizeWith": "Summarize with",
-    "summarizePrompt": "Summarize this article and give me the key points:"
+    "summarizePrompt": "Summarize this article and give me the key points:",
+    "quiz": {
+      "title": "Which AI helped me write this article?",
+      "subtitle": "Yes, I use AI to help me create quality content. Can you guess which one?",
+      "success": "That's right! I used [ai] for this article.",
+      "retry": "Not that one! Try again."
+    }
   },
   "contact": {
     "title": "Let's work together",

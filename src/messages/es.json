@@ -193,7 +193,13 @@
     "backToHome": "Volver a inicio",
     "backToBlog": "Volver al blog",
     "summarizeWith": "Resumir con",
-    "summarizePrompt": "Resume este artículo y dame los puntos clave:"
+    "summarizePrompt": "Resume este artículo y dame los puntos clave:",
+    "quiz": {
+      "title": "¿Con qué IA escribí este artículo?",
+      "subtitle": "Sí, uso IA para ayudarme a redactar contenido de calidad. ¿Adivinas cuál?",
+      "success": "¡Exacto! Usé [ai] para este artículo.",
+      "retry": "¡No es esa! Inténtalo de nuevo."
+    }
   },
   "contact": {
     "title": "¿Trabajamos juntos?",
