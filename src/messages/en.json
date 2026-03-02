@@ -94,6 +94,22 @@
         ]
       },
       {
+        "slug": "talkbook",
+        "title": "TalkBook",
+        "link": "https://books.hugooliva.com",
+        "year": "2026",
+        "image": "/projects/talkbook.webp",
+        "description": "Personal reading library with chat about your books, built with React, Supabase and a mobile-first experience.",
+        "content": "TalkBook is a web application for readers who want to have their personal library always at hand and be able to talk about what they read.\n\nYou can save the books you're reading or have read, with their covers, authors, descriptions, and ISBN, and keep your progress organized in a single place. You can also search for new titles using the Google Books API and easily add books to your library.\n\nThe most special feature of TalkBook is the book chat: you can open a conversation centered on a specific title and talk about its content, key ideas, questions, or reflections, always keeping the context of that book.\n\nMain features:\n- Personal library of read and reading books\n- Book cards with cover, author, description, and basic information\n- Google Books search integration\n- Ability to quickly add books to your collection\n- Chat associated with each book to talk about what you're reading\n- Mobile-first interface with bottom navigation and clean design\n\nWith this project I was able to explore how to design a richer reading digital experience, where not only do you save your books, but you can also talk about them and turn your library into an active reflection space.",
+        "tags": [
+          "React",
+          "TypeScript",
+          "Vite",
+          "TailwindCSS",
+          "Supabase"
+        ]
+      },
+      {
         "slug": "roundtable",
         "title": "Roundtable",
         "link": "https://roundtable.hugooliva.com",
