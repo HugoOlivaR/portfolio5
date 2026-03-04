@@ -14,6 +14,7 @@ type Project = {
   title: string;
   year: string;
   image: string;
+  category: string;
   description: string;
   content: string;
   tags: string[];
@@ -110,17 +111,31 @@ export default async function ProjectPage({
           )}
           <header className="space-y-4">
             <div className="flex items-center gap-2 justify-between">
-            <h1 className="text-3xl font-bold text-text-primary">{project.title}</h1>
-              <span className="text-sm text-text-secondary">{project.year}</span>
+              <h1 className="text-3xl font-bold text-text-primary">
+                {project.title}
+              </h1>
+              <span className="text-sm text-text-secondary">
+                {project.year}
+              </span>
             </div>
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-sm text-text-primary transition-colors flex items-center gap-1">
-                {project.link} <ExternalLink className="w-3 h-3" />
-              </a>
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-text-primary transition-colors flex items-center gap-1"
+            >
+              {project.link} <ExternalLink className="w-3 h-3" />
+            </a>
             <div className="flex flex-wrap gap-2">
+              {project.category && (
+                <span className="text-xs px-2 py-1 bg-bg-secondary text-green-500 border border-green-500 rounded">
+                  {project.category}
+                </span>
+              )}
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs px-2 py-1 bg-bg-secondary text-text-secondary rounded"
+                  className="text-xs border border-border px-2 py-1 bg-bg-secondary text-text-secondary rounded"
                 >
                   {tag}
                 </span>
@@ -129,7 +144,10 @@ export default async function ProjectPage({
           </header>
           <div className="prose prose-invert max-w-none">
             {project.content.split("\n\n").map((paragraph, index) => (
-              <p key={index} className="text-text-secondary leading-relaxed mb-4">
+              <p
+                key={index}
+                className="text-text-secondary leading-relaxed mb-4"
+              >
                 {paragraph}
               </p>
             ))}

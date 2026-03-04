@@ -10,6 +10,7 @@ export default function Projects() {
     title: string;
     link: string;
     description: string;
+    category: string;
     tags: string[];
     image: string;
   }>;
@@ -45,15 +46,22 @@ export default function Projects() {
                 />
               </div>
             )}
-            <h3 className="font-medium text-text-primary">{project.title}</h3>
+            <div className="flex items-center gap-2">
+              <h3 className="font-medium text-text-primary">{project.title}</h3>
+            </div>
             <p className="text-sm text-text-secondary leading-relaxed">
               {project.description}
             </p>
             <div className="flex flex-wrap gap-2">
+              {project.category && (
+                <span className="text-xs px-2 py-1 bg-bg-secondary text-green-500 border border-green-500 rounded">
+                  {project.category}
+                </span>
+              )}
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs px-2 py-1 bg-bg-secondary text-text-secondary rounded"
+                  className="text-xs px-2 py-1 bg-bg-secondary text-text-secondary rounded border border-border"
                 >
                   {tag}
                 </span>

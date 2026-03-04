@@ -43,6 +43,7 @@ export default async function ProjectsPage({
     tags: string[];
     link: string;
     image: string;
+    category: string;
   }>;
 
   return (
@@ -57,7 +58,9 @@ export default async function ProjectsPage({
             {t("backToHome")}
           </Link>
         </div>
-        <h1 className="text-3xl font-bold text-text-primary mb-8">{t("title")}</h1>
+        <h1 className="text-3xl font-bold text-text-primary mb-8">
+          {t("title")}
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
           {projects.map((project) => (
             <Link
@@ -67,7 +70,12 @@ export default async function ProjectsPage({
             >
               {project.image && (
                 <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-border">
-                  <Image src={project.image} alt={project.title} fill className="object-cover" />
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               )}
               <h2 className="text-xl font-medium text-text-primary">
@@ -77,16 +85,23 @@ export default async function ProjectsPage({
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-2">
+                {project.category && (
+                  <span className="text-xs px-2 py-1 bg-bg-secondary text-green-500 border border-green-500 rounded">
+                    {project.category}
+                  </span>
+                )}
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs px-2 py-1 bg-bg-secondary text-text-secondary rounded"
+                    className="text-xs border border-border px-2 py-1 bg-bg-secondary text-text-secondary rounded"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
-              <span className="text-sm text-accent">{t("viewProject")} &rarr;</span>
+              <span className="text-sm text-accent">
+                {t("viewProject")} &rarr;
+              </span>
             </Link>
           ))}
         </div>

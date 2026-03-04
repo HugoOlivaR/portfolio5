@@ -65,13 +65,13 @@
         "link": "https://tesora.app",
         "year": "2025 - 2026",
         "image": "/projects/tesora-main.webp",
+        "category": "Fintech",
         "description": "AI-powered financial management platform: connect your banks, unify your wealth, and receive intelligent advice.",
         "content": "Tesora is an AI-powered personal finance platform that helps you control, understand, and grow your wealth more intelligently.\n\nSecurely connect banks, investments, and crypto, visualize your real net worth (assets minus debts), and receive personalized guidance from an AI assistant that truly knows your financial situation.\n\nMain features:\n- Secure account aggregation and unified wealth with history\n- Smart expense analysis and automatic categorization\n- Advanced debt management with Avalanche/Snowball simulations and personalized recommendations\n- Marketplace of certified financial advisors with chat and granular permissions\n- Conversational AI assistant with contextual access to your data\n- Savings planning with realistic scenarios and projections\n- Dynamic Financial Health Score and proactive alerts\n\nWith Tesora I've learned to see my money in a completely different way: I no longer just look at scattered balances, but understand how my income, expenses, debts, and investments relate in real time. I've discovered spending patterns I used to ignore, optimized my debt payments saving thousands of euros in interest, and started making much more conscious investment decisions thanks to the simulations and context the AI provides. Most importantly, I've gone from feeling lost with finances to having a real sense of control and clear direction toward my goals.",
         "tags": [
           "Next.js",
           "React",
           "TypeScript",
-          "TailwindCSS",
           "OpenAI",
           "PostgreSQL"
         ]
@@ -90,6 +90,23 @@
           "Next.js",
           "TailwindCSS",
           "OpenAI"
+        ]
+      },
+      {
+        "slug": "btc-tracker",
+        "title": "BTC Tracker",
+        "link": "https://btc.hugooliva.com",
+        "year": "2026",
+        "image": "/projects/btc-tracker.webp",
+        "category": "Fintech",
+        "description": "Bitcoin purchase calculator and tracker to monitor average price, holdings, and real-time P&L.",
+        "content": "BTC Average Price is a web app designed to log and analyze Bitcoin buy/sell transactions with a focus on one key metric: your real average buy price in USD.\n\nThe app provides a clear overview of your position, shows unrealized profit/loss, and helps you make better decisions before selling.\n\nKey features:\n- Automatic average buy price calculation\n- Real-time metrics: current value, BTC holdings, total investment, and unrealized P&L\n- Live BTC price with periodic updates\n- Full transaction history with edit, delete, and CSV export options\n- Add transactions in 3 modes: manual entry, generic CSV upload, and exchange importer\n- Dedicated importers for Binance, Coinbase, Kraken, and Revolut\n- Automatic currency conversion to USD to normalize real cost basis\n- Sell simulator to estimate proceeds, cost basis, and profit/loss before executing a trade\n- Purchase chart to visualize entry evolution and average cost over time\n- Market sentiment widget (Fear & Greed Index)\n- Google authentication or guest mode, with user-based data persistence in Firebase\n- PWA support to install the app on desktop or mobile devices\n\nWith this project, I worked on a real crypto personal finance use case, integrating market data, multi-currency normalization, and heterogeneous data imports into a simple end-user experience.",
+        "tags": [
+          "React",
+          "TypeScript",
+          "Next.js",
+          "TailwindCSS",
+          "Firebase"
         ]
       },
       {

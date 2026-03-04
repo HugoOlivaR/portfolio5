@@ -65,13 +65,13 @@
         "link": "https://tesora.app",
         "year": "2025 - 2026",
         "image": "/projects/tesora-main.webp",
+        "category": "Fintech",
         "description": "Plataforma de gestión financiera con IA: conecta tus bancos, unifica tu patrimonio y recibe asesoramiento inteligente.",
         "content": "Tesora es una plataforma de finanzas personales impulsada por IA que te ayuda a controlar, entender y hacer crecer tu patrimonio de forma más inteligente.\n\nConecta bancos, inversiones y cripto de manera segura, visualiza tu riqueza neta real (activos menos deudas) y recibe orientación personalizada gracias a un asistente IA que realmente conoce tu situación financiera.\n\nCaracterísticas principales:\n- Agregación segura de cuentas y patrimonio unificado con histórico\n- Análisis inteligente de gastos y categorización automática\n- Gestión avanzada de deudas con simulaciones Avalanche/Snowball y recomendaciones personalizadas\n- Marketplace de asesores financieros certificados con chat y permisos granulares\n- Asistente IA conversacional con acceso contextual a tus datos\n- Planificación de ahorro con escenarios realistas y proyecciones\n- Financial Health Score dinámico y alertas proactivas\n\nCon Tesora he aprendido a ver mi dinero de una forma completamente distinta: ya no solo miro saldos sueltos, sino que entiendo cómo se relacionan mis ingresos, gastos, deudas e inversiones en tiempo real. He descubierto patrones de gasto que antes ignoraba, he optimizado mis pagos de deudas ahorrando miles de euros en intereses, y he empezado a tomar decisiones de inversión mucho más conscientes gracias a las simulaciones y al contexto que me da la IA. Sobre todo, he pasado de sentirme perdido con las finanzas a tener una sensación real de control y dirección clara hacia mis objetivos.",
         "tags": [
           "Next.js",
           "React",
           "TypeScript",
-          "TailwindCSS",
           "OpenAI",
           "PostgreSQL"
         ]
@@ -92,6 +92,23 @@
           "OpenAI"
         ]
       },
+      {
+        "slug": "btc-tracker",
+        "title": "BTC Tracker",
+        "link": "https://btc.hugooliva.com",
+        "year": "2026",
+        "image": "/projects/btc-tracker.webp",
+        "category": "Fintech",
+        "description": "Calculadora y tracker de compras de Bitcoin para controlar precio medio, holdings y P&L en tiempo real.",
+        "content": "BTC Average Price es una app web para registrar y analizar compras/ventas de Bitcoin con foco en una métrica clave: tu precio medio de compra real en USD.\n\nLa aplicación permite llevar un control claro de tu posición, ver rentabilidad no realizada y tomar mejores decisiones antes de vender.\n\nCaracterísticas principales:\n- Cálculo automático de precio medio de compra (average buy price)\n- Métricas en tiempo real: valor actual, BTC en cartera, inversión total y P&L no realizado\n- Precio de BTC en vivo con actualización periódica\n- Historial completo de transacciones con edición, borrado y exportación CSV\n- Alta de movimientos en 3 modos: manual, CSV genérico y importador de exchanges\n- Importador específico para Binance, Coinbase, Kraken y Revolut\n- Conversión automática de divisas a USD para normalizar el coste real\n- Simulador de venta para estimar ingresos, coste base y beneficio/pérdida antes de ejecutar una venta\n- Gráfico de compras para visualizar evolución de entradas y coste medio\n- Widget de sentimiento de mercado (Fear & Greed Index)\n- Autenticación con Google o modo invitado, con datos persistidos por usuario en Firebase\n- Soporte PWA para instalar la app en escritorio o móvil\n\nCon este proyecto he trabajado un caso real de finanzas personales cripto, integrando datos de mercado, normalización multi-divisa e importación de fuentes heterogéneas en una experiencia simple para usuario final.",
+        "tags": [
+          "React",
+          "TypeScript",
+          "Next.js",
+          "TailwindCSS",
+          "Firebase"
+        ]
+      },      
       {
         "slug": "talkbook",
         "title": "TalkBook",
