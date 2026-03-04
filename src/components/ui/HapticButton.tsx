@@ -26,11 +26,11 @@ export default function HapticButton({
       onClick={(e) => {
         if (hapticPreset === "success") {
           trigger([
-            { duration: 30 },
-            { delay: 60, duration: 40, intensity: 1 },
+            { duration: 40 },
+            { delay: 10, duration: 40, intensity: 1 },
           ]);
         } else if (hapticPreset === "medium") {
-          trigger([{ duration: 25 }], { intensity: 0.7 });
+          trigger([{ duration: 30 }, { delay: 0, duration: 30, intensity: 1 }]);
         } else if (hapticPattern) {
           trigger(hapticPattern);
         } else {
