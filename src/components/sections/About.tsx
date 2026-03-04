@@ -9,7 +9,6 @@ export default function About() {
       <div className="space-y-4 text-text-secondary leading-relaxed">
         <p>{t("paragraph1")}</p>
         <p>{t("paragraph2")}</p>
-        <p>{t("paragraph3")}</p>
       </div>
     </section>
   );

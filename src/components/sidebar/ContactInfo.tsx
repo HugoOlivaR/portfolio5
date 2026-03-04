@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import HapticButton from "@/components/ui/HapticButton";
 
 function LocationIcon() {
   return (
@@ -84,8 +85,9 @@ export default function ContactInfo() {
         <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
         <span className="text-text-secondary">{t("availability")}</span>
       </div>
-      <button
+      <HapticButton
         onClick={handleCopyEmail}
+        hapticPreset="success"
         className="flex items-center gap-2 text-text-secondary hover:text-text-primary transition-colors"
       >
         <span className="transition-transform duration-200">
@@ -94,7 +96,7 @@ export default function ContactInfo() {
         <span className="transition-opacity duration-200">
           {copied ? t("copied") : t("email")}
         </span>
-      </button>
+      </HapticButton>
     </div>
   );
 }

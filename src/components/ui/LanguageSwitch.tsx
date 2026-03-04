@@ -2,6 +2,7 @@
 
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
+import HapticButton from "./HapticButton";
 
 export default function LanguageSwitch() {
   const locale = useLocale();
@@ -15,7 +16,7 @@ export default function LanguageSwitch() {
 
   return (
     <div className="flex items-center gap-1 text-sm">
-      <button
+      <HapticButton
         onClick={() => switchLocale("en")}
         className={`px-2 py-1 rounded transition-colors ${
           locale === "en"
@@ -24,9 +25,9 @@ export default function LanguageSwitch() {
         }`}
       >
         EN
-      </button>
+      </HapticButton>
       <span className="text-text-secondary">|</span>
-      <button
+      <HapticButton
         onClick={() => switchLocale("es")}
         className={`px-2 py-1 rounded transition-colors ${
           locale === "es"
@@ -35,7 +36,7 @@ export default function LanguageSwitch() {
         }`}
       >
         ES
-      </button>
+      </HapticButton>
     </div>
   );
 }

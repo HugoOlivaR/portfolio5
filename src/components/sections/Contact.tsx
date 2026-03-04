@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import HapticButton from "../ui/HapticButton";
 
 export default function Contact() {
   const t = useTranslations("contact");
@@ -25,6 +26,7 @@ export default function Contact() {
             type="text"
             id="name"
             name="name"
+            required
             placeholder={t("form.namePlaceholder")}
             className="w-full px-3 py-2 bg-bg-secondary border border-border rounded-lg text-text-primary placeholder:text-text-secondary focus:outline-none focus:border-text-secondary transition-colors"
           />
@@ -42,6 +44,7 @@ export default function Contact() {
             name="email"
             placeholder={t("form.emailPlaceholder")}
             className="w-full px-3 py-2 bg-bg-secondary border border-border rounded-lg text-text-primary placeholder:text-text-secondary focus:outline-none focus:border-text-secondary transition-colors"
+            required
           />
         </div>
         <div className="space-y-2">
@@ -57,14 +60,16 @@ export default function Contact() {
             rows={4}
             placeholder={t("form.messagePlaceholder")}
             className="w-full px-3 py-2 bg-bg-secondary border border-border rounded-lg text-text-primary placeholder:text-text-secondary focus:outline-none focus:border-text-secondary transition-colors resize-none"
+            required
           />
         </div>
-        <button
+        <HapticButton
           type="submit"
+          hapticPreset="success"
           className="cursor-pointer px-6 py-2 bg-secondary text-primary border border-border rounded-lg hover:bg-primary hover:text-secondary transition-colors"
         >
           {t("form.send")}
-        </button>
+        </HapticButton>
       </form>
     </section>
   );

@@ -20,9 +20,8 @@
   },
   "about": {
     "title": "Sobre mí",
-    "paragraph1": "Me especializo en construir aplicaciones inteligentes full-stack que aprovechan la IA para mejorar experiencias de usuario, optimizar funcionalidades y resolver problemas del mundo real.",
-    "paragraph2": "Con experiencia en React, TypeScript, Node.js e integraciones de IA. Me enfoco en crear soluciones escalables desde la ideación hasta el despliegue, priorizando claridad, rendimiento y detalles innovadores.",
-    "paragraph3": "Soy un apasionado por la investigación en inteligencia artificial y en mantenerme a la vanguardia de las tecnologías emergentes, explorando constantemente cómo la IA puede transformar las aplicaciones más allá de la programación tradicional. Esta motivación se extiende al desarrollo personal, que veo como un viaje interminable."
+    "paragraph1": "Full-stack developer especializado en fintech y sistemas impulsados por IA.",
+    "paragraph2": "Diseño y desarrollo aplicaciones escalables con React, TypeScript y Node.js, llevando productos desde la ideación hasta producción. Mi foco está en aplicar inteligencia artificial para crear ventajas competitivas reales."
   },
   "experience": {
     "title": "Experiencia",

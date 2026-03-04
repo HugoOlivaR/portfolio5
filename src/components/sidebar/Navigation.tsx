@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useState, useEffect } from "react";
+import HapticLink from "../ui/HapticLink";
 
 const navItems = [
   { key: "about", href: "#about" },
@@ -19,17 +20,46 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = navItems.map((item) => item.key);
-      const scrollPosition = window.scrollY + window.innerHeight / 3;
+      const sections = navItems
+        .map((item) => {
+          const element = document.getElementById(item.key);
+          if (!element) return null;
+          return { key: item.key, top: element.offsetTop };
+        })
+        .filter((section): section is { key: string; top: number } => section !== null);
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = document.getElementById(sections[i]);
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(sections[i]);
+      if (!sections.length) {
+        setActiveSection("");
+        return;
+      }
+
+      const scrollPosition = window.scrollY + 1;
+      const atBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2;
+
+      if (atBottom) {
+        setActiveSection(sections[sections.length - 1].key);
+        return;
+      }
+
+      for (let i = 0; i < sections.length; i++) {
+        const current = sections[i];
+        const next = sections[i + 1];
+        const sectionEnd = next ? next.top : Infinity;
+
+        if (scrollPosition >= current.top && scrollPosition < sectionEnd) {
+          setActiveSection(current.key);
           return;
         }
       }
-      setActiveSection("");
+
+      if (scrollPosition < sections[0].top) {
+        setActiveSection(sections[0].key);
+        return;
+      }
+
+      setActiveSection(sections[sections.length - 1].key);
     };
 
     handleScroll();
@@ -42,9 +72,10 @@ export default function Navigation() {
       {navItems.map((item) => {
         const isActive = activeSection === item.key;
         return (
-          <a
+          <HapticLink
             key={item.key}
             href={item.href}
+            hapticPreset="medium"
             className={`group flex items-center gap-3 py-1 transition-all duration-300 ease-out ${
               isActive
                 ? "text-text-primary"
@@ -59,7 +90,7 @@ export default function Navigation() {
               }`}
             />
             <span>{t(item.key)}</span>
-          </a>
+          </HapticLink>
         );
       })}
     </nav>
