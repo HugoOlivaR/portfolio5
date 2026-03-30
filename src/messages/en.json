@@ -157,6 +157,20 @@
         ]
       },
       {
+        "slug": "laultimaversion",
+        "title": "La Última Versión",
+        "link": "https://laultimaversion.com",
+        "image": "/projects/luv.webp",
+        "year": "2026",
+        "description": "Website and podcast by Hugo and Juanma on AI, finance, and the digital future. We explore the limits of innovation every week.",
+        "content": "La Última Versión is the podcast and site where we cross AI, finance, and the digital future without the fluff. Every week Hugo and Juanma push the edges of innovation with a straight tone: more audit of tomorrow than hype.\n\nOur promise: unpack the real impact of artificial intelligence and modern finance on our present. No beating around the bush, no unnecessary hype—just the definitive version of the facts.\n\nFeatured episodes:\n- #01 (Mar 26, 2026): Will we live forever?, the habits that make you rich, and whether getting rich is luck or skill. Longevity, tech, daily decisions that build (or destroy) wealth, and whether the future is genetics, discipline, or probabilities. Site: laultimaversion.com.\n- #00 (Mar 19, 2026): Clever vs. intelligent?, standing out in the age of AI, and the decline of IQ. Introducing the show, intelligence as a commodity, the clever-vs-smart contrast, and the debate from the Flynn effect to smartphones and AI thinking for us.\n\nWhat we talk about (each episode crosses at least two pillars):\n- Artificial Intelligence: language models, autonomous agents, and everything AI is changing.\n- Technology: hardware, software, and the dynamics of who controls the stack.\n- Finance: startups, big tech, and market moves that redefine who wins and who loses.\n- The future: where the world is headed, who decides, and why it should matter to you.\n\nThe hosts: Juanma (software and science: code, papers, architecture) and Hugo (business and strategy: entrepreneurship, productivity). Two profiles, one obsession: understand technology with judgment and tell it without smoke.\n\nOn the site you'll also find vertical clips (highlight moments) and links to listen on YouTube and Spotify, plus the community so you don't miss a single release.\n\nWith La Última Versión I'm bringing something to the portfolio that goes beyond code: editorial product, a clear message, and a brand aligned with how I think about the future of work, money, and AI.",
+        "tags": [
+          "Next.js",
+          "TailwindCSS",
+          "TypeScript"
+        ]
+      },
+      {
         "slug": "zentunes",
         "title": "Zentunes",
         "link": "https://zentunes.hugooliva.com",

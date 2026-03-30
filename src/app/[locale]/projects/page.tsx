@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import { ExternalLink } from "lucide-react";
 import SimpleFooter from "@/components/layout/SimpleFooter";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://hugooliva.com";
@@ -63,46 +64,62 @@ export default async function ProjectsPage({
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
           {projects.map((project) => (
-            <Link
+            <div
               key={project.slug}
-              href={`/projects/${project.slug}`}
-              className="block space-y-4"
+              className="space-y-4 hover:scale-105 duration-200"
             >
-              {project.image && (
-                <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-border">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              )}
-              <h2 className="text-xl font-medium text-text-primary">
-                {project.title}
-              </h2>
-              <p className="text-text-secondary leading-relaxed">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {project.category && (
-                  <span className="text-xs px-2 py-1 bg-bg-secondary text-green-500 border border-green-500 rounded">
-                    {project.category}
-                  </span>
+              <Link
+                href={`/projects/${project.slug}`}
+                className="block space-y-4"
+              >
+                {project.image && (
+                  <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-border">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 )}
-                {project.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs border border-border px-2 py-1 bg-bg-secondary text-text-secondary rounded"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <span className="text-sm text-accent">
-                {t("viewProject")} &rarr;
-              </span>
-            </Link>
+                <h2 className="text-xl font-medium text-text-primary">
+                  {project.title}
+                </h2>
+              </Link>
+
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-text-primary transition-colors flex items-center gap-1"
+              >
+                {project.link} <ExternalLink className="w-3 h-3" />
+              </a>
+
+              <Link
+                href={`/projects/${project.slug}`}
+                className="block space-y-4"
+              >
+                <p className="text-text-secondary leading-relaxed">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {project.category && (
+                    <span className="text-xs px-2 py-1 bg-bg-secondary text-green-500 border border-green-500 rounded">
+                      {project.category}
+                    </span>
+                  )}
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-xs border border-border px-2 py-1 bg-bg-secondary text-text-secondary rounded"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </Link>
+            </div>
           ))}
         </div>
         <SimpleFooter />

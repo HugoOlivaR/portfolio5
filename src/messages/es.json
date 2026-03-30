@@ -157,6 +157,20 @@
         ]
       },
       {
+        "slug": "laultimaversion",
+        "title": "La Última Versión",
+        "link": "https://laultimaversion.com",
+        "image": "/projects/luv.webp",
+        "year": "2026",
+        "description": "Sitio web y Podcast de Hugo y Juanma sobre IA, finanzas y el futuro digital. Exploramos los límites de la innovación cada semana.",
+        "content": "La Última Versión es el podcast y la web donde cruzamos IA, finanzas y futuro digital sin humo. Cada semana Hugo y Juanma exploran los límites de la innovación con un tono directo: más auditoría del mañana que hype.\n\nPromesa: explorar el impacto real de la inteligencia artificial y las finanzas modernas en nuestro presente. Sin rodeos, sin hype innecesario, solo la versión definitiva de los hechos.\n\nEpisodios destacados:\n- #01 (26 mar 2026): ¿Vamos a vivir para siempre?, los hábitos que te harán rico y si enriquecerse es suerte o skill. Longevidad, tecnología, decisiones diarias que construyen (o destruyen) riqueza, y la pregunta de si el futuro es genética, disciplina o probabilidades. Web: laultimaversion.com.\n- #00 (19 mar 2026): ¿Ser listo o ser inteligente?, diferenciarse frente a la IA y la decadencia del IQ. Presentación del formato, la idea de la inteligencia como commodity, el contraste entre ser listo y ser inteligente, y el debate desde el efecto Flynn hasta smartphones y la IA pensando por nosotros.\n\nDe qué hablamos (cada episodio cruza al menos dos ejes):\n- Inteligencia Artificial: modelos de lenguaje, agentes autónomos y todo lo que la IA está cambiando.\n- Tecnología: hardware, software y las dinámicas entre quienes controlan la infraestructura.\n- Finanzas: startups, big tech y los movimientos de mercado que redefinen quién gana y quién pierde.\n- El futuro: hacia dónde va el mundo, quién lo decide y por qué debería importarte.\n\nLos hosts: Juanma (software y ciencia: código, papers, arquitectura) y Hugo (negocio y estrategia: emprendimiento, productividad). Dos perfiles, una misma obsesión: entender la tecnología con criterio y contarla sin humo.\n\nEn la web también hay clips en formato vertical (momentos destacados) y enlaces para escuchar en YouTube y Spotify, además de la comunidad para no perderte ninguna versión.\n\nCon La Última Versión llevo al portfolio algo que va más allá del código: producto editorial, mensaje claro y una marca alineada con cómo pienso el futuro del trabajo, el dinero y la IA.",
+        "tags": [
+          "Next.js",
+          "TailwindCSS",
+          "TypeScript"
+        ]
+      },
+      {
         "slug": "zentunes",
         "title": "Zentunes",
         "link": "https://zentunes.hugooliva.com",
