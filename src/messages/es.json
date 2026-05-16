@@ -190,22 +190,30 @@
     "title": "Habilidades",
     "frontend": "Frontend",
     "backend": "Backend",
-    "tools": "Herramientas y Otros",
+    "ai": "IA",
     "categories": {
       "frontend": [
         "React",
         "Next.js",
         "TypeScript",
         "Tailwind CSS",
-        "Angular"
+        "Angular",
+        "React Native",
+        "Expo"
       ],
       "backend": [
         "Node.js",
         "PostgreSQL",
         "MongoDB",
         "GraphQL"
+      ],
+      "ai": [
+        "Integración APIs de IA",
+        "Infraestructura de IA"
       ]
-    }
+    },
+    "pro": ["React", "Next.js"],
+    "proTooltip": "+2 años de experiencia"
   },
   "education": {
     "title": "Formación",

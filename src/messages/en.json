@@ -190,22 +190,30 @@
     "title": "Skills",
     "frontend": "Frontend",
     "backend": "Backend",
-    "tools": "Tools & Others",
+    "ai": "AI",
     "categories": {
       "frontend": [
         "React",
         "Next.js",
         "TypeScript",
         "Tailwind CSS",
-        "Angular"
+        "Angular",
+        "React Native",
+        "Expo"
       ],
       "backend": [
         "Node.js",
         "PostgreSQL",
         "MongoDB",
         "GraphQL"
+      ],
+      "ai": [
+        "AI API Integration",
+        "AI Infrastructure Design"
       ]
-    }
+    },
+    "pro": ["React", "Next.js"],
+    "proTooltip": "+2 years of experience"
   },
   "education": {
     "title": "Education",
