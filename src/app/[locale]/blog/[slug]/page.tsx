@@ -92,7 +92,7 @@ export default async function BlogPostPage({
 
   return (
     <div className="min-h-screen flex justify-center">
-      <div className="w-full max-w-3xl px-6 py-12">
+      <div className="w-full max-w-6xl px-6 py-12">
         <div className="mb-8">
           <Link
             href="/blog"
@@ -104,7 +104,9 @@ export default async function BlogPostPage({
         </div>
         <article className="space-y-6">
           <header className="space-y-2">
-            <h1 className="text-3xl font-semibold text-text-primary">{post.title}</h1>
+            <h1 className="text-3xl font-semibold text-text-primary">
+              {post.title}
+            </h1>
             <p className="text-text-secondary">{post.date}</p>
             {post.excerpt && (
               <p className="text-text-secondary text-lg">{post.excerpt}</p>
@@ -125,7 +127,8 @@ export default async function BlogPostPage({
             prompt={t("summarizePrompt")}
             label={t("summarizeWith")}
           />
-          <div className="prose prose-lg max-w-none
+          <div
+            className="prose prose-lg max-w-none
             prose-headings:text-text-primary prose-headings:font-semibold
             prose-h1:text-3xl prose-h1:mt-8 prose-h1:mb-4
             prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4 prose-h2:border-b prose-h2:border-border prose-h2:pb-2
@@ -144,7 +147,8 @@ export default async function BlogPostPage({
             prose-hr:border-border prose-hr:my-8
             prose-img:rounded-lg prose-img:my-6
             prose-table:text-text-secondary prose-th:text-text-primary prose-th:font-semibold prose-td:border-border
-          ">
+          "
+          >
             <MDXRemote source={post.content} />
           </div>
           {post.aiUsed && (

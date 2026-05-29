@@ -34,7 +34,7 @@ export default function Projects() {
         {projects.slice(0, 3).map((project) => (
           <div
             key={project.slug}
-            className="block hover:border-text-secondary transition-colors space-y-3"
+            className="relative hover:cursor-pointer group transition-colors space-y-3"
           >
             {project.image && (
               <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-border">
@@ -70,7 +70,7 @@ export default function Projects() {
             <div className="flex items-center gap-4">
               <HapticLink
                 href={`/projects/${project.slug}`}
-                className="text-sm text-text-primary transition-colors underline"
+                className="text-sm text-text-primary transition-colors underline group-hover:text-text-secondary after:absolute after:inset-0 after:content-['']"
               >
                 {t("readMore")}
               </HapticLink>
@@ -78,7 +78,7 @@ export default function Projects() {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-text-primary transition-colors flex items-center gap-1"
+                className="relative z-10 text-sm text-text-primary transition-colors flex items-center gap-1"
               >
                 {t("viewProject")} <ExternalLink className="w-3 h-3" />
               </a>

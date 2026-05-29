@@ -1,0 +1,193 @@
+/* ─────────────────────────────────────────────────────────────
+   Hugo Oliva — Personal Brand Design System
+   Tokens distilled from the production codebase (Next.js + Tailwind v4 + shadcn).
+   Dark is the DEFAULT theme. Light is a polite, fully-supported counterpart.
+   ───────────────────────────────────────────────────────────── */
+
+/* ──────────────────── Base palette (dark, default) ─────────── */
+:root,
+:root[data-theme="dark"],
+.dark {
+  /* Core black & white spine */
+  --bg-primary:        #0a0a0a;   /* page background — near-black, not pure */
+  --bg-secondary:      #141414;   /* cards, code blocks, subtle wells       */
+  --text-primary:      #ffffff;   /* headings, primary copy                 */
+  --text-secondary:    #a0a0a0;   /* body, captions, secondary actions      */
+  --border:            #262626;   /* hairlines, dividers, card outlines     */
+  --accent:            #ffffff;   /* in dark, accent = text-primary         */
+  --accent-hover:      #cccccc;
+
+  /* shadcn parity (used by inputs, popovers, etc.) */
+  --background:        oklch(0.145 0 0);
+  --foreground:        oklch(0.985 0 0);
+  --card:              oklch(0.205 0 0);
+  --card-foreground:   oklch(0.985 0 0);
+  --popover:           oklch(0.205 0 0);
+  --popover-foreground:oklch(0.985 0 0);
+  --primary:           oklch(0.922 0 0);
+  --primary-foreground:oklch(0.205 0 0);
+  --secondary:         oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted:             oklch(0.269 0 0);
+  --muted-foreground:  oklch(0.708 0 0);
+  --input:             oklch(1 0 0 / 15%);
+  --ring:              oklch(0.556 0 0);
+
+  /* Semantic */
+  --success:           #22c55e;   /* available dot, "Fintech" tag, quiz win */
+  --success-soft:      rgba(34, 197, 94, 0.08);
+  --danger:            #ef4444;   /* form error, quiz wrong                  */
+  --danger-soft:       rgba(239, 68, 68, 0.08);
+}
+
+/* ──────────────────── Light theme ──────────────────────────── */
+:root[data-theme="light"],
+.light {
+  --bg-primary:        #ffffff;
+  --bg-secondary:      #f5f5f5;
+  --text-primary:      #000000;
+  --text-secondary:    #666666;
+  --border:            oklch(0.922 0 0);
+  --accent:            oklch(0.97 0 0);
+  --accent-hover:      #333333;
+
+  --background:        oklch(1 0 0);
+  --foreground:        oklch(0.145 0 0);
+  --card:              oklch(1 0 0);
+  --card-foreground:   oklch(0.145 0 0);
+  --popover:           oklch(1 0 0);
+  --popover-foreground:oklch(0.145 0 0);
+  --primary:           oklch(0.205 0 0);
+  --primary-foreground:oklch(0.985 0 0);
+  --secondary:         oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted:             oklch(0.97 0 0);
+  --muted-foreground:  oklch(0.556 0 0);
+  --input:             oklch(0.922 0 0);
+  --ring:              oklch(0.708 0 0);
+
+  --success:           #16a34a;
+  --success-soft:      rgba(22, 163, 74, 0.06);
+  --danger:            #dc2626;
+  --danger-soft:       rgba(220, 38, 38, 0.06);
+}
+
+/* ──────────────────── Radii (shadcn scale, --radius = 10px) ── */
+:root {
+  --radius:            0.625rem;          /* 10px — base                  */
+  --radius-sm:         calc(var(--radius) - 4px);   /* 6px  — pill tags    */
+  --radius-md:         calc(var(--radius) - 2px);   /* 8px  — small wells  */
+  --radius-lg:         var(--radius);                /* 10px — inputs, cards*/
+  --radius-xl:         calc(var(--radius) + 4px);   /* 14px — quiz card    */
+  --radius-2xl:        calc(var(--radius) + 8px);   /* 18px — big surfaces */
+  --radius-full:       9999px;                       /* circles, chips      */
+}
+
+/* ──────────────────── Spacing (Tailwind default, exposed) ──── */
+:root {
+  --space-1:  0.25rem;   /* 4px  */
+  --space-2:  0.5rem;    /* 8px  — between icon + label                  */
+  --space-3:  0.75rem;   /* 12px — tag padding                           */
+  --space-4:  1rem;      /* 16px — form gaps, list rows                  */
+  --space-6:  1.5rem;    /* 24px — section padding, sidebar gap          */
+  --space-8:  2rem;      /* 32px — outer page padding                    */
+  --space-12: 3rem;      /* 48px — sidebar vertical padding              */
+  --space-16: 4rem;      /* 64px — distance between sections             */
+}
+
+/* ──────────────────── Typography ────────────────────────────
+   The portfolio uses pure system fonts — no webfonts shipped.
+   This is intentional: instant load, native feel per OS.
+   `--font-display` and `--font-sans` resolve identically;
+   they exist so future webfonts can be swapped in cleanly.
+   ─────────────────────────────────────────────────────────── */
+:root {
+  --font-sans:    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                  Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-sans);
+  --font-mono:    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+                  "Liberation Mono", monospace;
+
+  /* Tailwind-aligned size scale, but only the sizes Hugo's site uses */
+  --text-xs:   0.75rem;    /* 12px — meta dates, tag chips                */
+  --text-sm:   0.875rem;   /* 14px — body, secondary links, form labels   */
+  --text-base: 1rem;       /* 16px — paragraph default                    */
+  --text-lg:   1.125rem;   /* 18px — quiz title                           */
+  --text-xl:   1.25rem;    /* 20px — section h2 (About, Projects…)        */
+  --text-2xl:  1.5rem;     /* 24px — profile subtitle (ES: "Ingeniero…")  */
+  --text-3xl:  1.875rem;   /* 30px — page h1 (/projects, /blog)           */
+  --text-6xl:  3.75rem;    /* 60px — hero name "Hugo Oliva"               */
+
+  /* Weights — only two, ever */
+  --fw-normal:   400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+
+  /* Line heights */
+  --lh-tight:   1.1;       /* big display name                            */
+  --lh-snug:    1.3;       /* h2 / h3                                     */
+  --lh-relaxed: 1.625;     /* paragraph body (Tailwind `leading-relaxed`) */
+
+  /* Letter-spacing — none. The system fonts handle their own tracking. */
+}
+
+/* ──────────────────── Semantic typography ─────────────────── */
+.h-display {
+  /* Hero name in ProfileCard */
+  font: var(--fw-semibold) var(--text-6xl)/var(--lh-tight) var(--font-display);
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+.h-subtitle {
+  /* "Ingeniero Full-Stack · AI-Native" */
+  font: var(--fw-normal) var(--text-2xl)/var(--lh-snug) var(--font-sans);
+  color: var(--text-secondary);
+}
+.h-page {
+  /* /projects, /blog page titles */
+  font: 700 var(--text-3xl)/var(--lh-snug) var(--font-sans);
+  color: var(--text-primary);
+}
+.h-section {
+  /* "Sobre mí", "Experiencia", "Proyectos"… */
+  font: var(--fw-semibold) var(--text-xl)/var(--lh-snug) var(--font-sans);
+  color: var(--text-primary);
+}
+.h-card {
+  /* Project / job / education titles */
+  font: var(--fw-medium) var(--text-base)/var(--lh-snug) var(--font-sans);
+  color: var(--text-primary);
+}
+.h-card-lg {
+  /* Project card title on /projects, blog post title on /blog */
+  font: var(--fw-medium) var(--text-xl)/var(--lh-snug) var(--font-sans);
+  color: var(--text-primary);
+}
+.p-body {
+  font: var(--fw-normal) var(--text-sm)/var(--lh-relaxed) var(--font-sans);
+  color: var(--text-secondary);
+}
+.p-meta {
+  font: var(--fw-normal) var(--text-sm)/1.5 var(--font-sans);
+  color: var(--text-secondary);
+}
+.p-caption {
+  font: var(--fw-normal) var(--text-xs)/1.4 var(--font-sans);
+  color: var(--text-secondary);
+}
+.p-mono {
+  font: var(--fw-normal) var(--text-sm)/1.5 var(--font-mono);
+  color: var(--text-primary);
+}
+
+/* ──────────────────── Global resets used across previews ──── */
+*, *::before, *::after { box-sizing: border-box; }
+::selection { background: var(--text-primary); color: var(--bg-primary); }
+
+html, body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+}

@@ -42,7 +42,7 @@ export default async function BlogPage({
 
   return (
     <div className="min-h-screen flex justify-center">
-      <div className="w-full max-w-3xl px-6 py-12">
+      <div className="w-full max-w-6xl px-6 py-12">
         <div className="mb-8">
           <Link
             href="/"
@@ -52,13 +52,15 @@ export default async function BlogPage({
             {t("backToHome")}
           </Link>
         </div>
-        <h1 className="text-3xl font-bold text-text-primary mb-8">{t("title")}</h1>
-        <div className="space-y-6">
+        <h1 className="text-3xl font-bold text-text-primary mb-8">
+          {t("title")}
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
           {posts.map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="block border border-border rounded-lg overflow-hidden hover:border-text-secondary transition-colors"
+              className="space-y-4 hover:scale-105 duration-200 block border rounded-lg overflow-hidden"
             >
               {post.image && (
                 <div className="relative w-full aspect-video">
@@ -75,12 +77,16 @@ export default async function BlogPage({
                   <h2 className="text-xl font-medium text-text-primary">
                     {post.title}
                   </h2>
-                  <span className="text-sm text-text-secondary">{post.date}</span>
                 </div>
                 <p className="text-text-secondary leading-relaxed">
                   {post.excerpt}
                 </p>
-                <span className="text-sm text-accent">{t("readMore")} &rarr;</span>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm">{t("readMore")} &rarr;</span>
+                  <span className="text-sm text-text-secondary">
+                    {post.date}
+                  </span>
+                </div>
               </div>
             </Link>
           ))}

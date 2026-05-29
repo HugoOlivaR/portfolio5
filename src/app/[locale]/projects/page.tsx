@@ -49,7 +49,7 @@ export default async function ProjectsPage({
 
   return (
     <div className="min-h-screen flex justify-center">
-      <div className="w-full max-w-3xl px-6 py-12">
+      <div className="w-full max-w-6xl px-6 py-12">
         <div className="mb-8">
           <Link
             href="/"

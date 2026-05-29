@@ -39,7 +39,7 @@
         "title": "Fundador & Lead Full-Stack Developer",
         "company": "Evolvio",
         "companyUrl": "https://evolvio.digital/en",
-        "period": "2024 - Presente",
+        "period": "2024 - 2026",
         "description": "Fundador y desarrollador principal en Evolvio, una agencia de desarrollo digital especializada en proyectos full-stack con un fuerte enfoque en inteligencia artificial. Lidero el proceso completo: desde entender los problemas del cliente, ideación y diseño de soluciones hasta el desarrollo completo, despliegue y optimización de aplicaciones web y móviles."
       },
       {
@@ -64,7 +64,16 @@
         "title": "Tesora",
         "link": "https://tesora.app",
         "year": "2025 - 2026",
-        "image": "/projects/tesora-main.webp",
+        "image": "/projects/tesora/tesora-main.webp",
+        "video": "/projects/tesora/tesora.mp4",
+        "gallery": [
+          "/projects/tesora/accounts.png",
+          "/projects/tesora/auri.png",
+          "/projects/tesora/dashboard.png",
+          "/projects/tesora/fin-health.png",
+          "/projects/tesora/investments.png",
+          "/projects/tesora/learning.png"
+        ],
         "category": "Fintech",
         "description": "Plataforma de gestión financiera con IA: conecta tus bancos, unifica tu patrimonio y recibe asesoramiento inteligente.",
         "content": "Tesora es una plataforma de finanzas personales impulsada por IA que te ayuda a controlar, entender y hacer crecer tu patrimonio de forma más inteligente.\n\nConecta bancos, inversiones y cripto de manera segura, visualiza tu riqueza neta real (activos menos deudas) y recibe orientación personalizada gracias a un asistente IA que realmente conoce tu situación financiera.\n\nCaracterísticas principales:\n- Agregación segura de cuentas y patrimonio unificado con histórico\n- Análisis inteligente de gastos y categorización automática\n- Gestión avanzada de deudas con simulaciones Avalanche/Snowball y recomendaciones personalizadas\n- Marketplace de asesores financieros certificados con chat y permisos granulares\n- Asistente IA conversacional con acceso contextual a tus datos\n- Planificación de ahorro con escenarios realistas y proyecciones\n- Financial Health Score dinámico y alertas proactivas\n\nCon Tesora he aprendido a ver mi dinero de una forma completamente distinta: ya no solo miro saldos sueltos, sino que entiendo cómo se relacionan mis ingresos, gastos, deudas e inversiones en tiempo real. He descubierto patrones de gasto que antes ignoraba, he optimizado mis pagos de deudas ahorrando miles de euros en intereses, y he empezado a tomar decisiones de inversión mucho más conscientes gracias a las simulaciones y al contexto que me da la IA. Sobre todo, he pasado de sentirme perdido con las finanzas a tener una sensación real de control y dirección clara hacia mis objetivos.",
@@ -74,7 +83,59 @@
           "TypeScript",
           "OpenAI",
           "PostgreSQL"
-        ]
+        ],
+        "eyebrow": "Caso de estudio · Fintech · Founder",
+        "role": "Founder · Lead full-stack",
+        "status": "live",
+        "tagline": "Plataforma de gestión financiera con IA: conecta tus bancos, unifica tu patrimonio y recibe asesoramiento inteligente.",
+        "thesis": "Un solo lugar para ver, entender y mover tu dinero.",
+        "thesisNote": "Una sola app — cuentas, deudas, inversiones y un asistente que entiende el contexto entero.",
+        "problem": "Los productos de finanzas personales suelen quedarse en dos extremos: o son agregadores fríos que solo muestran números, o son apps de coaching genéricas sin acceso real a tu situación.\n\nTesora nace para cerrar esa brecha — un agregador serio con un asistente de IA que sí conoce tu patrimonio, tus deudas y tus inversiones, y puede razonar sobre ellos en tiempo real.",
+        "stack": [
+          {
+            "name": "Next.js 16",
+            "note": "App Router + RSC + Server Actions. La capa que sostiene todo el frontend y la mitad del backend."
+          },
+          {
+            "name": "React 19",
+            "note": "useOptimistic y transitions para que las mutaciones financieras se sientan instantáneas sin mentir al usuario."
+          },
+          {
+            "name": "TypeScript",
+            "note": "Strict mode en toda la base, validación de inputs con Zod antes de tocar la base de datos."
+          },
+          {
+            "name": "PostgreSQL",
+            "note": "Supabase + Drizzle. Row Level Security real — cada usuario solo ve sus filas, también desde la IA."
+          },
+          {
+            "name": "OpenAI",
+            "note": "GPT con tool-calling sobre una vista de solo lectura del patrimonio. El modelo razona, no toca credenciales."
+          },
+          {
+            "name": "Stripe",
+            "note": "Suscripciones, billing del marketplace de asesores, y Connect para repartir pagos."
+          },
+          {
+            "name": "Tailwind v4",
+            "note": "Sistema de diseño con tokens semánticos; cero CSS suelto en componentes."
+          },
+          {
+            "name": "Vercel",
+            "note": "Deploy continuo + Edge runtime para latencias bajas en LATAM y Europa."
+          }
+        ],
+        "features": [
+          "Agregación segura de cuentas y patrimonio unificado, con histórico mensual.",
+          "Análisis inteligente de gastos y categorización automática.",
+          "Gestión de deudas con simulaciones Avalanche y Snowball.",
+          "Marketplace de asesores financieros certificados, con billing integrado.",
+          "Asistente IA conversacional con acceso contextual a tus datos.",
+          "Planificación de ahorro con escenarios realistas y proyecciones.",
+          "Financial Health Score dinámico y alertas proactivas por email."
+        ],
+        "architecture": "Mantengo todo razonablemente plano: un frontend Next.js que llama a server actions y a un Edge worker que orquesta el asistente. La capa de IA tiene acceso a una vista de solo-lectura sobre los datos del usuario, nunca a las credenciales bancarias.",
+        "learnings": "Con Tesora he aprendido a ver mi dinero de una forma completamente distinta: ya no solo miro saldos sueltos, sino que entiendo cómo se relacionan mis ingresos, gastos, deudas e inversiones en tiempo real. Y a nivel técnico, he interiorizado que la IA útil no es la más grande — es la que tiene el contexto correcto."
       },
       {
         "slug": "cosmo-ai",
@@ -90,7 +151,49 @@
           "Next.js",
           "TailwindCSS",
           "OpenAI"
-        ]
+        ],
+        "eyebrow": "Caso de estudio · Productividad IA · Creador",
+        "role": "Creador · Full-stack",
+        "status": "beta",
+        "tagline": "Asistente de productividad con IA: centraliza tus tareas, proyectos y apps en un solo chat personalizado.",
+        "thesis": "Un único chat para hablar, recordar y gestionar todo tu trabajo.",
+        "thesisNote": "Tu mini ERP personal: tareas, proyectos, clientes y notas conviviendo con un asistente que recuerda.",
+        "problem": "Las herramientas de productividad están fragmentadas: las tareas en una app, las notas en otra, los clientes en una tercera. Cada cambio de contexto cuesta tiempo y energía.\n\nCosmo unifica todo en un solo lugar donde hablas de forma natural con tu asistente y, al mismo tiempo, gestionas tu flujo de trabajo sin saltar de aplicación.",
+        "stack": [
+          {
+            "name": "Next.js",
+            "note": "App Router y server actions para un mini ERP personal que carga rápido y se siente nativo."
+          },
+          {
+            "name": "React",
+            "note": "Estado conversacional y UI optimista para que el chat y las tareas respondan al instante."
+          },
+          {
+            "name": "TypeScript",
+            "note": "Tipado estricto: tareas, proyectos, clientes y notas comparten los mismos contratos."
+          },
+          {
+            "name": "TailwindCSS",
+            "note": "Sistema visual minimalista y consistente en cada vista del asistente."
+          },
+          {
+            "name": "OpenAI",
+            "note": "El cerebro de Cosmo: conversa, recuerda contexto y ejecuta acciones sobre tu flujo de trabajo."
+          }
+        ],
+        "features": [
+          "Chat conversacional inteligente: hablas con Cosmo como con un compañero de equipo.",
+          "Gestión de tareas con prioridades, fechas, recordatorios y seguimiento visual.",
+          "Proyectos centralizados: tareas, notas y clientes relacionados en un solo sitio.",
+          "Mini ERP personal con contexto compartido entre clientes, proyectos y notas.",
+          "Memoria persistente: recuerda tus preferencias, decisiones y forma de trabajar.",
+          "Búsqueda en internet cuando necesita información actualizada.",
+          "Sistema de experiencia y estadísticas gamificadas para ver tu progreso.",
+          "Generador automático de rutinas semanales según tus prioridades."
+        ],
+        "architecture": "Frontend Next.js conectado a un modelo de lenguaje con memoria persistente. El asistente accede al contexto de tus tareas, proyectos y notas, y puede buscar en internet cuando necesita datos actualizados, todo sin sacarte del chat.",
+        "learnings": "Con este proyecto aprendí lo valioso que es conectar un modelo de inteligencia artificial a una aplicación real, y cómo eso permite resolver problemas muy distintos desde una misma interfaz conversacional.",
+        "gallery": []
       },
       {
         "slug": "btc-tracker",
@@ -107,8 +210,51 @@
           "Next.js",
           "TailwindCSS",
           "Firebase"
-        ]
-      },      
+        ],
+        "eyebrow": "Caso de estudio · Fintech · Cripto",
+        "role": "Desarrollador full-stack",
+        "status": "live",
+        "tagline": "Calculadora y tracker de compras de Bitcoin para controlar precio medio, holdings y P&L en tiempo real.",
+        "thesis": "Tu precio medio real y tu P&L de Bitcoin, en tiempo real.",
+        "thesisNote": "Registra cada compra, normaliza divisas a USD y sabe exactamente cuánto vale tu posición.",
+        "problem": "Quien acumula Bitcoin a lo largo del tiempo pierde de vista su precio medio real y su rentabilidad. Las hojas de cálculo no normalizan divisas ni importan movimientos de los exchanges.\n\nBTC Tracker se centra en una métrica clave —tu precio medio de compra real en USD— y la combina con métricas en vivo para decidir mejor antes de vender.",
+        "stack": [
+          {
+            "name": "Next.js",
+            "note": "App Router y rutas de datos para servir precios en vivo y soportar PWA."
+          },
+          {
+            "name": "React",
+            "note": "Estado reactivo para reflejar al instante holdings, P&L y simulaciones de venta."
+          },
+          {
+            "name": "TypeScript",
+            "note": "Tipado de transacciones y conversiones de divisa para evitar errores de cálculo."
+          },
+          {
+            "name": "TailwindCSS",
+            "note": "Interfaz limpia y densa en datos, legible en escritorio y móvil."
+          },
+          {
+            "name": "Firebase",
+            "note": "Auth con Google y persistencia por usuario; modo invitado para probar sin registrarse."
+          }
+        ],
+        "features": [
+          "Cálculo automático del precio medio de compra real (average buy price).",
+          "Métricas en tiempo real: valor actual, BTC en cartera, inversión total y P&L no realizado.",
+          "Precio de BTC en vivo con actualización periódica.",
+          "Historial completo de transacciones con edición, borrado y exportación CSV.",
+          "Alta de movimientos en 3 modos: manual, CSV genérico e importador de exchanges.",
+          "Importador específico para Binance, Coinbase, Kraken y Revolut.",
+          "Conversión automática de divisas a USD para normalizar el coste real.",
+          "Simulador de venta para estimar ingresos, coste base y beneficio antes de ejecutar.",
+          "Widget de sentimiento de mercado (Fear & Greed Index) y soporte PWA."
+        ],
+        "architecture": "App Next.js con soporte PWA, datos persistidos por usuario en Firebase y precio de BTC en vivo. Los importadores específicos por exchange normalizan divisas a USD para que el coste medio refleje la realidad.",
+        "learnings": "Con este proyecto trabajé un caso real de finanzas personales cripto: integrar datos de mercado, normalizar múltiples divisas e importar fuentes heterogéneas, todo dentro de una experiencia simple para el usuario final.",
+        "gallery": []
+      },
       {
         "slug": "talkbook",
         "title": "TalkBook",
@@ -123,7 +269,47 @@
           "Vite",
           "TailwindCSS",
           "Supabase"
-        ]
+        ],
+        "eyebrow": "Caso de estudio · Lectura · Móvil-first",
+        "role": "Desarrollador full-stack",
+        "status": "live",
+        "tagline": "Biblioteca de lectura personal con chat sobre tus libros, construida con React, Supabase y una experiencia móvil-first.",
+        "thesis": "Tu biblioteca, pero para conversar con tus libros.",
+        "thesisNote": "Guardas lo que lees y abres una conversación centrada en cada título, sin perder el contexto.",
+        "problem": "Solemos guardar lo que leemos en listas muertas que nunca revisamos. La lectura se queda sin un espacio para reflexionar sobre las ideas.\n\nTalkBook convierte tu biblioteca en un lugar activo: organizas tus libros y, sobre todo, conversas con cada uno sobre su contenido, sus ideas clave y tus dudas.",
+        "stack": [
+          {
+            "name": "React",
+            "note": "Componentes para fichas de libro, búsqueda y chat por título con estado claro."
+          },
+          {
+            "name": "TypeScript",
+            "note": "Modelos tipados para libros, progreso y conversaciones."
+          },
+          {
+            "name": "Vite",
+            "note": "SPA ligera con build y recarga instantáneos durante el desarrollo."
+          },
+          {
+            "name": "TailwindCSS",
+            "note": "Diseño limpio y móvil-first con navegación inferior."
+          },
+          {
+            "name": "Supabase",
+            "note": "Auth, base de datos y storage de la biblioteca; sincroniza tu colección entre dispositivos."
+          }
+        ],
+        "features": [
+          "Biblioteca personal de libros leídos y en lectura.",
+          "Fichas de libro con portada, autor, descripción e ISBN.",
+          "Búsqueda de títulos conectada con la API de Google Books.",
+          "Añadir libros rápidamente a tu colección.",
+          "Chat asociado a cada libro para conversar sobre lo que estás leyendo.",
+          "Interfaz pensada para móvil, con navegación inferior y diseño limpio."
+        ],
+        "architecture": "SPA en Vite + React con Supabase como backend (auth, datos y storage) e integración con la API de Google Books para descubrir y añadir títulos. El diseño es móvil-first, con navegación inferior.",
+        "learnings": "Con este proyecto exploré cómo diseñar una experiencia de lectura digital más rica, donde no solo guardas tus libros sino que dialogas sobre ellos, convirtiendo la biblioteca en un espacio de reflexión activa.",
+        "gallery": []
       },
       {
         "slug": "roundtable",
@@ -140,7 +326,50 @@
           "TailwindCSS",
           "OpenAI",
           "PostHog"
-        ]
+        ],
+        "eyebrow": "Caso de estudio · Herramienta de pensamiento · IA",
+        "role": "Desarrollador full-stack",
+        "status": "live",
+        "tagline": "Herramienta de pensamiento con IA: configura una mesa redonda de pensadores históricos y modernos para debatir ideas y decidir mejor.",
+        "thesis": "Un consejo de mentes brillantes que debaten tu decisión.",
+        "thesisNote": "Agentes que no solo te responden: se desafían entre sí y sacan a la luz tus puntos ciegos.",
+        "problem": "Tomar buenas decisiones en solitario es difícil: nos faltan perspectivas y caemos en puntos ciegos.\n\nInspirado en una práctica descrita por Napoleon Hill, Roundtable te sienta con un consejo personal de pensadores —representados por agentes de IA— que debaten tu dilema desde marcos mentales distintos.",
+        "stack": [
+          {
+            "name": "Vite",
+            "note": "SPA rápida para una experiencia de debate fluida y sin recargas."
+          },
+          {
+            "name": "React",
+            "note": "Orquesta la conversación multi-agente y el estado del debate en vivo."
+          },
+          {
+            "name": "TypeScript",
+            "note": "Tipado de agentes, turnos y mensajes para mantener el debate coherente."
+          },
+          {
+            "name": "TailwindCSS",
+            "note": "Interfaz centrada en la lectura del debate, sin ruido visual."
+          },
+          {
+            "name": "OpenAI",
+            "note": "Cada pensador es un agente con sus modelos mentales; orquesto un debate que se desafía a sí mismo."
+          },
+          {
+            "name": "PostHog",
+            "note": "Analítica de producto para entender cómo se usan los debates y mejorar la experiencia."
+          }
+        ],
+        "features": [
+          "Mesas redondas configurables con múltiples agentes de IA.",
+          "Modelos mentales y perspectivas distintas por agente.",
+          "Debates orquestados y discusiones moderadas.",
+          "Conversaciones enfocadas en decisiones, no respuestas genéricas.",
+          "Diseñado para la claridad, la reflexión y el mejor pensamiento."
+        ],
+        "architecture": "SPA en Vite + React que orquesta varios agentes de OpenAI en un debate moderado; cada agente razona con sus propios modelos mentales y reacciona a los demás. PostHog aporta analítica de producto sobre el uso real.",
+        "learnings": "Construir Roundtable me enseñó a diseñar sistemas multi-agente donde el valor no está en una respuesta, sino en el contraste de perspectivas. Orquestar agentes que se desafían entre sí —y mantener el debate enfocado en la decisión— es tanto un problema de diseño como de prompting.",
+        "gallery": []
       },
       {
         "slug": "evolvio-website",
@@ -154,7 +383,38 @@
           "Next.js",
           "TailwindCSS",
           "TypeScript"
-        ]
+        ],
+        "eyebrow": "Caso de estudio · Sitio de agencia · Web",
+        "role": "Diseño y desarrollo web",
+        "status": "live",
+        "tagline": "Sitio web de la agencia de desarrollo e innovación digital Evolvio.",
+        "thesis": "Una web que no solo informa: convierte.",
+        "thesisNote": "El propio sitio es la demostración del trabajo de la agencia: rápido, optimizado para conversión y SEO.",
+        "problem": "La web de muchas pymes 'está ahí', pero no vende. Evolvio necesitaba un sitio que comunicara su propuesta —webs que convierten y automatizaciones con IA— y que fuera, en sí mismo, una prueba de su trabajo.\n\nEl objetivo: un sitio rápido, claro y orientado a resultados que transmita autoridad y genere contactos cualificados.",
+        "stack": [
+          {
+            "name": "Next.js",
+            "note": "Renderizado optimizado para SEO y tiempos de carga rápidos en cada página."
+          },
+          {
+            "name": "TailwindCSS",
+            "note": "Sistema de diseño consistente para una web moderna y responsive."
+          },
+          {
+            "name": "TypeScript",
+            "note": "Componentes tipados y mantenibles para iterar el sitio con seguridad."
+          }
+        ],
+        "features": [
+          "Desarrollo web moderno: responsive y optimizado para conversión (UX, CTAs, SEO on-page).",
+          "Sección de automatizaciones e IA para ahorrar horas y mejorar la experiencia del cliente.",
+          "Presencia online y marketing digital: visibilidad, tráfico cualificado y branding.",
+          "Proceso claro: Discovery → Estrategia → Implementación → Optimización continua.",
+          "Enfoque en resultados medibles: más visitas, más ventas y alta disponibilidad.",
+          "Prueba social real con testimonios y casos de clientes."
+        ],
+        "learnings": "Con Evolvio aprendí a ver la presencia digital no como un gasto sino como una palanca de crecimiento. Una web bien hecha —que vende y no solo 'está ahí'— combinada con automatizaciones inteligentes libera tiempo y multiplica resultados. Cambió mi forma de pensar los proyectos digitales: menos 'hacer bonito' y más 'hacer que genere dinero y eficiencia'.",
+        "gallery": []
       },
       {
         "slug": "laultimaversion",
@@ -168,7 +428,37 @@
           "Next.js",
           "TailwindCSS",
           "TypeScript"
-        ]
+        ],
+        "eyebrow": "Caso de estudio · Podcast & web · Marca",
+        "role": "Co-host · Desarrollo y marca",
+        "status": "live",
+        "tagline": "Sitio web y podcast de Hugo y Juanma sobre IA, finanzas y el futuro digital. Exploramos los límites de la innovación cada semana.",
+        "thesis": "IA, finanzas y futuro digital. Sin humo.",
+        "thesisNote": "Más auditoría del mañana que hype: cada episodio cruza al menos dos ejes de la conversación tecnológica.",
+        "problem": "Hay demasiado ruido y hype alrededor de la IA y las finanzas, y poca conversación con criterio.\n\nLa Última Versión nace para cruzar IA, tecnología y dinero sin humo: una web y un podcast que explican el impacto real de la innovación en nuestro presente, con un tono directo.",
+        "stack": [
+          {
+            "name": "Next.js",
+            "note": "Web del podcast con páginas rápidas para episodios, clips y enlaces de escucha."
+          },
+          {
+            "name": "TailwindCSS",
+            "note": "Identidad visual de la marca, consistente y editorial en toda la web."
+          },
+          {
+            "name": "TypeScript",
+            "note": "Base tipada y mantenible para crecer episodio a episodio."
+          }
+        ],
+        "features": [
+          "Web del podcast con cada episodio y sus notas.",
+          "Clips verticales con los momentos destacados de cada programa.",
+          "Enlaces directos para escuchar en YouTube y Spotify.",
+          "Comunidad para no perderte ninguna versión.",
+          "Identidad y mensaje de marca alineados con el futuro del trabajo, el dinero y la IA."
+        ],
+        "learnings": "Con La Última Versión llevo al portfolio algo que va más allá del código: producto editorial, un mensaje claro y una marca alineada con cómo pienso el futuro del trabajo, el dinero y la IA.",
+        "gallery": []
       },
       {
         "slug": "zentunes",
@@ -182,9 +472,65 @@
           "Vite",
           "TailwindCSS",
           "TypeScript"
-        ]
+        ],
+        "eyebrow": "Caso de estudio · Side project · 24h",
+        "role": "Side project · Full-stack",
+        "status": "live",
+        "tagline": "Reproductor web de sonidos relajantes para trabajar, dormir o relajarse.",
+        "thesis": "Menos opciones, más foco. Sonido ambiente en segundos.",
+        "thesisNote": "Un side project construido en 24 horas: simple, bonito y efectivo, sin nada que sobre.",
+        "problem": "Las apps de sonidos ambientales suelen estar sobrecargadas de opciones y fricción.\n\nZenTunes es lo contrario: eliges un sonido —o mezclas varios con su propio volumen— y empiezas a concentrarte o a relajarte en segundos, sin instalar nada.",
+        "stack": [
+          {
+            "name": "Vite",
+            "note": "SPA ultraligera con arranque instantáneo, ideal para un proyecto de 24 horas."
+          },
+          {
+            "name": "TailwindCSS",
+            "note": "Interfaz minimalista que invita a la calma, sin distracciones."
+          },
+          {
+            "name": "TypeScript",
+            "note": "Pequeña base tipada para gestionar la mezcla y los volúmenes con seguridad."
+          }
+        ],
+        "features": [
+          "Sonidos ambientales en alta calidad: lluvia, viento, naturaleza, café y más.",
+          "Mezcla de varios sonidos simultáneamente con control de volumen individual.",
+          "Reproducción en segundo plano mientras navegas o trabajas.",
+          "Interfaz minimalista e intuitiva: eliges un sonido y empiezas en segundos.",
+          "Ligero y rápido: sin instalación, funciona directo en el navegador."
+        ],
+        "learnings": "Con ZenTunes aprendí lo valioso que es una herramienta sencilla y sin distracciones para mejorar el foco. Descubrí que a veces menos opciones y más simplicidad es justo lo que necesito para concentrarme o desconectar.",
+        "gallery": []
       }
-    ]
+    ],
+    "detail": {
+      "caseStudy": "Caso de estudio",
+      "role": "Rol",
+      "status": "Estado",
+      "site": "Sitio",
+      "year": "Año",
+      "statusLive": "En producción",
+      "statusBeta": "En beta",
+      "statusArchived": "Archivado",
+      "thesis": "Tesis",
+      "problemTitle": "El problema",
+      "stackTitle": "Stack técnico",
+      "stackHint": "Toca o pasa el cursor por cualquier tecnología.",
+      "featuresTitle": "Características clave",
+      "galleryTitle": "Capturas",
+      "galleryHint": "Pulsa para ampliar.",
+      "archTitle": "Arquitectura",
+      "learningsTitle": "Aprendizajes",
+      "linksTitle": "Enlaces",
+      "relatedTitle": "Otros proyectos",
+      "liveApp": "Ver en producción",
+      "viewCode": "Código en GitHub",
+      "available": "Disponible para proyectos",
+      "location": "Hugo Oliva · Madrid",
+      "of": "de"
+    }
   },
   "skills": {
     "title": "Habilidades",
@@ -212,7 +558,10 @@
         "Infraestructura de IA"
       ]
     },
-    "pro": ["React", "Next.js"],
+    "pro": [
+      "React",
+      "Next.js"
+    ],
     "proTooltip": "+2 años de experiencia"
   },
   "education": {

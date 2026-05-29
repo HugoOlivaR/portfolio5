@@ -39,7 +39,7 @@
         "title": "Founder & Lead Full-Stack Developer",
         "company": "Evolvio",
         "companyUrl": "https://evolvio.digital/en",
-        "period": "2024 - Present",
+        "period": "2024 - 2026",
         "description": "Founder and lead developer at Evolvio, a digital development agency specialized in full-stack projects with a strong focus on artificial intelligence. I lead the complete process: from understanding client problems, ideation, and solution design to full development, deployment, and optimization of web and mobile applications."
       },
       {
@@ -74,7 +74,60 @@
           "TypeScript",
           "OpenAI",
           "PostgreSQL"
-        ]
+        ],
+        "eyebrow": "Case study · Fintech · Founder",
+        "role": "Founder · Lead full-stack",
+        "status": "live",
+        "tagline": "AI-powered personal finance: connect your banks, unify your wealth, get intelligent advice.",
+        "thesis": "One place to see, understand and move your money.",
+        "thesisNote": "One app — accounts, debts, investments, and an assistant that understands the full context.",
+        "problem": "Existing personal-finance products tend to live at two extremes: cold aggregators that only display numbers, or generic coaching apps with no real access to your situation.\n\nTesora was born to close that gap — a serious aggregator with an AI assistant that actually knows your wealth, your debts, and your investments, and can reason over them in real time.",
+        "stack": [
+          {
+            "name": "Next.js 16",
+            "note": "App Router + RSC + Server Actions. The layer holding up the whole frontend and half of the backend."
+          },
+          {
+            "name": "React 19",
+            "note": "useOptimistic and transitions so financial mutations feel instant without lying to the user."
+          },
+          {
+            "name": "TypeScript",
+            "note": "Strict mode across the board, input validation with Zod before anything hits the DB."
+          },
+          {
+            "name": "PostgreSQL",
+            "note": "Supabase + Drizzle. Real Row Level Security — each user only sees their own rows, including from the AI."
+          },
+          {
+            "name": "OpenAI",
+            "note": "GPT with tool-calling over a read-only view of net worth. The model reasons, it never touches credentials."
+          },
+          {
+            "name": "Stripe",
+            "note": "Subscriptions, billing for the advisor marketplace, and Connect to split payments."
+          },
+          {
+            "name": "Tailwind v4",
+            "note": "Design system with semantic tokens; zero loose CSS inside components."
+          },
+          {
+            "name": "Vercel",
+            "note": "Continuous deploy + Edge runtime for low latencies across LATAM and Europe."
+          }
+        ],
+        "features": [
+          "Secure account aggregation and unified net worth, with monthly history.",
+          "Smart expense analysis and automatic categorization.",
+          "Debt management with Avalanche and Snowball simulations.",
+          "Marketplace of certified financial advisors, with integrated billing.",
+          "Conversational AI assistant with contextual access to your data.",
+          "Savings planning with realistic scenarios and projections.",
+          "Dynamic Financial Health Score and proactive email alerts."
+        ],
+        "architecture": "I keep things reasonably flat: a Next.js frontend calling server actions and an Edge worker that orchestrates the assistant. The AI layer has read-only access to a view of the user's data — never to banking credentials.",
+        "learnings": "With Tesora I've learned to see my money in a completely different way: no longer just scattered balances, but how income, expenses, debts and investments relate in real time. And technically, I've internalized that useful AI isn't the biggest model — it's the one with the right context.",
+        "gallery": []
       },
       {
         "slug": "cosmo-ai",
@@ -90,7 +143,49 @@
           "Next.js",
           "TailwindCSS",
           "OpenAI"
-        ]
+        ],
+        "eyebrow": "Case study · AI productivity · Creator",
+        "role": "Creator · Full-stack",
+        "status": "beta",
+        "tagline": "AI productivity assistant: centralize your tasks, projects and apps in a single personalized chat.",
+        "thesis": "A single chat to talk, remember and manage all your work.",
+        "thesisNote": "Your personal mini-ERP: tasks, projects, clients and notes living alongside an assistant that remembers.",
+        "problem": "Productivity tools are fragmented: tasks in one app, notes in another, clients in a third. Every context switch costs time and energy.\n\nCosmo unifies everything in one place where you talk naturally to your assistant and, at the same time, manage your workflow without switching apps.",
+        "stack": [
+          {
+            "name": "Next.js",
+            "note": "App Router and server actions for a personal mini-ERP that loads fast and feels native."
+          },
+          {
+            "name": "React",
+            "note": "Conversational state and optimistic UI so chat and tasks respond instantly."
+          },
+          {
+            "name": "TypeScript",
+            "note": "Strict typing: tasks, projects, clients and notes share the same contracts."
+          },
+          {
+            "name": "TailwindCSS",
+            "note": "A minimal, consistent visual system across every view of the assistant."
+          },
+          {
+            "name": "OpenAI",
+            "note": "Cosmo's brain: it chats, remembers context and runs actions over your workflow."
+          }
+        ],
+        "features": [
+          "Smart conversational chat: you talk to Cosmo like a teammate.",
+          "Task management with priorities, dates, reminders and visual tracking.",
+          "Centralized projects: related tasks, notes and clients in one place.",
+          "Personal mini-ERP with shared context across clients, projects and notes.",
+          "Persistent memory: it remembers your preferences, decisions and way of working.",
+          "Internet search when it needs up-to-date information.",
+          "Experience system and gamified stats to see your progress.",
+          "Automatic weekly routine generator based on your priorities."
+        ],
+        "architecture": "A Next.js frontend wired to a language model with persistent memory. The assistant accesses the context of your tasks, projects and notes, and can search the internet when it needs fresh data — all without taking you out of the chat.",
+        "learnings": "With this project I learned how valuable it is to connect an AI model to a real application, and how that lets you solve very different problems from a single conversational interface.",
+        "gallery": []
       },
       {
         "slug": "btc-tracker",
@@ -107,7 +202,50 @@
           "Next.js",
           "TailwindCSS",
           "Firebase"
-        ]
+        ],
+        "eyebrow": "Case study · Fintech · Crypto",
+        "role": "Full-stack developer",
+        "status": "live",
+        "tagline": "Bitcoin purchase calculator and tracker for average price, holdings and real-time P&L.",
+        "thesis": "Your real average price and Bitcoin P&L, in real time.",
+        "thesisNote": "Log every buy, normalize currencies to USD and know exactly what your position is worth.",
+        "problem": "Anyone stacking Bitcoin over time loses track of their real average price and returns. Spreadsheets don't normalize currencies or import exchange activity.\n\nBTC Tracker focuses on one key metric —your real average buy price in USD— and combines it with live metrics to decide better before selling.",
+        "stack": [
+          {
+            "name": "Next.js",
+            "note": "App Router and data routes to serve live prices and support PWA."
+          },
+          {
+            "name": "React",
+            "note": "Reactive state to instantly reflect holdings, P&L and sell simulations."
+          },
+          {
+            "name": "TypeScript",
+            "note": "Typed transactions and currency conversions to avoid calculation errors."
+          },
+          {
+            "name": "TailwindCSS",
+            "note": "A clean, data-dense interface that stays readable on desktop and mobile."
+          },
+          {
+            "name": "Firebase",
+            "note": "Google auth and per-user persistence; guest mode to try it without signing up."
+          }
+        ],
+        "features": [
+          "Automatic real average buy price calculation.",
+          "Real-time metrics: current value, BTC held, total invested and unrealized P&L.",
+          "Live BTC price with periodic refresh.",
+          "Full transaction history with editing, deletion and CSV export.",
+          "Add activity in 3 modes: manual, generic CSV and exchange importer.",
+          "Dedicated importer for Binance, Coinbase, Kraken and Revolut.",
+          "Automatic currency conversion to USD to normalize real cost.",
+          "Sell simulator to estimate proceeds, cost basis and profit before executing.",
+          "Market sentiment widget (Fear & Greed Index) and PWA support."
+        ],
+        "architecture": "A Next.js app with PWA support, per-user data persisted in Firebase and a live BTC price. The exchange-specific importers normalize currencies to USD so the average cost reflects reality.",
+        "learnings": "With this project I worked through a real personal-crypto-finance case: integrating market data, normalizing multiple currencies and importing heterogeneous sources, all inside a simple experience for the end user.",
+        "gallery": []
       },
       {
         "slug": "talkbook",
@@ -123,7 +261,47 @@
           "Vite",
           "TailwindCSS",
           "Supabase"
-        ]
+        ],
+        "eyebrow": "Case study · Reading · Mobile-first",
+        "role": "Full-stack developer",
+        "status": "live",
+        "tagline": "Personal reading library with a chat about your books, built with React, Supabase and a mobile-first experience.",
+        "thesis": "Your library — but built to talk to your books.",
+        "thesisNote": "Save what you read and open a conversation focused on each title, without losing context.",
+        "problem": "We tend to save what we read in dead lists we never revisit. Reading is left without a space to reflect on its ideas.\n\nTalkBook turns your library into an active place: you organize your books and, above all, talk to each one about its content, key ideas and your questions.",
+        "stack": [
+          {
+            "name": "React",
+            "note": "Components for book cards, search and per-title chat with clear state."
+          },
+          {
+            "name": "TypeScript",
+            "note": "Typed models for books, progress and conversations."
+          },
+          {
+            "name": "Vite",
+            "note": "A lightweight SPA with instant builds and reloads during development."
+          },
+          {
+            "name": "TailwindCSS",
+            "note": "Clean, mobile-first design with bottom navigation."
+          },
+          {
+            "name": "Supabase",
+            "note": "Auth, database and storage for the library; syncs your collection across devices."
+          }
+        ],
+        "features": [
+          "Personal library of read and currently-reading books.",
+          "Book cards with cover, author, description and ISBN.",
+          "Title search connected to the Google Books API.",
+          "Quickly add books to your collection.",
+          "A chat tied to each book to talk about what you're reading.",
+          "Mobile-first interface with bottom navigation and a clean design."
+        ],
+        "architecture": "A Vite + React SPA with Supabase as the backend (auth, data and storage) and Google Books API integration to discover and add titles. The design is mobile-first, with bottom navigation.",
+        "learnings": "With this project I explored how to design a richer digital reading experience, where you don't just store your books but talk about them, turning the library into a space for active reflection.",
+        "gallery": []
       },
       {
         "slug": "roundtable",
@@ -140,7 +318,50 @@
           "TailwindCSS",
           "OpenAI",
           "PostHog"
-        ]
+        ],
+        "eyebrow": "Case study · Thinking tool · AI",
+        "role": "Full-stack developer",
+        "status": "live",
+        "tagline": "AI thinking tool: assemble a roundtable of historical and modern thinkers to debate ideas and decide better.",
+        "thesis": "A council of brilliant minds debating your decision.",
+        "thesisNote": "Agents that don't just answer you: they challenge each other and surface your blind spots.",
+        "problem": "Making good decisions alone is hard: we lack perspectives and fall into blind spots.\n\nInspired by a practice described by Napoleon Hill, Roundtable seats you with a personal council of thinkers —represented by AI agents— who debate your dilemma from different mental frameworks.",
+        "stack": [
+          {
+            "name": "Vite",
+            "note": "A fast SPA for a fluid, reload-free debate experience."
+          },
+          {
+            "name": "React",
+            "note": "Orchestrates the multi-agent conversation and the live debate state."
+          },
+          {
+            "name": "TypeScript",
+            "note": "Typed agents, turns and messages to keep the debate coherent."
+          },
+          {
+            "name": "TailwindCSS",
+            "note": "An interface focused on reading the debate, with no visual noise."
+          },
+          {
+            "name": "OpenAI",
+            "note": "Each thinker is an agent with its own mental models; I orchestrate a debate that challenges itself."
+          },
+          {
+            "name": "PostHog",
+            "note": "Product analytics to understand how debates are used and improve the experience."
+          }
+        ],
+        "features": [
+          "Configurable roundtables with multiple AI agents.",
+          "Different mental models and perspectives per agent.",
+          "Orchestrated debates and moderated discussions.",
+          "Decision-focused conversations, not generic answers.",
+          "Designed for clarity, reflection and better thinking."
+        ],
+        "architecture": "A Vite + React SPA that orchestrates several OpenAI agents in a moderated debate; each agent reasons with its own mental models and reacts to the others. PostHog provides product analytics on real usage.",
+        "learnings": "Building Roundtable taught me to design multi-agent systems where the value isn't a single answer but the contrast of perspectives. Orchestrating agents that challenge each other —and keeping the debate focused on the decision— is as much a design problem as a prompting one.",
+        "gallery": []
       },
       {
         "slug": "evolvio-website",
@@ -154,7 +375,38 @@
           "Next.js",
           "TailwindCSS",
           "TypeScript"
-        ]
+        ],
+        "eyebrow": "Case study · Agency site · Web",
+        "role": "Web design & development",
+        "status": "live",
+        "tagline": "Website for the digital development and innovation agency Evolvio.",
+        "thesis": "A website that doesn't just inform: it converts.",
+        "thesisNote": "The site itself is proof of the agency's work: fast, conversion-optimized and SEO-ready.",
+        "problem": "Many SMBs' websites are 'just there' but don't sell. Evolvio needed a site that communicated its offer —websites that convert and AI automations— and that was, in itself, proof of its work.\n\nThe goal: a fast, clear, results-oriented site that conveys authority and generates qualified leads.",
+        "stack": [
+          {
+            "name": "Next.js",
+            "note": "SEO-optimized rendering and fast load times on every page."
+          },
+          {
+            "name": "TailwindCSS",
+            "note": "A consistent design system for a modern, responsive website."
+          },
+          {
+            "name": "TypeScript",
+            "note": "Typed, maintainable components to iterate on the site safely."
+          }
+        ],
+        "features": [
+          "Modern web development: responsive and conversion-optimized (UX, CTAs, on-page SEO).",
+          "An automation and AI section to save hours and improve the client experience.",
+          "Online presence and digital marketing: visibility, qualified traffic and branding.",
+          "A clear process: Discovery → Strategy → Implementation → Continuous optimization.",
+          "Focus on measurable results: more visits, more sales and high availability.",
+          "Real social proof with testimonials and client cases."
+        ],
+        "learnings": "With Evolvio I learned to see digital presence not as a cost but as a growth lever. A well-built website —one that sells and isn't just 'there'— combined with smart automations frees up time and multiplies results. It changed how I think about digital projects: less 'make it pretty' and more 'make it generate money and efficiency'.",
+        "gallery": []
       },
       {
         "slug": "laultimaversion",
@@ -168,7 +420,37 @@
           "Next.js",
           "TailwindCSS",
           "TypeScript"
-        ]
+        ],
+        "eyebrow": "Case study · Podcast & web · Brand",
+        "role": "Co-host · Development & brand",
+        "status": "live",
+        "tagline": "Website and podcast by Hugo and Juanma about AI, finance and the digital future. We explore the limits of innovation every week.",
+        "thesis": "AI, finance and the digital future. No hype.",
+        "thesisNote": "More an audit of tomorrow than hype: every episode crosses at least two axes of the tech conversation.",
+        "problem": "There's too much noise and hype around AI and finance, and too little thoughtful conversation.\n\nLa Última Versión was born to cross AI, technology and money without the hype: a website and a podcast that explain the real impact of innovation on our present, with a direct tone.",
+        "stack": [
+          {
+            "name": "Next.js",
+            "note": "The podcast site with fast pages for episodes, clips and listening links."
+          },
+          {
+            "name": "TailwindCSS",
+            "note": "The brand's visual identity, consistent and editorial across the site."
+          },
+          {
+            "name": "TypeScript",
+            "note": "A typed, maintainable base to grow episode by episode."
+          }
+        ],
+        "features": [
+          "Podcast website with each episode and its show notes.",
+          "Vertical clips featuring the highlights of every show.",
+          "Direct links to listen on YouTube and Spotify.",
+          "A community so you don't miss a single version.",
+          "Brand identity and message aligned with the future of work, money and AI."
+        ],
+        "learnings": "With La Última Versión I bring something beyond code to my portfolio: an editorial product, a clear message and a brand aligned with how I think about the future of work, money and AI.",
+        "gallery": []
       },
       {
         "slug": "zentunes",
@@ -182,9 +464,65 @@
           "Vite",
           "TailwindCSS",
           "TypeScript"
-        ]
+        ],
+        "eyebrow": "Case study · Side project · 24h",
+        "role": "Side project · Full-stack",
+        "status": "live",
+        "tagline": "Web player of relaxing sounds for working, sleeping or relaxing.",
+        "thesis": "Fewer options, more focus. Ambient sound in seconds.",
+        "thesisNote": "A side project built in 24 hours: simple, beautiful and effective, with nothing extra.",
+        "problem": "Ambient-sound apps tend to be overloaded with options and friction.\n\nZenTunes is the opposite: you pick a sound —or mix several, each with its own volume— and start focusing or relaxing in seconds, without installing anything.",
+        "stack": [
+          {
+            "name": "Vite",
+            "note": "An ultra-light SPA with instant startup, perfect for a 24-hour project."
+          },
+          {
+            "name": "TailwindCSS",
+            "note": "A minimal interface that invites calm, with no distractions."
+          },
+          {
+            "name": "TypeScript",
+            "note": "A small typed base to manage the mix and volumes safely."
+          }
+        ],
+        "features": [
+          "High-quality ambient sounds: rain, wind, nature, coffee and more.",
+          "Mix multiple sounds simultaneously with individual volume control.",
+          "Background playback while you browse or work.",
+          "Minimal, intuitive interface: pick a sound and start in seconds.",
+          "Light and fast: no installation, runs straight in the browser."
+        ],
+        "learnings": "With ZenTunes I learned how valuable a simple, distraction-free tool can be for focus. I discovered that sometimes fewer options and more simplicity is exactly what I need to concentrate or unwind.",
+        "gallery": []
       }
-    ]
+    ],
+    "detail": {
+      "caseStudy": "Case study",
+      "role": "Role",
+      "status": "Status",
+      "site": "Site",
+      "year": "Year",
+      "statusLive": "Live",
+      "statusBeta": "In beta",
+      "statusArchived": "Archived",
+      "thesis": "Thesis",
+      "problemTitle": "The problem",
+      "stackTitle": "Tech stack",
+      "stackHint": "Tap or hover any technology.",
+      "featuresTitle": "Key features",
+      "galleryTitle": "Screens",
+      "galleryHint": "Click to expand.",
+      "archTitle": "Architecture",
+      "learningsTitle": "Learnings",
+      "linksTitle": "Links",
+      "relatedTitle": "Other projects",
+      "liveApp": "View live",
+      "viewCode": "Code on GitHub",
+      "available": "Open for projects",
+      "location": "Hugo Oliva · Madrid",
+      "of": "of"
+    }
   },
   "skills": {
     "title": "Skills",
@@ -212,7 +550,10 @@
         "AI Infrastructure Design"
       ]
     },
-    "pro": ["React", "Next.js"],
+    "pro": [
+      "React",
+      "Next.js"
+    ],
     "proTooltip": "+2 years of experience"
   },
   "education": {
