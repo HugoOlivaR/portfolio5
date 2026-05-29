@@ -64,7 +64,16 @@
         "title": "Tesora",
         "link": "https://tesora.app",
         "year": "2025 - 2026",
-        "image": "/projects/tesora-main.webp",
+        "image": "/projects/tesora/tesora-main.webp",
+        "video": "/projects/tesora/tesora.mp4",
+        "gallery": [
+          "/projects/tesora/accounts.png",
+          "/projects/tesora/auri.png",
+          "/projects/tesora/dashboard.png",
+          "/projects/tesora/fin-health.png",
+          "/projects/tesora/investments.png",
+          "/projects/tesora/learning.png"
+        ],
         "category": "Fintech",
         "description": "AI-powered financial management platform: connect your banks, unify your wealth, and receive intelligent advice.",
         "content": "Tesora is an AI-powered personal finance platform that helps you control, understand, and grow your wealth more intelligently.\n\nSecurely connect banks, investments, and crypto, visualize your real net worth (assets minus debts), and receive personalized guidance from an AI assistant that truly knows your financial situation.\n\nMain features:\n- Secure account aggregation and unified wealth with history\n- Smart expense analysis and automatic categorization\n- Advanced debt management with Avalanche/Snowball simulations and personalized recommendations\n- Marketplace of certified financial advisors with chat and granular permissions\n- Conversational AI assistant with contextual access to your data\n- Savings planning with realistic scenarios and projections\n- Dynamic Financial Health Score and proactive alerts\n\nWith Tesora I've learned to see my money in a completely different way: I no longer just look at scattered balances, but understand how my income, expenses, debts, and investments relate in real time. I've discovered spending patterns I used to ignore, optimized my debt payments saving thousands of euros in interest, and started making much more conscious investment decisions thanks to the simulations and context the AI provides. Most importantly, I've gone from feeling lost with finances to having a real sense of control and clear direction toward my goals.",
