@@ -1,6 +1,7 @@
 import About from "../sections/About";
 import Experience from "../sections/Experience";
 import Projects from "../sections/Projects";
+import Comunicacion from "../sections/Comunicacion";
 import Skills from "../sections/Skills";
 import Education from "../sections/Education";
 import Blog from "../sections/Blog";
@@ -13,6 +14,7 @@ export default function MainContent() {
         <About />
         <Experience />
         <Projects />
+        <Comunicacion />
         <Skills />
         <Education />
         <Blog />

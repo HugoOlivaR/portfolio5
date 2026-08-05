@@ -2,6 +2,7 @@
   "profile": {
     "name": "Hugo Oliva",
     "title": "Ingeniero Full-Stack · AI-Native",
+    "badge": "Profesor de IA en thePower",
     "location": "Madrid, España",
     "email": "hugoliva158@gmail.com",
     "availability": "Disponible para proyectos",
@@ -13,6 +14,7 @@
     "about": "Sobre mí",
     "experience": "Experiencia",
     "projects": "Proyectos",
+    "comunicacion": "Comunicación",
     "skills": "Habilidades",
     "education": "Formación",
     "blog": "Blog",
@@ -34,6 +36,13 @@
         "companyUrl": "https://globant.com",
         "period": "2025 - Presente",
         "description": "Trabajo directamente en la cuenta de Iberia, desarrollando y manteniendo aplicaciones web empresariales a gran escala. Construyo nuevas funcionalidades, resuelvo problemas complejos y optimizo el rendimiento en sistemas de misión crítica usados por millones de usuarios. El stack tecnológico incluye Angular 15 para desarrollo moderno y AngularJS para componentes legacy y migraciones."
+      },
+      {
+        "title": "Profesor colaborador · IA aplicada",
+        "company": "thePower",
+        "companyUrl": "https://thepower.education",
+        "period": "2026",
+        "description": "Profesor en tres másteres de thePower —AI Maker, Desarrollo Agéntico y Full Stack Development con IA— escuela online con más de 26.000 alumnos nuevos al año. He dado clase de React y desarrollo web, pero sobre todo de IA: desarrollo agéntico con Claude Code y Codex, agentes y servidores MCP, y automatización de procesos con N8N. Enseñar esto a perfiles que van desde negocio hasta desarrolladores senior es la base desde la que doy charlas y formación de IA a empresas."
       },
       {
         "title": "Fundador & Lead Full-Stack Developer",
@@ -417,50 +426,6 @@
         "gallery": []
       },
       {
-        "slug": "laultimaversion",
-        "title": "La Última Versión",
-        "link": "https://laultimaversion.com",
-        "image": "/projects/luv.webp",
-        "year": "2026",
-        "description": "Sitio web y Podcast de Hugo y Juanma sobre IA, finanzas y el futuro digital. Exploramos los límites de la innovación cada semana.",
-        "content": "La Última Versión es el podcast y la web donde cruzamos IA, finanzas y futuro digital sin humo. Cada semana Hugo y Juanma exploran los límites de la innovación con un tono directo: más auditoría del mañana que hype.\n\nPromesa: explorar el impacto real de la inteligencia artificial y las finanzas modernas en nuestro presente. Sin rodeos, sin hype innecesario, solo la versión definitiva de los hechos.\n\nEpisodios destacados:\n- #01 (26 mar 2026): ¿Vamos a vivir para siempre?, los hábitos que te harán rico y si enriquecerse es suerte o skill. Longevidad, tecnología, decisiones diarias que construyen (o destruyen) riqueza, y la pregunta de si el futuro es genética, disciplina o probabilidades. Web: laultimaversion.com.\n- #00 (19 mar 2026): ¿Ser listo o ser inteligente?, diferenciarse frente a la IA y la decadencia del IQ. Presentación del formato, la idea de la inteligencia como commodity, el contraste entre ser listo y ser inteligente, y el debate desde el efecto Flynn hasta smartphones y la IA pensando por nosotros.\n\nDe qué hablamos (cada episodio cruza al menos dos ejes):\n- Inteligencia Artificial: modelos de lenguaje, agentes autónomos y todo lo que la IA está cambiando.\n- Tecnología: hardware, software y las dinámicas entre quienes controlan la infraestructura.\n- Finanzas: startups, big tech y los movimientos de mercado que redefinen quién gana y quién pierde.\n- El futuro: hacia dónde va el mundo, quién lo decide y por qué debería importarte.\n\nLos hosts: Juanma (software y ciencia: código, papers, arquitectura) y Hugo (negocio y estrategia: emprendimiento, productividad). Dos perfiles, una misma obsesión: entender la tecnología con criterio y contarla sin humo.\n\nEn la web también hay clips en formato vertical (momentos destacados) y enlaces para escuchar en YouTube y Spotify, además de la comunidad para no perderte ninguna versión.\n\nCon La Última Versión llevo al portfolio algo que va más allá del código: producto editorial, mensaje claro y una marca alineada con cómo pienso el futuro del trabajo, el dinero y la IA.",
-        "tags": [
-          "Next.js",
-          "TailwindCSS",
-          "TypeScript"
-        ],
-        "eyebrow": "Caso de estudio · Podcast & web · Marca",
-        "role": "Co-host · Desarrollo y marca",
-        "status": "live",
-        "tagline": "Sitio web y podcast de Hugo y Juanma sobre IA, finanzas y el futuro digital. Exploramos los límites de la innovación cada semana.",
-        "thesis": "IA, finanzas y futuro digital. Sin humo.",
-        "thesisNote": "Más auditoría del mañana que hype: cada episodio cruza al menos dos ejes de la conversación tecnológica.",
-        "problem": "Hay demasiado ruido y hype alrededor de la IA y las finanzas, y poca conversación con criterio.\n\nLa Última Versión nace para cruzar IA, tecnología y dinero sin humo: una web y un podcast que explican el impacto real de la innovación en nuestro presente, con un tono directo.",
-        "stack": [
-          {
-            "name": "Next.js",
-            "note": "Web del podcast con páginas rápidas para episodios, clips y enlaces de escucha."
-          },
-          {
-            "name": "TailwindCSS",
-            "note": "Identidad visual de la marca, consistente y editorial en toda la web."
-          },
-          {
-            "name": "TypeScript",
-            "note": "Base tipada y mantenible para crecer episodio a episodio."
-          }
-        ],
-        "features": [
-          "Web del podcast con cada episodio y sus notas.",
-          "Clips verticales con los momentos destacados de cada programa.",
-          "Enlaces directos para escuchar en YouTube y Spotify.",
-          "Comunidad para no perderte ninguna versión.",
-          "Identidad y mensaje de marca alineados con el futuro del trabajo, el dinero y la IA."
-        ],
-        "learnings": "Con La Última Versión llevo al portfolio algo que va más allá del código: producto editorial, un mensaje claro y una marca alineada con cómo pienso el futuro del trabajo, el dinero y la IA.",
-        "gallery": []
-      },
-      {
         "slug": "zentunes",
         "title": "Zentunes",
         "link": "https://zentunes.hugooliva.com",
@@ -530,6 +495,159 @@
       "available": "Disponible para proyectos",
       "location": "Hugo Oliva · Madrid",
       "of": "de"
+    }
+  },
+  "comunicacion": {
+    "title": "Comunicación & Docencia",
+    "subtitle": "Sé construir… y sé explicarlo. Docencia, podcast y vídeo: lo que me diferencia más allá del código.",
+    "viewAll": "Ver todo",
+    "backToHome": "Volver a inicio",
+    "backToComunicacion": "Volver a comunicación",
+    "items": [
+      {
+        "slug": "thepower",
+        "format": "teaching",
+        "title": "Profesor en thePower",
+        "link": "https://thepower.education",
+        "year": "2026",
+        "image": "/comunicacion/thepower.webp",
+        "kicker": "Docencia · IA aplicada",
+        "tagline": "Profesor en tres másteres de thePower. Sobre todo de IA: agentes, Claude Code, MCP, N8N y Codex.",
+        "role": "Profesor colaborador",
+        "thesis": "Enseño a construir con IA de verdad, no a copiar prompts.",
+        "thesisNote": "Tres másteres a la vez, de perfiles no técnicos a desarrolladores senior.",
+        "stats": [
+          {
+            "value": "3",
+            "label": "másteres"
+          },
+          {
+            "value": "26.000",
+            "label": "alumnos nuevos al año"
+          }
+        ],
+        "introTitle": "El encargo",
+        "intro": "La mayoría de la formación en IA se queda en llamar a una API y poco más. El salto real —agentes, Claude Code, MCP y automatización con IA dentro del flujo— es justo lo que las empresas necesitan y casi nadie enseña.\n\nEn thePower doy clase en tres másteres a la vez, con alumnos muy distintos delante: perfiles de negocio que quieren construir producto con IA, desarrolladores que necesitan dominar el desarrollo agéntico y gente que está aprendiendo a programar desde cero. He enseñado React y fundamentos de desarrollo web, pero el peso de lo que imparto está en IA.\n\nEnseñar a esa escala es lo que me obliga a tener criterio propio: no vale repetir lo que dice un vídeo de YouTube cuando tienes que responder en directo a un senior que va a llevar eso a producción.",
+        "programs": [
+          {
+            "name": "Máster AI Maker",
+            "link": "https://thepower.education/thepowermba/ia/ai-maker",
+            "meta": "IA · perfiles no técnicos"
+          },
+          {
+            "name": "Máster en Desarrollo Agéntico",
+            "link": "https://thepower.education/thepowermba/tech/desarrollo-agentico",
+            "meta": "Tech · desarrolladores"
+          },
+          {
+            "name": "Máster Full Stack Developer con IA",
+            "link": "https://thepower.education/thepowermba/tech/rock-the-code",
+            "meta": "Tech · full stack desde cero"
+          }
+        ],
+        "craftTitle": "Qué imparto",
+        "craft": [
+          "IA aplicada: llevar modelos a producto real, no a demos.",
+          "Desarrollo agéntico con Claude Code y Codex: agentes, MCP y skills propias.",
+          "Automatización de procesos con N8N, con IA dentro del flujo.",
+          "React y fundamentos de desarrollo web, la base sobre la que se sostiene todo lo anterior."
+        ],
+        "takeaway": "Esto es lo que me da autoridad para hablar de IA fuera del aula: charlas y formación a medida para empresas que necesitan adoptar IA y no saben por dónde empezar. Si puedo llevar a un alumno de cero a construir agentes, puedo sentarme con un equipo y decirles qué tiene sentido en su caso y qué es humo.",
+        "platforms": [
+          {
+            "name": "thepower.education",
+            "link": "https://thepower.education"
+          }
+        ]
+      },
+      {
+        "slug": "laultimaversion",
+        "format": "podcast",
+        "title": "La Última Versión",
+        "link": "https://laultimaversion.com",
+        "year": "2026",
+        "image": "/projects/luv.webp",
+        "kicker": "Podcast · IA y finanzas",
+        "tagline": "Podcast de Hugo y Juanma sobre IA, finanzas y el futuro digital. Exploramos los límites de la innovación cada semana.",
+        "role": "Co-host · guion y marca",
+        "thesis": "IA, finanzas y futuro digital. Sin humo.",
+        "thesisNote": "Más auditoría del mañana que hype: cada episodio cruza al menos dos ejes de la conversación tecnológica.",
+        "stats": [
+          {
+            "value": "Semanal",
+            "label": "un episodio nuevo"
+          },
+          {
+            "value": "2 voces",
+            "label": "ciencia y negocio"
+          }
+        ],
+        "introTitle": "El proyecto",
+        "intro": "Hay demasiado ruido y hype alrededor de la IA y las finanzas, y poca conversación con criterio.\n\nLa Última Versión nace para cruzar IA, tecnología y dinero sin humo: un podcast que explica el impacto real de la innovación en nuestro presente, con un tono directo. Y para mí es donde entreno, semana a semana, la comunicación de ideas complejas ante una audiencia.\n\nEl formato es a dos voces: Juanma aporta software y ciencia, yo negocio y estrategia. Guiono y estructuro cada conversación para que las ideas complejas se entiendan, y de cada programa salen clips verticales con los momentos destacados.",
+        "episodes": [
+          {
+            "num": "#01",
+            "date": "26 mar 2026",
+            "title": "¿Vamos a vivir para siempre?, los hábitos que te harán rico y si enriquecerse es suerte o skill."
+          },
+          {
+            "num": "#00",
+            "date": "19 mar 2026",
+            "title": "¿Ser listo o ser inteligente?, diferenciarse frente a la IA y la decadencia del IQ."
+          }
+        ],
+        "takeaway": "Con La Última Versión llevo al portfolio algo que va más allá del código: aprender a comunicar ideas complejas con claridad y constancia. Esa capacidad de explicar la tecnología es, precisamente, lo que me abrió la puerta de la docencia.",
+        "platforms": [
+          {
+            "name": "laultimaversion.com",
+            "link": "https://laultimaversion.com"
+          }
+        ]
+      },
+      {
+        "slug": "youtube",
+        "format": "video",
+        "title": "Canal de YouTube",
+        "link": "https://youtube.com/@hugooliva",
+        "year": "2023",
+        "image": "/comunicacion/thumbnail.webp",
+        "kicker": "Marca personal · Vídeo",
+        "tagline": "Contenido sobre emprendimiento, lifestyle y desarrollo personal.",
+        "role": "Creador · guion, cámara y edición",
+        "thesis": "Comunicar ideas y construir audiencia, cámara en mano.",
+        "thesisNote": "Mi laboratorio de comunicación: donde entreno guion, presencia en cámara y constancia.",
+        "introTitle": "El laboratorio",
+        "intro": "Saber de tecnología no basta si no sabes transmitirla. Necesitaba un espacio propio para entrenar lo que más me diferencia: contar ideas de forma clara y sostenerlo en el tiempo.\n\nEste canal es ese laboratorio. No va de tecnología, va de aprender a comunicar y construir marca personal delante de una cámara.",
+        "craft": [
+          "Guion y estructura narrativa de cada vídeo.",
+          "Presencia y naturalidad frente a la cámara.",
+          "Grabación y edición propias, de principio a fin.",
+          "Constancia y construcción de marca personal a largo plazo."
+        ],
+        "takeaway": "Comunicar bien es una habilidad que se construye publicando. Esta práctica frente a la cámara es, literalmente, parte de lo que me abrió la puerta de la docencia en thePower.",
+        "platforms": [
+          {
+            "name": "youtube.com/@hugooliva",
+            "link": "https://youtube.com/@hugooliva"
+          }
+        ]
+      }
+    ],
+    "detail": {
+      "role": "Rol",
+      "year": "Año",
+      "link": "Enlace",
+      "introTitle": "El contexto",
+      "programsTitle": "Programas",
+      "syllabusTitle": "Temario",
+      "episodesTitle": "Episodios",
+      "videosTitle": "Vídeos",
+      "craftTitle": "El oficio",
+      "takeawayTitle": "Qué me llevo",
+      "platformsTitle": "Dónde",
+      "relatedTitle": "Más de comunicación",
+      "location": "Hugo Oliva · Madrid",
+      "available": "Disponible para proyectos"
     }
   },
   "skills": {

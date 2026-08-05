@@ -2,6 +2,7 @@
   "profile": {
     "name": "Hugo Oliva",
     "title": "Full-Stack Engineer · AI-Native",
+    "badge": "AI Instructor at thePower",
     "location": "Madrid, Spain",
     "email": "hugoliva158@gmail.com",
     "availability": "Open for projects",
@@ -13,6 +14,7 @@
     "about": "About",
     "experience": "Experience",
     "projects": "Projects",
+    "comunicacion": "Communication",
     "skills": "Skills",
     "education": "Education",
     "blog": "Blog",
@@ -34,6 +36,13 @@
         "companyUrl": "https://globant.com",
         "period": "2025 - Present",
         "description": "Working directly on the Iberia airline account, developing and maintaining large-scale, enterprise-grade web applications. I build new features, resolve complex issues, and optimize performance in mission-critical systems used by millions of users. Tech stack includes Angular 15 for modern development and AngularJS for legacy components and migrations."
+      },
+      {
+        "title": "Collaborating Instructor · Applied AI",
+        "company": "thePower",
+        "companyUrl": "https://thepower.education",
+        "period": "2026",
+        "description": "Instructor across three of thePower's master's programs — AI Maker, Agentic Development, and Full Stack Development with AI — at an online school with 26,000+ new students a year. I've taught React and web development, but mostly AI: agentic development with Claude Code and Codex, agents and MCP servers, and process automation with N8N. Teaching this to audiences ranging from business profiles to senior developers is the base from which I give AI talks and training to companies."
       },
       {
         "title": "Founder & Lead Full-Stack Developer",
@@ -418,50 +427,6 @@
         "gallery": []
       },
       {
-        "slug": "laultimaversion",
-        "title": "La Última Versión",
-        "link": "https://laultimaversion.com",
-        "image": "/projects/luv.webp",
-        "year": "2026",
-        "description": "Website and podcast by Hugo and Juanma on AI, finance, and the digital future. We explore the limits of innovation every week.",
-        "content": "La Última Versión is the podcast and site where we cross AI, finance, and the digital future without the fluff. Every week Hugo and Juanma push the edges of innovation with a straight tone: more audit of tomorrow than hype.\n\nOur promise: unpack the real impact of artificial intelligence and modern finance on our present. No beating around the bush, no unnecessary hype—just the definitive version of the facts.\n\nFeatured episodes:\n- #01 (Mar 26, 2026): Will we live forever?, the habits that make you rich, and whether getting rich is luck or skill. Longevity, tech, daily decisions that build (or destroy) wealth, and whether the future is genetics, discipline, or probabilities. Site: laultimaversion.com.\n- #00 (Mar 19, 2026): Clever vs. intelligent?, standing out in the age of AI, and the decline of IQ. Introducing the show, intelligence as a commodity, the clever-vs-smart contrast, and the debate from the Flynn effect to smartphones and AI thinking for us.\n\nWhat we talk about (each episode crosses at least two pillars):\n- Artificial Intelligence: language models, autonomous agents, and everything AI is changing.\n- Technology: hardware, software, and the dynamics of who controls the stack.\n- Finance: startups, big tech, and market moves that redefine who wins and who loses.\n- The future: where the world is headed, who decides, and why it should matter to you.\n\nThe hosts: Juanma (software and science: code, papers, architecture) and Hugo (business and strategy: entrepreneurship, productivity). Two profiles, one obsession: understand technology with judgment and tell it without smoke.\n\nOn the site you'll also find vertical clips (highlight moments) and links to listen on YouTube and Spotify, plus the community so you don't miss a single release.\n\nWith La Última Versión I'm bringing something to the portfolio that goes beyond code: editorial product, a clear message, and a brand aligned with how I think about the future of work, money, and AI.",
-        "tags": [
-          "Next.js",
-          "TailwindCSS",
-          "TypeScript"
-        ],
-        "eyebrow": "Case study · Podcast & web · Brand",
-        "role": "Co-host · Development & brand",
-        "status": "live",
-        "tagline": "Website and podcast by Hugo and Juanma about AI, finance and the digital future. We explore the limits of innovation every week.",
-        "thesis": "AI, finance and the digital future. No hype.",
-        "thesisNote": "More an audit of tomorrow than hype: every episode crosses at least two axes of the tech conversation.",
-        "problem": "There's too much noise and hype around AI and finance, and too little thoughtful conversation.\n\nLa Última Versión was born to cross AI, technology and money without the hype: a website and a podcast that explain the real impact of innovation on our present, with a direct tone.",
-        "stack": [
-          {
-            "name": "Next.js",
-            "note": "The podcast site with fast pages for episodes, clips and listening links."
-          },
-          {
-            "name": "TailwindCSS",
-            "note": "The brand's visual identity, consistent and editorial across the site."
-          },
-          {
-            "name": "TypeScript",
-            "note": "A typed, maintainable base to grow episode by episode."
-          }
-        ],
-        "features": [
-          "Podcast website with each episode and its show notes.",
-          "Vertical clips featuring the highlights of every show.",
-          "Direct links to listen on YouTube and Spotify.",
-          "A community so you don't miss a single version.",
-          "Brand identity and message aligned with the future of work, money and AI."
-        ],
-        "learnings": "With La Última Versión I bring something beyond code to my portfolio: an editorial product, a clear message and a brand aligned with how I think about the future of work, money and AI.",
-        "gallery": []
-      },
-      {
         "slug": "zentunes",
         "title": "Zentunes",
         "link": "https://zentunes.hugooliva.com",
@@ -531,6 +496,159 @@
       "available": "Open for projects",
       "location": "Hugo Oliva · Madrid",
       "of": "of"
+    }
+  },
+  "comunicacion": {
+    "title": "Communication & Teaching",
+    "subtitle": "I can build… and I can explain it. Teaching, podcast and video: what sets me apart beyond code.",
+    "viewAll": "View all",
+    "backToHome": "Back to home",
+    "backToComunicacion": "Back to communication",
+    "items": [
+      {
+        "slug": "thepower",
+        "format": "teaching",
+        "title": "Instructor at thePower",
+        "link": "https://thepower.education",
+        "year": "2026",
+        "image": "/comunicacion/thepower.webp",
+        "kicker": "Teaching · Applied AI",
+        "tagline": "Instructor across three of thePower's master's programs. Mostly on AI: agents, Claude Code, MCP, N8N, and Codex.",
+        "role": "Collaborating instructor",
+        "thesis": "I teach people to build with AI for real — not to copy prompts.",
+        "thesisNote": "Three programs at once, from non-technical profiles to senior developers.",
+        "stats": [
+          {
+            "value": "3",
+            "label": "master's programs"
+          },
+          {
+            "value": "26,000",
+            "label": "new students a year"
+          }
+        ],
+        "introTitle": "The brief",
+        "intro": "Most AI training stops at calling an API and little more. The real jump —agents, Claude Code, MCP, and automation with AI inside the workflow— is exactly what companies need and almost nobody teaches.\n\nAt thePower I teach across three master's programs at once, with very different students in front of me: business profiles who want to build a product with AI, developers who need to master agentic development, and people learning to code from scratch. I've taught React and web development fundamentals, but the weight of what I teach is AI.\n\nTeaching at that scale is what forces me to hold my own opinion: repeating what some YouTube video says doesn't hold up when you have to answer a senior engineer live, someone who's taking this straight to production.",
+        "programs": [
+          {
+            "name": "AI Maker",
+            "link": "https://thepower.education/thepowermba/ia/ai-maker",
+            "meta": "AI · non-technical profiles"
+          },
+          {
+            "name": "Agentic Development",
+            "link": "https://thepower.education/thepowermba/tech/desarrollo-agentico",
+            "meta": "Tech · developers"
+          },
+          {
+            "name": "Full Stack Developer with AI",
+            "link": "https://thepower.education/thepowermba/tech/rock-the-code",
+            "meta": "Tech · full stack from scratch"
+          }
+        ],
+        "craftTitle": "What I teach",
+        "craft": [
+          "Applied AI: taking models into real products, not demos.",
+          "Agentic development with Claude Code and Codex: agents, MCP, and custom skills.",
+          "Process automation with N8N, with AI inside the workflow.",
+          "React and web development fundamentals — the base everything above stands on."
+        ],
+        "takeaway": "This is what earns me authority to talk about AI outside the classroom: talks and tailored training for companies that need to adopt AI and don't know where to start. If I can take a student from zero to building agents, I can sit down with a team and tell them what makes sense in their case and what's just hype.",
+        "platforms": [
+          {
+            "name": "thepower.education",
+            "link": "https://thepower.education"
+          }
+        ]
+      },
+      {
+        "slug": "laultimaversion",
+        "format": "podcast",
+        "title": "La Última Versión",
+        "link": "https://laultimaversion.com",
+        "year": "2026",
+        "image": "/projects/luv.webp",
+        "kicker": "Podcast · AI and finance",
+        "tagline": "A podcast by Hugo and Juanma on AI, finance and the digital future. We explore the limits of innovation every week.",
+        "role": "Co-host · scripting & brand",
+        "thesis": "AI, finance and the digital future. No hype.",
+        "thesisNote": "More an audit of tomorrow than hype: every episode crosses at least two axes of the tech conversation.",
+        "stats": [
+          {
+            "value": "Weekly",
+            "label": "a new episode"
+          },
+          {
+            "value": "2 voices",
+            "label": "science and business"
+          }
+        ],
+        "introTitle": "The project",
+        "intro": "There's too much noise and hype around AI and finance, and too little thoughtful conversation.\n\nLa Última Versión was born to cross AI, technology and money without the hype: a podcast that explains the real impact of innovation on our present, with a direct tone. And for me it's where I train, week after week, communicating complex ideas to an audience.\n\nThe format runs on two voices: Juanma brings software and science, I bring business and strategy. I script and structure every conversation so complex ideas land, and each show yields vertical clips with the highlights.",
+        "episodes": [
+          {
+            "num": "#01",
+            "date": "Mar 26, 2026",
+            "title": "Will we live forever?, the habits that make you rich, and whether getting rich is luck or skill."
+          },
+          {
+            "num": "#00",
+            "date": "Mar 19, 2026",
+            "title": "Clever vs. intelligent?, standing out in the age of AI, and the decline of IQ."
+          }
+        ],
+        "takeaway": "With La Última Versión I bring something beyond code to my portfolio: learning to communicate complex ideas with clarity and consistency. That ability to explain technology is precisely what opened the door to teaching.",
+        "platforms": [
+          {
+            "name": "laultimaversion.com",
+            "link": "https://laultimaversion.com"
+          }
+        ]
+      },
+      {
+        "slug": "youtube",
+        "format": "video",
+        "title": "YouTube Channel",
+        "link": "https://youtube.com/@hugooliva",
+        "year": "2023",
+        "image": "/comunicacion/thumbnail.webp",
+        "kicker": "Personal brand · Video",
+        "tagline": "Content on entrepreneurship, lifestyle and personal development.",
+        "role": "Creator · scripting, camera and editing",
+        "thesis": "Communicating ideas and building an audience, camera in hand.",
+        "thesisNote": "My communication lab: where I train scripting, on-camera presence and consistency.",
+        "introTitle": "The lab",
+        "intro": "Knowing about technology isn't enough if you can't convey it. I needed my own space to train what sets me apart most: telling ideas clearly and sustaining it over time.\n\nThis channel is that lab. It's not about technology, it's about learning to communicate and build a personal brand in front of a camera.",
+        "craft": [
+          "Scripting and narrative structure for each video.",
+          "Presence and naturalness in front of the camera.",
+          "My own filming and editing, end to end.",
+          "Consistency and long-term personal-brand building."
+        ],
+        "takeaway": "Communicating well is a skill you build by publishing. That practice in front of a camera is, literally, part of what opened the door to teaching at thePower.",
+        "platforms": [
+          {
+            "name": "youtube.com/@hugooliva",
+            "link": "https://youtube.com/@hugooliva"
+          }
+        ]
+      }
+    ],
+    "detail": {
+      "role": "Role",
+      "year": "Year",
+      "link": "Link",
+      "introTitle": "Context",
+      "programsTitle": "Programs",
+      "syllabusTitle": "Syllabus",
+      "episodesTitle": "Episodes",
+      "videosTitle": "Videos",
+      "craftTitle": "The craft",
+      "takeawayTitle": "What I take from it",
+      "platformsTitle": "Where",
+      "relatedTitle": "More communication",
+      "location": "Hugo Oliva · Madrid",
+      "available": "Open for projects"
     }
   },
   "skills": {
