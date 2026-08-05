@@ -14,7 +14,7 @@ export default function ProfileCard() {
     .toUpperCase();
 
   return (
-    <div className="flex mb-6 md:mb-0 flex-col md:flex-row gap-4 justify-between md:items-center">
+    <div className="flex flex-col md:flex-row gap-4 justify-between md:items-center">
       <div className="order-2 md:order-1 flex flex-col gap-1">
         <h1 className="text-6xl font-semibold text-text-primary">{name}</h1>
         <h2 className="text-2xl text-text-secondary">{t("title")}</h2>
