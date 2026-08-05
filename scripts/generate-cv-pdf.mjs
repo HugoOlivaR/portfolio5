@@ -145,6 +145,12 @@ const s = StyleSheet.create({
     color: C.body,
     lineHeight: 1.4,
   },
+  expHighlight: {
+    fontSize: 8,
+    color: C.body,
+    lineHeight: 1.4,
+    marginBottom: 1,
+  },
 
   // --- Timeline indicator ---
   timelineItem: {
@@ -413,7 +419,13 @@ function CvDocument({ messages }) {
                   h(Text, { style: s.expPeriod }, job.period)
                 ),
                 h(Link, { src: job.companyUrl, style: s.expCompany }, job.company),
-                h(Text, { style: s.expDesc }, job.description)
+                ...job.highlights.map((highlight, j) =>
+                  h(
+                    Text,
+                    { key: j, style: s.expHighlight },
+                    `• ${highlight}`
+                  )
+                )
               )
             )
           ),

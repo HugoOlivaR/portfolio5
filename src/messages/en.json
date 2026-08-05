@@ -35,28 +35,43 @@
         "company": "Globant · Iberia",
         "companyUrl": "https://globant.com",
         "period": "2025 - Present",
-        "description": "Working directly on the Iberia airline account, developing and maintaining large-scale, enterprise-grade web applications. I build new features, resolve complex issues, and optimize performance in mission-critical systems used by millions of users. Tech stack includes Angular 15 for modern development and AngularJS for legacy components and migrations."
+        "highlights": [
+          "Mission-critical apps on the Iberia account, used by millions of users.",
+          "New features and performance optimization at enterprise scale.",
+          "Angular 15 for new development; AngularJS for legacy components and migrations."
+        ]
       },
       {
         "title": "Collaborating Instructor · Applied AI",
         "company": "thePower",
         "companyUrl": "https://thepower.education",
         "period": "2026",
-        "description": "Instructor across three of thePower's master's programs — AI Maker, Agentic Development, and Full Stack Development with AI — at an online school with 26,000+ new students a year. I've taught React and web development, but mostly AI: agentic development with Claude Code and Codex, agents and MCP servers, and process automation with N8N. Teaching this to audiences ranging from business profiles to senior developers is the base from which I give AI talks and training to companies."
+        "highlights": [
+          "Three master's programs: AI Maker, Agentic Development, Full Stack with AI.",
+          "Online school with 26,000+ new students a year.",
+          "Agentic development with Claude Code and Codex, agents and MCP, N8N automation."
+        ]
       },
       {
         "title": "Founder & Lead Full-Stack Developer",
         "company": "Evolvio",
         "companyUrl": "https://evolvio.digital/en",
         "period": "2024 - 2026",
-        "description": "Founder and lead developer at Evolvio, a digital development agency specialized in full-stack projects with a strong focus on artificial intelligence. I lead the complete process: from understanding client problems, ideation, and solution design to full development, deployment, and optimization of web and mobile applications."
+        "highlights": [
+          "Digital development agency specialized in full-stack projects with AI.",
+          "End-to-end process: client problem, ideation, design, development, deployment.",
+          "Web and mobile applications, from shipping to optimization."
+        ]
       },
       {
         "title": "Frontend Developer",
         "company": "HMY",
         "companyUrl": "https://hmy-group.com",
         "period": "2024 - 2025",
-        "description": "Development of full-stack applications with Next.js and React. Implementation of design systems and reusable components. API integration and performance optimization. Collaboration in software architecture and best practices."
+        "highlights": [
+          "Full-stack applications with Next.js and React.",
+          "Design system, reusable components, and API integration."
+        ]
       }
     ]
   },

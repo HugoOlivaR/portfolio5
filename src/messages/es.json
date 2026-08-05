@@ -35,28 +35,43 @@
         "company": "Globant · Iberia",
         "companyUrl": "https://globant.com",
         "period": "2025 - Presente",
-        "description": "Trabajo directamente en la cuenta de Iberia, desarrollando y manteniendo aplicaciones web empresariales a gran escala. Construyo nuevas funcionalidades, resuelvo problemas complejos y optimizo el rendimiento en sistemas de misión crítica usados por millones de usuarios. El stack tecnológico incluye Angular 15 para desarrollo moderno y AngularJS para componentes legacy y migraciones."
+        "highlights": [
+          "Apps de misión crítica en la cuenta de Iberia, usadas por millones de usuarios.",
+          "Nuevas funcionalidades y optimización de rendimiento a escala empresarial.",
+          "Angular 15 en desarrollo nuevo; AngularJS en componentes legacy y migraciones."
+        ]
       },
       {
         "title": "Profesor colaborador · IA aplicada",
         "company": "thePower",
         "companyUrl": "https://thepower.education",
         "period": "2026",
-        "description": "Profesor en tres másteres de thePower —AI Maker, Desarrollo Agéntico y Full Stack Development con IA— escuela online con más de 26.000 alumnos nuevos al año. He dado clase de React y desarrollo web, pero sobre todo de IA: desarrollo agéntico con Claude Code y Codex, agentes y servidores MCP, y automatización de procesos con N8N. Enseñar esto a perfiles que van desde negocio hasta desarrolladores senior es la base desde la que doy charlas y formación de IA a empresas."
+        "highlights": [
+          "Tres másteres: AI Maker, Desarrollo Agéntico y Full Stack Development con IA.",
+          "Escuela online con más de 26.000 alumnos nuevos al año.",
+          "Desarrollo agéntico con Claude Code y Codex, agentes y MCP, automatización con N8N."
+        ]
       },
       {
         "title": "Fundador & Lead Full-Stack Developer",
         "company": "Evolvio",
         "companyUrl": "https://evolvio.digital/en",
         "period": "2024 - 2026",
-        "description": "Fundador y desarrollador principal en Evolvio, una agencia de desarrollo digital especializada en proyectos full-stack con un fuerte enfoque en inteligencia artificial. Lidero el proceso completo: desde entender los problemas del cliente, ideación y diseño de soluciones hasta el desarrollo completo, despliegue y optimización de aplicaciones web y móviles."
+        "highlights": [
+          "Agencia de desarrollo digital full-stack especializada en proyectos con IA.",
+          "Ciclo completo: problema del cliente, ideación, diseño, desarrollo y despliegue.",
+          "Aplicaciones web y móviles, de la puesta en producción a la optimización."
+        ]
       },
       {
         "title": "Frontend Developer",
         "company": "HMY",
         "companyUrl": "https://hmy-group.com",
         "period": "2024 - 2025",
-        "description": "Desarrollo de aplicaciones full-stack con Next.js y React. Implementación de sistemas de diseño y componentes reutilizables. Integración de APIs y optimización de rendimiento. Colaboración en arquitectura de software y mejores prácticas."
+        "highlights": [
+          "Aplicaciones full-stack con Next.js y React.",
+          "Sistema de diseño, componentes reutilizables e integración de APIs."
+        ]
       }
     ]
   },

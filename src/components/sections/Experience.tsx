@@ -6,7 +6,7 @@ export default function Experience() {
     title: string;
     company: string;
     period: string;
-    description: string;
+    highlights: string[];
     companyUrl: string;
   }>;
 
@@ -34,9 +34,18 @@ export default function Experience() {
                 {job.company}
               </a>
             </p>
-            <p className="text-sm text-text-secondary leading-relaxed">
-              {job.description}
-            </p>
+            {/* Dot drawn with ::before, not list-disc: the native marker
+                misaligns against the section's left border. */}
+            <ul className="space-y-1.5">
+              {job.highlights.map((highlight, i) => (
+                <li
+                  key={i}
+                  className="relative pl-3.5 text-sm text-text-secondary leading-relaxed before:absolute before:left-0 before:top-[0.6em] before:h-1 before:w-1 before:rounded-full before:bg-border"
+                >
+                  {highlight}
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
