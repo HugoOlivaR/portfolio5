@@ -82,7 +82,7 @@ export default function ContactInfo() {
         <span>{t("location")}</span>
       </div>
       <div className="flex items-center gap-2">
-        <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+        <span className="w-2 h-2 bg-accent-green rounded-full animate-pulse" />
         <span className="text-text-secondary">{t("availability")}</span>
       </div>
       <HapticButton

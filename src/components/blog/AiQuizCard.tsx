@@ -65,7 +65,7 @@ export function AiQuizCard({
     <div
       className={`mt-10 p-6 rounded-xl border-2 transition-all duration-300 ${
         status === "correct"
-          ? "border-green-500 bg-green-500/5"
+          ? "border-emerald-600 bg-emerald-600/5 dark:border-emerald-400 dark:bg-emerald-400/5"
           : status === "wrong"
             ? "border-red-500 bg-red-500/5"
             : "border-border bg-bg-secondary"
@@ -90,7 +90,7 @@ export function AiQuizCard({
               disabled={status === "correct"}
               className={`flex flex-col items-center gap-2 w-[4.5rem] py-3 rounded-xl border-2 transition-all duration-200 ${
                 isCorrectAnswer
-                  ? "border-green-500 bg-green-500/10 scale-110"
+                  ? "border-emerald-600 bg-emerald-600/10 dark:border-emerald-400 dark:bg-emerald-400/10 scale-110"
                   : isWrongAnswer
                     ? "border-red-500 bg-red-500/10"
                     : status === "correct"
@@ -108,7 +108,7 @@ export function AiQuizCard({
               <span
                 className={`text-xs font-medium ${
                   isCorrectAnswer
-                    ? "text-green-600 dark:text-green-400"
+                    ? "text-emerald-600 dark:text-emerald-400"
                     : isWrongAnswer
                       ? "text-red-600 dark:text-red-400"
                       : "text-text-secondary"
@@ -123,7 +123,7 @@ export function AiQuizCard({
 
       {status === "correct" && (
         <div className="text-center mt-4 space-y-1 animate-in fade-in">
-          <p className="text-sm font-medium text-green-600 dark:text-green-400">
+          <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
             {successText.replace("[ai]", correctLabel)}
           </p>
           <p className="text-xs text-text-secondary italic">{aiReason}</p>

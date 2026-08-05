@@ -105,7 +105,7 @@ export default async function ProjectsPage({
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.category && (
-                    <span className="text-xs px-2 py-1 bg-bg-secondary text-green-500 border border-green-500 rounded">
+                    <span className="text-xs px-2 py-1 bg-bg-secondary text-accent-green border border-accent-green rounded">
                       {project.category}
                     </span>
                   )}

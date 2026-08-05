@@ -50,8 +50,8 @@ function StatusPill({
 }) {
   if (status === "live") {
     return (
-      <span className="inline-flex items-center gap-2 text-green-500">
-        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-green-500" />
+      <span className="inline-flex items-center gap-2 text-accent-green">
+        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent-green" />
         {labels.statusLive}
       </span>
     );
@@ -182,7 +182,7 @@ export default function ProjectDetail({
         {/* ── Tags ────────────────────────────────────────────── */}
         <div className="mt-6 flex flex-wrap gap-2">
           {project.category && (
-            <span className="rounded border border-green-500 bg-bg-secondary px-2.5 py-1 text-xs text-green-500">
+            <span className="rounded border border-accent-green bg-bg-secondary px-2.5 py-1 text-xs text-accent-green">
               {project.category}
             </span>
           )}
