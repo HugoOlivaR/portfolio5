@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Hugo Oliva",
     images: [
       {
-        url: "/profile.webp",
+        url: "/me.webp",
         width: 1200,
         height: 630,
         alt: "Foto de perfil de Hugo Oliva, ingeniero full‑stack AI‑native",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Hugo Oliva | Full Stack Developer & AI-Native Engineer",
     description:
       "Portfolio de proyectos full‑stack y AI‑native de Hugo Oliva: Next.js, React, Node.js e integraciones de inteligencia artificial.",
-    images: ["/profile.webp"],
+    images: ["/me.webp"],
   },
   alternates: {
     canonical: "/",
@@ -59,7 +59,11 @@ export default async function RootLayout({
   const isDark = themeCookie ? themeCookie === "dark" : true;
 
   return (
-    <html lang={locale} className={isDark ? "dark" : ""} suppressHydrationWarning>
+    <html
+      lang={locale}
+      className={isDark ? "dark" : ""}
+      suppressHydrationWarning
+    >
       <head>
         <script
           dangerouslySetInnerHTML={{
