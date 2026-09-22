@@ -90,14 +90,7 @@
         "year": "2025 - 2026",
         "image": "/projects/tesora/tesora-main.webp",
         "video": "/projects/tesora/tesora.mp4",
-        "gallery": [
-          "/projects/tesora/accounts.png",
-          "/projects/tesora/auri.png",
-          "/projects/tesora/dashboard.png",
-          "/projects/tesora/fin-health.png",
-          "/projects/tesora/investments.png",
-          "/projects/tesora/learning.png"
-        ],
+        "gallery": [],
         "category": "Fintech",
         "description": "AI-powered financial management platform: connect your banks, unify your wealth, and receive intelligent advice.",
         "content": "Tesora is an AI-powered personal finance platform that helps you control, understand, and grow your wealth more intelligently.\n\nSecurely connect banks, investments, and crypto, visualize your real net worth (assets minus debts), and receive personalized guidance from an AI assistant that truly knows your financial situation.\n\nMain features:\n- Secure account aggregation and unified wealth with history\n- Smart expense analysis and automatic categorization\n- Advanced debt management with Avalanche/Snowball simulations and personalized recommendations\n- Marketplace of certified financial advisors with chat and granular permissions\n- Conversational AI assistant with contextual access to your data\n- Savings planning with realistic scenarios and projections\n- Dynamic Financial Health Score and proactive alerts\n\nWith Tesora I've learned to see my money in a completely different way: I no longer just look at scattered balances, but understand how my income, expenses, debts, and investments relate in real time. I've discovered spending patterns I used to ignore, optimized my debt payments saving thousands of euros in interest, and started making much more conscious investment decisions thanks to the simulations and context the AI provides. Most importantly, I've gone from feeling lost with finances to having a real sense of control and clear direction toward my goals.",
@@ -159,8 +152,82 @@
           "Dynamic Financial Health Score and proactive email alerts."
         ],
         "architecture": "I keep things reasonably flat: a Next.js frontend calling server actions and an Edge worker that orchestrates the assistant. The AI layer has read-only access to a view of the user's data — never to banking credentials.",
-        "learnings": "With Tesora I've learned to see my money in a completely different way: no longer just scattered balances, but how income, expenses, debts and investments relate in real time. And technically, I've internalized that useful AI isn't the biggest model — it's the one with the right context.",
-        "gallery": []
+        "learnings": "With Tesora I've learned to see my money in a completely different way: no longer just scattered balances, but how income, expenses, debts and investments relate in real time. And technically, I've internalized that useful AI isn't the biggest model — it's the one with the right context."
+      },
+      {
+        "slug": "x-ray-embat",
+        "title": "X-Ray",
+        "link": "https://youtu.be/ojYzNzDsO74",
+        "repo": "https://github.com/antoniomachuca/hackspain-2026-embat",
+        "year": "2026",
+        "image": "/projects/x-ray/x-ray-main.png",
+        "video": "/projects/x-ray/x-ray.mp4",
+        "gallery": [
+          "/projects/x-ray/trayectoria.png",
+          "/projects/x-ray/anticipacion.png",
+          "/projects/x-ray/catalogo.png",
+          "/projects/x-ray/simulador.png",
+          "/projects/x-ray/palanca.png",
+          "/projects/x-ray/negocio.png"
+        ],
+        "status": "archived",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Python",
+          "FastAPI",
+          "DuckDB",
+          "Remotion"
+        ],
+        "linkLabel": "Video",
+        "linkCta": "Watch the product video",
+        "category": "B2B Fintech",
+        "description": "A financial-health engine that reads the banking trail of 1,286 companies and flags the ones turning months before it shows. Embat track at HackSpain 2026.",
+        "content": "X-Ray scores a company's financial health by reading the one thing that doesn't lie: the daily movement of its money. It was built for the Embat track at HackSpain 2026, a 36-hour hackathon at UPM's ETSIT, on a dataset of 250 corporate groups, 1,286 companies and 24 months of banking activity.\n\nThe system answers six questions: who is healthy, who is improving, who is starting to turn, whether it's a bump or a fall, why the number moved, and how many months ahead the system saw it coming.\n\nI worked on the front end and the product, within a team of five.",
+        "eyebrow": "Case study · B2B Fintech · HackSpain 2026",
+        "role": "Front end & product · team of 5",
+        "tagline": "Financial health for 1,286 companies read from their banking trail, with early warning and scenario simulation.",
+        "thesis": "A company doesn't go under on its balance sheet. It goes under on cash.",
+        "thesisNote": "36 hours, five people and 24 months of bank movements to answer a single question: can money tell you how a company is doing?",
+        "problem": "Classic solvency models lean on annual balance sheets and accounting ratios that arrive months late. By then the decision is already made — or it's already too late.\n\nThe challenge came down to a paradox: at month 24, two companies in the dataset score almost the same — 65 and 68 — but one has been climbing from 45 and the other falling from 82. A still photo can't tell them apart; one is the best bet of the year and the other an imminent risk.\n\nWhat was needed was reading the trajectory, not the portrait: separating a one-off cash squeeze from structural decline, and being able to explain every point of the score without a black box.",
+        "stack": [
+          {
+            "name": "Next.js",
+            "note": "App Router and strict TypeScript. Two audiences on one engine: Embat sees its client book, a company sees only itself."
+          },
+          {
+            "name": "TypeScript",
+            "note": "The contract between engine and screen. If the backend changes a score factor, the front end won't compile until it knows."
+          },
+          {
+            "name": "Python",
+            "note": "The scoring engine: continuous transforms calibrated on working-capital physics, not a classifier with no labels."
+          },
+          {
+            "name": "FastAPI",
+            "note": "A thin REST layer with Pydantic v2 over the engine: profile, history, sector benchmark, groups and counterfactual simulation."
+          },
+          {
+            "name": "DuckDB",
+            "note": "A 400 MB embedded columnar store. 30,000 monthly slices queried in under 10 ms, with no external infrastructure."
+          },
+          {
+            "name": "Remotion",
+            "note": "The product video isn't a mockup: the real front-end components run inside the composition."
+          }
+        ],
+        "features": [
+          "A continuous 0–100 score with exact additive decomposition: the bars add up to the change in the number, with no residual.",
+          "Early warning: catches the company that's turning while its score still looks healthy, a median of eight months ahead.",
+          "Six analytical states that separate a one-off bump from structural decline instead of firing on every bad month.",
+          "Counterfactual simulator: eight operating levers ranked by impact in points and in euros of cash freed.",
+          "Intra-group flow map inferred from a dataset that never says who pays whom, by matching amounts, dates and entities.",
+          "Holding consolidation with a contagion penalty when a subsidiary drops into critical territory.",
+          "A proactive monitor that alerts by email and Telegram with the causal breakdown of the change.",
+          "A conversational agent over an internal MCP, scoped to the company and its group."
+        ],
+        "architecture": "The challenge CSVs are ingested into an embedded DuckDB that acts as the single source of truth. On top, a Python scoring engine processes monthly panels causally — point-in-time, no lookahead bias — and precomputes states, levers and scenarios. FastAPI exposes them over REST, and the Next.js front end paints two different products on the same API: the client book for Embat and the company profile for the company itself. The forecasting module sits apart, as a testbed for models at 1, 3 and 6 months.",
+        "learnings": "The decision that taught me most was not training a model: the dataset had no default label, so a classifier would have meant inventing the target and dressing it up as science. Giving up ML where it didn't belong — and keeping it for forecasting, which did have a measurable time series — was worth more than any architecture."
       },
       {
         "slug": "cosmo-ai",

@@ -126,7 +126,9 @@ export default function ProjectDetail({
                 </div>
               )}
               <div className="flex items-center justify-between gap-4">
-                <dt className="text-text-secondary">{labels.site}</dt>
+                <dt className="text-text-secondary">
+                  {project.linkLabel ?? labels.site}
+                </dt>
                 <dd>
                   <a
                     href={project.link}
@@ -324,14 +326,14 @@ export default function ProjectDetail({
             >
               <div className="flex items-center justify-between">
                 <span className="text-sm font-medium text-text-primary">
-                  {labels.liveApp}
+                  {project.linkCta ?? labels.liveApp}
                 </span>
                 <ExternalLink className="h-3.5 w-3.5 text-text-secondary" />
               </div>
               <span className="text-xs text-text-secondary">{site}</span>
             </a>
             <a
-              href={GITHUB_URL}
+              href={project.repo ?? GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col gap-1.5 bg-bg-primary p-5 transition-colors hover:bg-bg-secondary"

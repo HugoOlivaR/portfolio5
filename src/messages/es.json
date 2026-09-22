@@ -162,6 +162,81 @@
         "learnings": "Con Tesora he aprendido a ver mi dinero de una forma completamente distinta: ya no solo miro saldos sueltos, sino que entiendo cómo se relacionan mis ingresos, gastos, deudas e inversiones en tiempo real. Y a nivel técnico, he interiorizado que la IA útil no es la más grande — es la que tiene el contexto correcto."
       },
       {
+        "slug": "x-ray-embat",
+        "title": "X-Ray",
+        "link": "https://youtu.be/ojYzNzDsO74",
+        "repo": "https://github.com/antoniomachuca/hackspain-2026-embat",
+        "year": "2026",
+        "image": "/projects/x-ray/x-ray-main.png",
+        "video": "/projects/x-ray/x-ray.mp4",
+        "gallery": [
+          "/projects/x-ray/trayectoria.png",
+          "/projects/x-ray/anticipacion.png",
+          "/projects/x-ray/catalogo.png",
+          "/projects/x-ray/simulador.png",
+          "/projects/x-ray/palanca.png",
+          "/projects/x-ray/negocio.png"
+        ],
+        "status": "archived",
+        "tags": [
+          "Next.js",
+          "TypeScript",
+          "Python",
+          "FastAPI",
+          "DuckDB",
+          "Remotion"
+        ],
+        "linkLabel": "Vídeo",
+        "linkCta": "Ver el vídeo de producto",
+        "category": "Fintech B2B",
+        "description": "Motor de salud financiera que lee el rastro bancario de 1.286 empresas y detecta quién se tuerce meses antes de que se note. Reto Embat en HackSpain 2026.",
+        "content": "X-Ray puntúa la salud financiera de una empresa leyendo lo único que no miente: el movimiento diario de su dinero. Nace en el track de Embat de HackSpain 2026, un hackathon de 36 horas en la ETSIT de la UPM, sobre un dataset de 250 grupos, 1.286 empresas y 24 meses de operativa bancaria.\n\nEl sistema contesta seis preguntas: quién está sano, quién está mejorando, quién empieza a torcerse, si lo que pasa es un bache o una caída, por qué ha cambiado el número y con cuántos meses de antelación se vio venir.\n\nTrabajé en el front y en el producto, dentro de un equipo de cinco.",
+        "eyebrow": "Caso de estudio · Fintech B2B · HackSpain 2026",
+        "role": "Front y producto · equipo de 5",
+        "tagline": "Salud financiera de 1.286 empresas leída en su rastro bancario, con alerta temprana y simulación de escenarios.",
+        "thesis": "Una empresa no quiebra por balance. Quiebra por caja.",
+        "thesisNote": "36 horas, cinco personas y 24 meses de movimientos bancarios para responder a una sola pregunta: ¿puede el dinero decir cómo está una empresa?",
+        "problem": "Los modelos de solvencia clásicos se apoyan en balances anuales y ratios contables que llegan con meses de retraso. Para entonces la decisión ya está tomada, o ya es tarde.\n\nEl reto lo resumía una paradoja: en el mes 24, dos empresas del dataset puntúan casi igual —65 y 68—, pero una viene subiendo desde 45 y la otra cayendo desde 82. Una foto fija no las distingue; una es la mejor apuesta del año y la otra un riesgo inminente.\n\nHacía falta leer la trayectoria, no el retrato: separar el bache puntual del deterioro estructural y poder explicar cada punto del score sin recurrir a una caja negra.",
+        "stack": [
+          {
+            "name": "Next.js",
+            "note": "App Router y TypeScript estricto. Dos audiencias sobre el mismo motor: Embat ve su cartera de clientes, la empresa se ve solo a sí misma."
+          },
+          {
+            "name": "TypeScript",
+            "note": "El contrato entre motor y pantalla. Si el back cambia un factor del score, el front no compila hasta enterarse."
+          },
+          {
+            "name": "Python",
+            "note": "El motor de scoring: transformaciones continuas calibradas sobre la física del circulante, no un clasificador sin etiquetas."
+          },
+          {
+            "name": "FastAPI",
+            "note": "Una capa REST fina con Pydantic v2 sobre el motor: ficha, histórico, benchmark sectorial, grupos y simulación contrafactual."
+          },
+          {
+            "name": "DuckDB",
+            "note": "Base columnar embebida de 400 MB. 30.000 cortes mensuales consultados en menos de 10 ms, sin infraestructura externa."
+          },
+          {
+            "name": "Remotion",
+            "note": "El vídeo de producto no es una maqueta: son los componentes reales del front ejecutándose dentro de la composición."
+          }
+        ],
+        "features": [
+          "Score continuo de 0 a 100 con descomposición aditiva exacta: la suma de las barras cuadra con el cambio del número, sin residuo.",
+          "Alerta temprana: detecta a la empresa que se tuerce mientras su score todavía parece sano, con una mediana de ocho meses de antelación.",
+          "Seis estados analíticos que separan el bache puntual del deterioro estructural en vez de disparar por cada mes malo.",
+          "Simulador contrafactual: ocho palancas operativas ordenadas por impacto en puntos y en euros de caja liberada.",
+          "Mapa de flujos intragrupo inferido de un dataset que no dice quién paga a quién, emparejando importes, días y sociedades.",
+          "Consolidación de holdings con penalización por contagio cuando una filial cae a zona crítica.",
+          "Monitor proactivo que avisa por correo y por Telegram con el desglose causal del cambio.",
+          "Agente conversacional con MCP interno, acotado a la empresa y a su grupo."
+        ],
+        "architecture": "Los CSV del reto se ingieren a un DuckDB embebido que actúa de fuente única de verdad. Encima, un motor de scoring en Python procesa paneles mensuales de forma causal —point-in-time, sin sesgo de anticipación— y deja precomputados estados, palancas y escenarios. FastAPI los expone como REST y el front de Next.js pinta dos productos distintos sobre la misma API: la cartera para Embat y la ficha para la propia empresa. El módulo de previsión queda aparte, como banco de pruebas de modelos a 1, 3 y 6 meses.",
+        "learnings": "La decisión que más me enseñó fue la de no entrenar un modelo: el dataset no traía etiqueta de impago, así que un clasificador habría sido inventarse el target y vestirlo de ciencia. Renunciar al ML donde no tocaba y reservarlo para la previsión, que sí tenía serie temporal medible, valió más que cualquier arquitectura."
+      },
+      {
         "slug": "cosmo-ai",
         "title": "Cosmo AI",
         "link": "https://cosmo.hugooliva.com",

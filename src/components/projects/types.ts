@@ -10,6 +10,12 @@ export type ProjectDetailData = {
   slug: string;
   title: string;
   link: string;
+  /** Short label for `link` in the hero meta. Defaults to `detail.site`. */
+  linkLabel?: string;
+  /** Call to action for `link` in the links block. Defaults to `detail.liveApp`. */
+  linkCta?: string;
+  /** Repository for this project. Defaults to the personal GitHub profile. */
+  repo?: string;
   year: string;
   image: string;
   /** Optional header/cover video (mp4/webm). Falls back to `image` as poster. */
