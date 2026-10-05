@@ -13,7 +13,7 @@
   --accent: oklch(0.97 0 0);
   --accent-hover: #333333;
   /* The one chromatic accent in an otherwise monochrome system: category tags,
-     live dots and the teaching badge. Emerald-600 here because the tags use it
+     live dots and status accents. Emerald-600 here because the tags use it
      as *text* colour, and a brighter green on near-white fails contrast. */
   --accent-green: #059669;
   --accent-green-soft: color-mix(in oklab, #059669 40%, transparent);

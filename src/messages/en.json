@@ -2,7 +2,6 @@
   "profile": {
     "name": "Hugo Oliva",
     "title": "Full-Stack Engineer · AI-Native",
-    "badge": "AI Instructor at thePower",
     "location": "Madrid, Spain",
     "email": "hugoliva158@gmail.com",
     "availability": "Open for projects",
@@ -22,19 +21,32 @@
   },
   "about": {
     "title": "About Me",
-    "paragraph1": "Full-stack developer focused on fintech and AI-powered systems.",
-    "paragraph2": "I design and build scalable applications with React, TypeScript, and Node.js, taking products from ideation to production. My focus is on applying artificial intelligence to create real competitive advantages."
+    "paragraph1": "Full-stack developer focused on AI products, agents, and fintech.",
+    "paragraph2": "I'm currently a Founding Engineer at Musive and CTO of Tesora. I design and build applications with React, TypeScript, and Node.js, taking products from ideation to production with an AI-native workflow: agent orchestration and harness engineering. My focus is on applying AI where it creates real competitive advantages."
   },
   "experience": {
     "title": "Experience",
     "viewAll": "View all",
     "present": "Present",
+    "showMore": "Show more",
+    "showLess": "Show less",
     "jobs": [
+      {
+        "title": "Founding Engineer",
+        "company": "Musive",
+        "companyUrl": "https://musive.io",
+        "period": "2026 - Present",
+        "highlights": [
+          "One of two engineers on the team: taking the product from an agency MVP to in-house development.",
+          "End-to-end full stack: backend, frontend, and mobile.",
+          "AI agents in the product: orchestration, tools, and evaluation loops."
+        ]
+      },
       {
         "title": "Frontend Engineer",
         "company": "Globant · Iberia",
         "companyUrl": "https://globant.com",
-        "period": "2025 - Present",
+        "period": "2025 - 2026",
         "highlights": [
           "Mission-critical apps on the Iberia account, used by millions of users.",
           "New features and performance optimization at enterprise scale.",
@@ -48,8 +60,8 @@
         "period": "2026",
         "highlights": [
           "Three master's programs: AI Maker, Agentic Development, Full Stack with AI.",
-          "Online school with 26,000+ new students a year.",
-          "Agentic development with Claude Code and Codex, agents and MCP, N8N automation."
+          "Claude Code and Codex specializations, plus live sessions building a multi-agent assistant with MCP.",
+          "Online school with 26,000+ new students a year."
         ]
       },
       {
@@ -92,54 +104,59 @@
         "video": "/projects/tesora/tesora.mp4",
         "gallery": [],
         "category": "Fintech",
-        "description": "AI-powered financial management platform: connect your banks, unify your wealth, and receive intelligent advice.",
+        "description": "AI-powered personal finance platform: connect your banks, unify your wealth, and receive intelligent advice. On web, iOS, and Android.",
         "content": "Tesora is an AI-powered personal finance platform that helps you control, understand, and grow your wealth more intelligently.\n\nSecurely connect banks, investments, and crypto, visualize your real net worth (assets minus debts), and receive personalized guidance from an AI assistant that truly knows your financial situation.\n\nMain features:\n- Secure account aggregation and unified wealth with history\n- Smart expense analysis and automatic categorization\n- Advanced debt management with Avalanche/Snowball simulations and personalized recommendations\n- Marketplace of certified financial advisors with chat and granular permissions\n- Conversational AI assistant with contextual access to your data\n- Savings planning with realistic scenarios and projections\n- Dynamic Financial Health Score and proactive alerts\n\nWith Tesora I've learned to see my money in a completely different way: I no longer just look at scattered balances, but understand how my income, expenses, debts, and investments relate in real time. I've discovered spending patterns I used to ignore, optimized my debt payments saving thousands of euros in interest, and started making much more conscious investment decisions thanks to the simulations and context the AI provides. Most importantly, I've gone from feeling lost with finances to having a real sense of control and clear direction toward my goals.",
         "tags": [
           "Next.js",
-          "React",
+          "NestJS",
           "TypeScript",
-          "OpenAI",
-          "PostgreSQL"
+          "PostgreSQL",
+          "Capacitor",
+          "MCP"
         ],
-        "eyebrow": "Case study · Fintech · Founder",
-        "role": "Founder · Lead full-stack",
+        "eyebrow": "Case study · Fintech · Co-founder",
+        "role": "Co-founder & CTO",
         "status": "live",
         "tagline": "AI-powered personal finance: connect your banks, unify your wealth, get intelligent advice.",
         "thesis": "One place to see, understand and move your money.",
         "thesisNote": "One app — accounts, debts, investments, and an assistant that understands the full context.",
-        "problem": "Existing personal-finance products tend to live at two extremes: cold aggregators that only display numbers, or generic coaching apps with no real access to your situation.\n\nTesora was born to close that gap — a serious aggregator with an AI assistant that actually knows your wealth, your debts, and your investments, and can reason over them in real time.",
+        "problem": "Existing personal-finance products tend to live at two extremes: cold aggregators that only display numbers, or generic coaching apps with no real access to your situation.\n\nTesora was born to close that gap — a serious aggregator with an AI assistant that actually knows your wealth, your debts, and your investments, and can reason over them in real time.\n\nToday Tesora is a company: in October 2026 four partners incorporated TESORA Patrimonio SL, with me leading the technical side as CTO, and we're bringing the app to the App Store and Google Play.",
         "stack": [
           {
             "name": "Next.js 16",
-            "note": "App Router + RSC + Server Actions. The layer holding up the whole frontend and half of the backend."
+            "note": "Web frontend on the App Router, grouped by context: auth, onboarding, the user app, and the advisor panel."
           },
           {
             "name": "React 19",
-            "note": "useOptimistic and transitions so financial mutations feel instant without lying to the user."
+            "note": "TanStack Query for server data and Zustand for global state, never mixing the two."
           },
           {
-            "name": "TypeScript",
-            "note": "Strict mode across the board, input validation with Zod before anything hits the DB."
+            "name": "Capacitor",
+            "note": "The same codebase packaged as a native iOS and Android app, with native social login."
+          },
+          {
+            "name": "NestJS 11",
+            "note": "Modular REST API mapping 1:1 to the functional spec: net worth, debt, savings, advisors, AI… With JWT, Swagger, and scheduled jobs."
           },
           {
             "name": "PostgreSQL",
-            "note": "Supabase + Drizzle. Real Row Level Security — each user only sees their own rows, including from the AI."
+            "note": "Prisma 6 over ~50 models. Balances, bank tokens, and messages are encrypted with AES-256-GCM before they're stored."
           },
           {
-            "name": "OpenAI",
-            "note": "GPT with tool-calling over a read-only view of net worth. The model reasons, it never touches credentials."
+            "name": "Open Banking",
+            "note": "WealthReader to connect banks, brokers, and crypto, with in-house transaction categorization."
           },
           {
-            "name": "Stripe",
-            "note": "Subscriptions, billing for the advisor marketplace, and Connect to split payments."
+            "name": "LLMs",
+            "note": "In-house provider layer (Anthropic and OpenAI, swappable) with tool-calling over the user's real data. The model reasons, it never touches credentials."
           },
           {
-            "name": "Tailwind v4",
-            "note": "Design system with semantic tokens; zero loose CSS inside components."
+            "name": "MCP",
+            "note": "MCP server with personal access tokens so each user can plug their wealth into their own AI client."
           },
           {
-            "name": "Vercel",
-            "note": "Continuous deploy + Edge runtime for low latencies across LATAM and Europe."
+            "name": "Sentry + PostHog",
+            "note": "Backend error tracking and product analytics, with PostHog hosted in the EU region."
           }
         ],
         "features": [
@@ -149,9 +166,10 @@
           "Marketplace of certified financial advisors, with integrated billing.",
           "Conversational AI assistant with contextual access to your data.",
           "Savings planning with realistic scenarios and projections.",
-          "Dynamic Financial Health Score and proactive email alerts."
+          "Dynamic Financial Health Score and proactive email alerts.",
+          "iOS and Android apps from the same codebase."
         ],
-        "architecture": "I keep things reasonably flat: a Next.js frontend calling server actions and an Edge worker that orchestrates the assistant. The AI layer has read-only access to a view of the user's data — never to banking credentials.",
+        "architecture": "Three pieces: a Next.js frontend that also ships as a native app through Capacitor, a modular NestJS API on PostgreSQL, and a separate admin panel. Everything runs on our own VPS behind nginx, with the API under /api on the same domain. The AI assistant works through tools over the user's data and never sees banking credentials; sensitive data is encrypted before it's stored.",
         "learnings": "With Tesora I've learned to see my money in a completely different way: no longer just scattered balances, but how income, expenses, debts and investments relate in real time. And technically, I've internalized that useful AI isn't the biggest model — it's the one with the right context."
       },
       {
@@ -607,10 +625,14 @@
           {
             "value": "26,000",
             "label": "new students a year"
+          },
+          {
+            "value": "2",
+            "label": "recorded specializations"
           }
         ],
         "introTitle": "The brief",
-        "intro": "Most AI training stops at calling an API and little more. The real jump —agents, Claude Code, MCP, and automation with AI inside the workflow— is exactly what companies need and almost nobody teaches.\n\nAt thePower I teach across three master's programs at once, with very different students in front of me: business profiles who want to build a product with AI, developers who need to master agentic development, and people learning to code from scratch. I've taught React and web development fundamentals, but the weight of what I teach is AI.\n\nTeaching at that scale is what forces me to hold my own opinion: repeating what some YouTube video says doesn't hold up when you have to answer a senior engineer live, someone who's taking this straight to production.",
+        "intro": "Most AI training stops at calling an API and little more. The real jump —agents, Claude Code, MCP, and automation with AI inside the workflow— is exactly what companies need and almost nobody teaches.\n\nAt thePower I taught across three master's programs at once, with very different students in front of me: business profiles who want to build a product with AI, developers who need to master agentic development, and people learning to code from scratch. I've taught React and web development fundamentals, but the weight of what I taught was AI: on top of the classes, I recorded the Claude Code and Codex specializations and ran the live agentic-development sessions.\n\nTeaching at that scale is what forced me to hold my own opinion: repeating what some YouTube video says doesn't hold up when you have to answer a senior engineer live, someone who's taking this straight to production.",
         "programs": [
           {
             "name": "AI Maker",
@@ -631,7 +653,8 @@
         "craftTitle": "What I teach",
         "craft": [
           "Applied AI: taking models into real products, not demos.",
-          "Agentic development with Claude Code and Codex: agents, MCP, and custom skills.",
+          "Claude Code and Codex specializations: professional workflow, permissions, skills, MCP, and Git.",
+          "Live agentic-development sessions: a multi-agent productivity assistant wired up through MCP, built over four sessions.",
           "Process automation with N8N, with AI inside the workflow.",
           "React and web development fundamentals — the base everything above stands on."
         ],
@@ -651,14 +674,14 @@
         "year": "2026",
         "image": "/projects/luv.webp",
         "kicker": "Podcast · AI and finance",
-        "tagline": "A podcast by Hugo and Juanma on AI, finance and the digital future. We explore the limits of innovation every week.",
+        "tagline": "A podcast by Hugo and Juanma on AI, finance and the digital future. 14 episodes, one a week.",
         "role": "Co-host · scripting & brand",
         "thesis": "AI, finance and the digital future. No hype.",
-        "thesisNote": "More an audit of tomorrow than hype: every episode crosses at least two axes of the tech conversation.",
+        "thesisNote": "More an audit of tomorrow than hype: every episode crossed at least two axes of the tech conversation.",
         "stats": [
           {
-            "value": "Weekly",
-            "label": "a new episode"
+            "value": "14",
+            "label": "weekly episodes"
           },
           {
             "value": "2 voices",
@@ -666,7 +689,7 @@
           }
         ],
         "introTitle": "The project",
-        "intro": "There's too much noise and hype around AI and finance, and too little thoughtful conversation.\n\nLa Última Versión was born to cross AI, technology and money without the hype: a podcast that explains the real impact of innovation on our present, with a direct tone. And for me it's where I train, week after week, communicating complex ideas to an audience.\n\nThe format runs on two voices: Juanma brings software and science, I bring business and strategy. I script and structure every conversation so complex ideas land, and each show yields vertical clips with the highlights.",
+        "intro": "There's too much noise and hype around AI and finance, and too little thoughtful conversation.\n\nLa Última Versión was born to cross AI, technology and money without the hype: a podcast that explained the real impact of innovation on our present, with a direct tone. And for me it was where I trained, week after week, communicating complex ideas to an audience.\n\nThe format ran on two voices: Juanma brought software and science, I brought business and strategy. I scripted and structured every conversation so complex ideas would land, and each show yielded vertical clips with the highlights.\n\nWe wrapped it up after 14 episodes. It had a finite horizon, and much of its value was in the process of learning to make a podcast.",
         "episodes": [
           {
             "num": "#01",
@@ -695,12 +718,22 @@
         "year": "2023",
         "image": "/comunicacion/thumbnail.webp",
         "kicker": "Personal brand · Video",
-        "tagline": "Content on entrepreneurship, lifestyle and personal development.",
+        "tagline": "Vlogs on entrepreneurship, building in public, lifestyle, and a bit of AI.",
         "role": "Creator · scripting, camera and editing",
         "thesis": "Communicating ideas and building an audience, camera in hand.",
         "thesisNote": "My communication lab: where I train scripting, on-camera presence and consistency.",
+        "stats": [
+          {
+            "value": "~500",
+            "label": "subscribers"
+          },
+          {
+            "value": "8-15 min",
+            "label": "long-form vlogs"
+          }
+        ],
         "introTitle": "The lab",
-        "intro": "Knowing about technology isn't enough if you can't convey it. I needed my own space to train what sets me apart most: telling ideas clearly and sustaining it over time.\n\nThis channel is that lab. It's not about technology, it's about learning to communicate and build a personal brand in front of a camera.",
+        "intro": "Knowing about technology isn't enough if you can't convey it. I needed my own space to train what sets me apart most: telling ideas clearly and sustaining it over time.\n\nThis channel is that lab. It's not a tech channel: it's long-form vlogs of 8 to 15 minutes, one topic per video, mixing building in public (Tesora and my projects), lifestyle and personal development, and a bit of AI.",
         "craft": [
           "Scripting and narrative structure for each video.",
           "Presence and naturalness in front of the camera.",
@@ -750,13 +783,19 @@
       ],
       "backend": [
         "Node.js",
+        "NestJS",
         "PostgreSQL",
+        "Prisma",
         "MongoDB",
         "GraphQL"
       ],
       "ai": [
-        "AI API Integration",
-        "AI Infrastructure Design"
+        "Agent orchestration",
+        "Harness engineering",
+        "Claude Code & Codex",
+        "MCP",
+        "RAG",
+        "LLM integration"
       ]
     },
     "pro": [
