@@ -10,7 +10,14 @@ import { SummarizeWith } from "@/components/blog/SummarizeWith";
 import { AiQuizCard } from "@/components/blog/AiQuizCard";
 import SimpleFooter from "@/components/layout/SimpleFooter";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://hugooliva.com";
+import { JsonLd, breadcrumbNode } from "@/lib/jsonld";
+import { ID, PERSON, absoluteUrl, localeUrl, pageMetadata } from "@/lib/site";
+
+// Posts already start below the page <h1>: a "# Title" inside the MDX
+// would be a second h1, so it renders as h2.
+const mdxComponents = {
+  h1: (props: React.ComponentProps<"h2">) => <h2 {...props} />,
+};
 
 export async function generateStaticParams() {
   const locales = ["en", "es"];
@@ -33,47 +40,20 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, slug } = await params;
   const post = getBlogPost(locale, slug);
+  if (!post) return {};
 
-  if (!post) {
-    return {};
-  }
-
-  const url = `${BASE_URL}/${locale}/blog/${slug}`;
-  const title = `${post.title} | Blog de Hugo Oliva`;
-  const description =
-    post.excerpt ||
-    "Artículo del blog de Hugo Oliva sobre desarrollo full‑stack, IA aplicada y producto digital.";
-
-  return {
-    title,
-    description,
-    alternates: {
-      canonical: url,
-    },
-    openGraph: {
-      type: "article",
-      url,
-      title,
-      description,
-      publishedTime: post.date || undefined,
-      authors: ["Hugo Oliva"],
-      images: post.image
-        ? [
-            {
-              url: post.image,
-              alt: post.title,
-            },
-          ]
-        : undefined,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: post.image ? [post.image] : undefined,
-    },
-  };
+  return pageMetadata({
+    locale,
+    path: `/blog/${slug}`,
+    title: post.title,
+    description: post.excerpt || post.title,
+    image: post.image,
+    imageAlt: post.title,
+    type: "article",
+    publishedTime: post.date || undefined,
+  });
 }
+
 
 export default async function BlogPostPage({
   params,
@@ -90,8 +70,38 @@ export default async function BlogPostPage({
     notFound();
   }
 
+  const seo = await getTranslations({ locale, namespace: "seo" });
+  const url = localeUrl(locale, `/blog/${slug}`);
+  const words = post.content.split(/\s+/).filter(Boolean).length;
+
   return (
     <div className="min-h-screen flex justify-center">
+      <JsonLd
+        data={[
+          {
+            "@type": "BlogPosting",
+            "@id": `${url}#article`,
+            headline: post.title,
+            description: post.excerpt,
+            url,
+            mainEntityOfPage: url,
+            inLanguage: locale,
+            ...(post.date
+              ? { datePublished: post.date, dateModified: post.date }
+              : {}),
+            ...(post.image ? { image: absoluteUrl(post.image) } : {}),
+            wordCount: words,
+            author: { "@id": ID.person, name: PERSON.name },
+            publisher: { "@id": ID.person, name: PERSON.name },
+            isPartOf: { "@id": ID.website },
+          },
+          breadcrumbNode([
+            { name: seo("breadcrumbHome"), url: localeUrl(locale) },
+            { name: t("title"), url: localeUrl(locale, "/blog") },
+            { name: post.title, url },
+          ]),
+        ]}
+      />
       <div className="w-full max-w-6xl px-6 py-12">
         <div className="mb-8">
           <Link
@@ -107,7 +117,17 @@ export default async function BlogPostPage({
             <h1 className="text-3xl font-semibold text-text-primary">
               {post.title}
             </h1>
-            <p className="text-text-secondary">{post.date}</p>
+            <p className="text-text-secondary">
+              <time dateTime={post.date}>{post.date}</time>
+              {" · "}
+              <Link
+                href="/"
+                rel="author"
+                className="underline decoration-border underline-offset-4 hover:text-text-primary"
+              >
+                {PERSON.name}
+              </Link>
+            </p>
             {post.excerpt && (
               <p className="text-text-secondary text-lg">{post.excerpt}</p>
             )}
@@ -123,7 +143,7 @@ export default async function BlogPostPage({
             </div>
           )}
           <SummarizeWith
-            postUrl={`${BASE_URL}/${locale}/blog/${slug}`}
+            postUrl={url}
             prompt={t("summarizePrompt")}
             label={t("summarizeWith")}
           />
@@ -149,7 +169,7 @@ export default async function BlogPostPage({
             prose-table:text-text-secondary prose-th:text-text-primary prose-th:font-semibold prose-td:border-border
           "
           >
-            <MDXRemote source={post.content} />
+            <MDXRemote source={post.content} components={mdxComponents} />
           </div>
           {post.aiUsed && (
             <AiQuizCard

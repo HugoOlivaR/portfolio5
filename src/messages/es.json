@@ -1,10 +1,10 @@
 {
   "profile": {
     "name": "Hugo Oliva",
-    "title": "Ingeniero Full-Stack · AI-Native",
+    "title": "IA aplicada · Formación y desarrollo a medida",
     "location": "Madrid, España",
     "email": "hugoliva158@gmail.com",
-    "availability": "Disponible para proyectos",
+    "availability": "Disponible para formaciones y proyectos",
     "copied": "¡Copiado!",
     "getTemplate": "Obtener plantilla",
     "downloadCV": "Descargar CV"
@@ -15,14 +15,480 @@
     "projects": "Proyectos",
     "comunicacion": "Comunicación",
     "skills": "Habilidades",
-    "education": "Formación",
+    "education": "Estudios",
     "blog": "Blog",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "services": "Servicios"
   },
   "about": {
     "title": "Sobre mí",
-    "paragraph1": "Full-stack developer enfocado en producto con IA, agentes y fintech.",
-    "paragraph2": "Hoy soy Founding Engineer en Musive y CTO de Tesora. Diseño y desarrollo aplicaciones con React, TypeScript y Node.js, llevando productos desde la ideación hasta producción, con un flujo de trabajo nativo en IA: orquestación de agentes y harness engineering. Mi foco está en aplicar la IA donde crea ventajas competitivas reales."
+    "paragraph1": "Ayudo a empresas a adoptar la IA de verdad: formo a sus equipos y desarrollo el software a medida que la pone a trabajar.",
+    "paragraph2": "Soy cofundador y CTO de Tesora, Founding Engineer en Musive y profesor de IA aplicada en tres másteres de thePower. Llevo productos con IA de la idea a producción —agentes, orquestación, RAG y MCP— con React, TypeScript y Node.js. Lo que enseño en clase lo uso cada día en producción, y lo que aprendo en producción acaba en clase."
+  },
+  "services": {
+    "title": "Servicios",
+    "subtitle": "Formo a equipos para trabajar con IA y construyo el software a medida que la pone a trabajar. A menudo, las dos cosas a la vez.",
+    "viewService": "Ver servicio",
+    "backToHome": "Volver a inicio",
+    "labels": {
+      "faq": "Preguntas frecuentes",
+      "related": "El otro servicio",
+      "location": "Hugo Oliva · Madrid",
+      "available": "Disponible para formaciones y proyectos",
+      "emailMe": "O escríbeme a"
+    },
+    "builder": {
+      "title": "Arma tu formación",
+      "text": "Elige para quién es y el formato. Verás qué incluye y, al pedirla, tu elección se añade al formulario de contacto de esta página.",
+      "audience": "¿Para quién es?",
+      "format": "¿Qué formato?",
+      "for": "para",
+      "proposal": "Tu propuesta",
+      "ask": "Pedir esta formación",
+      "tools": "Con las herramientas que ya uséis: Claude Code, Codex, MCP, n8n, ChatGPT, Claude o Gemini.",
+      "mailIntro": "Hola Hugo,\n\nMe interesa esta formación:",
+      "mailOutro": "Equipo (personas y perfil):\nQué queremos conseguir:\nFechas aproximadas:\n\nGracias."
+    },
+    "items": [
+      {
+        "slug": "formacion-ia-empresas",
+        "serviceType": "Formación en inteligencia artificial para empresas",
+        "title": "Formación en IA para empresas",
+        "summary": "Charlas, talleres y programas in-company para que tu equipo use y construya con IA: agentes, Claude Code, Codex, MCP y n8n.",
+        "standfirst": "Talleres prácticos para que tu equipo trabaje con IA de verdad: con vuestros casos, vuestras herramientas y criterio para saber qué automatizar.",
+        "metaTitle": "Formación en IA para empresas: agentes, Claude Code y automatización",
+        "metaDescription": "Formación en IA para empresas, práctica y a medida: agentes, Claude Code, Codex, MCP y automatización con n8n. Con Hugo Oliva, profesor de IA en thePower.",
+        "heroCta": "Pedir propuesta",
+        "heroImage": {
+          "src": "/services/clase-directo-control.jpg",
+          "video": "/services/clase-directo-control.mp4",
+          "alt": "Una de mis clases en directo vista desde el control de realización: en pantalla, Claude Code"
+        },
+        "heroImage2": {
+          "src": "/comunicacion/thepower.webp",
+          "alt": "thePower, la escuela donde Hugo Oliva es profesor de IA",
+          "href": "/comunicacion/thepower"
+        },
+        "statements": [
+          "Profesor de IA en tres másteres de thePower.",
+          "De perfiles sin código a desarrolladores senior."
+        ],
+        "lead": "Casi todas las empresas pagan ya alguna herramienta de IA, pero pocas la usan bien. La formación habitual se queda en trucos de prompts. La mía parte de vuestro trabajo real y termina con cosas funcionando.",
+        "columns": [
+          {
+            "title": "Para quién.",
+            "text": "Dirección y equipos de negocio que quieren usar la IA cada día con criterio. Equipos de desarrollo que dan el salto al desarrollo agéntico. Operaciones que quieren automatizar procesos."
+          },
+          {
+            "title": "Qué os lleváis.",
+            "text": "Cada persona sale con flujos o automatizaciones funcionando sobre sus propias tareas, material de referencia y un plan claro de qué automatizar o construir después."
+          },
+          {
+            "title": "Dónde.",
+            "text": "Presencial en Madrid o en remoto. Una charla para arrancar, un taller de una jornada o un programa de varias semanas con un proyecto real de la empresa."
+          },
+          {
+            "title": "Cómo empezar.",
+            "text": "Escríbeme con el tamaño del equipo, su perfil y lo que queréis conseguir. Con eso preparo una propuesta de formato y temario a vuestra medida."
+          }
+        ],
+        "audiences": [
+          {
+            "title": "Dirección y equipos de negocio",
+            "detail": "Aprenderéis a usar la IA cada día con el contexto y los documentos de la empresa, y a decidir qué procesos merece la pena automatizar."
+          },
+          {
+            "title": "Equipos de desarrollo",
+            "detail": "Aprenderéis a trabajar con Claude Code y Codex en un flujo profesional, con permisos, skills, MCP y Git, y a llevar agentes a producción."
+          },
+          {
+            "title": "Operaciones y producto",
+            "detail": "Convertiréis procesos repetitivos en flujos automáticos con n8n, con IA dentro del flujo y conectados a las herramientas que ya usáis."
+          }
+        ],
+        "formats": [
+          {
+            "title": "Charla de adopción de IA",
+            "detail": "Qué puede hacer hoy la IA por vuestro negocio, qué no y por dónde empezar.",
+            "meta": "1–2 horas"
+          },
+          {
+            "title": "Taller práctico",
+            "detail": "Una sesión intensiva con ordenador sobre vuestros casos; cada persona termina con algo funcionando.",
+            "meta": "Media jornada o jornada"
+          },
+          {
+            "title": "Programa in-company",
+            "detail": "Varias sesiones con temario a medida y un proyecto real de la empresa que se construye durante el programa.",
+            "meta": "Varias semanas"
+          }
+        ],
+        "rowsTitle": "Qué aprende tu equipo",
+        "rows": [
+          {
+            "title": "Criterio antes que herramientas",
+            "detail": "Qué hace bien un modelo de IA, dónde falla y cómo comprobar si una solución funciona de verdad antes de invertir en ella."
+          },
+          {
+            "title": "La IA en el trabajo de cada día",
+            "detail": "ChatGPT, Claude y Gemini con el contexto, los documentos y los datos de la empresa, sin poner en riesgo información sensible."
+          },
+          {
+            "title": "Desarrollo agéntico",
+            "detail": "Claude Code y Codex en un flujo profesional: permisos, skills, MCP, Git y cómo revisar el código que escribe la IA.",
+            "image": {
+              "src": "/services/clase-claude-code.jpg",
+              "video": "/services/clase-claude-code.mp4",
+              "alt": "Hugo Oliva explicando los hooks de Claude Code en una clase en directo",
+              "caption": "Explicando hooks de Claude Code, en directo.",
+              "shape": "wide"
+            }
+          },
+          {
+            "title": "Agentes conectados a vuestras herramientas",
+            "detail": "Agentes que consultan vuestros sistemas mediante MCP y hacen trabajo real, no solo conversación.",
+            "image": {
+              "src": "/services/auri-movil.png",
+              "alt": "Auri, el asistente de Tesora, consultando deudas y simulando pagos",
+              "href": "/projects/tesora",
+              "caption": "Auri, el agente de Tesora, en producción.",
+              "shape": "tall"
+            }
+          },
+          {
+            "title": "Automatización con n8n e IA",
+            "detail": "Procesos repetitivos convertidos en flujos automáticos, con IA solo en el paso donde aporta."
+          },
+          {
+            "title": "Seguridad y buen uso",
+            "detail": "Privacidad, riesgos y reglas claras para usar la IA en la empresa sin sustos."
+          }
+        ],
+        "processTitle": "Cómo trabajamos",
+        "process": [
+          {
+            "title": "Diagnóstico",
+            "detail": "Una llamada para entender el equipo, su nivel y lo que queréis conseguir.",
+            "weight": 1
+          },
+          {
+            "title": "Propuesta a medida",
+            "detail": "Formato y temario con casos de vuestra empresa.",
+            "weight": 1.4
+          },
+          {
+            "title": "Formación práctica",
+            "detail": "Sesiones con las manos en el teclado, no con diapositivas.",
+            "weight": 3
+          },
+          {
+            "title": "Siguientes pasos",
+            "detail": "Material de referencia y un plan de qué automatizar después.",
+            "weight": 1.2
+          }
+        ],
+        "proofTitle": "Dónde lo enseño y lo uso",
+        "proof": [
+          {
+            "kind": "Docencia en thePower",
+            "names": [
+              {
+                "name": "Máster AI Maker",
+                "href": "https://thepower.education/thepowermba/ia/ai-maker"
+              },
+              {
+                "name": "Máster en Desarrollo Agéntico",
+                "href": "https://thepower.education/thepowermba/tech/desarrollo-agentico"
+              },
+              {
+                "name": "Máster Full Stack con IA",
+                "href": "https://thepower.education/thepowermba/tech/rock-the-code"
+              },
+              {
+                "name": "Especialización en Claude Code"
+              },
+              {
+                "name": "Especialización en Codex"
+              }
+            ]
+          },
+          {
+            "kind": "Producto en producción",
+            "names": [
+              {
+                "name": "Tesora, cofundador y CTO",
+                "href": "/projects/tesora"
+              },
+              {
+                "name": "Musive, Founding Engineer",
+                "href": "https://musive.io"
+              },
+              {
+                "name": "Mimify",
+                "href": "/projects/mimify"
+              },
+              {
+                "name": "X-Ray · HackSpain 2026",
+                "href": "/projects/x-ray-embat"
+              }
+            ]
+          },
+          {
+            "kind": "Herramientas",
+            "names": [
+              {
+                "name": "Claude Code"
+              },
+              {
+                "name": "Codex"
+              },
+              {
+                "name": "MCP"
+              },
+              {
+                "name": "n8n"
+              },
+              {
+                "name": "ChatGPT"
+              },
+              {
+                "name": "Claude"
+              },
+              {
+                "name": "Gemini"
+              }
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "¿Hace falta saber programar?",
+            "a": "No. Hay formación para perfiles de negocio, sin código, y formación técnica para equipos de desarrollo. El temario se adapta al nivel de cada grupo."
+          },
+          {
+            "q": "¿Se adapta a nuestro sector y herramientas?",
+            "a": "Sí. Antes de la formación entiendo cómo trabajáis y preparo los ejercicios con vuestros casos, documentos y herramientas reales."
+          },
+          {
+            "q": "¿Qué herramientas se usan?",
+            "a": "Las que tengan sentido para vosotros: ChatGPT, Claude, Gemini, Claude Code, Codex, n8n y MCP, entre otras. Si la empresa ya tiene licencias, trabajamos con ellas."
+          },
+          {
+            "q": "¿Es presencial o en remoto?",
+            "a": "Las dos cosas: presencial en Madrid o en remoto para equipos en cualquier sitio."
+          },
+          {
+            "q": "¿Cómo se pide una propuesta?",
+            "a": "Escríbeme con el tamaño del equipo, su perfil y lo que queréis conseguir. Con eso preparo una propuesta de formato y temario."
+          }
+        ],
+        "ctaTitle": "Tu equipo, trabajando con IA",
+        "ctaText": "Cuéntame quién es el equipo y qué queréis conseguir. Te propongo formato y temario.",
+        "ctaButton": "Pedir propuesta",
+        "formPlaceholder": "Cuéntame quién es el equipo, cuántas personas sois y qué queréis conseguir con la IA."
+      },
+      {
+        "slug": "desarrollo-ia-a-medida",
+        "serviceType": "Desarrollo de software a medida con inteligencia artificial",
+        "title": "Software a medida con IA",
+        "summary": "Agentes, automatizaciones, integraciones de LLMs y aplicaciones web y móviles completas, de la idea a producción.",
+        "standfirst": "Agentes, automatizaciones y aplicaciones que llegan a producción y se usan. De punta a punta, y con IA solo donde aporta.",
+        "metaTitle": "Desarrollo de software a medida con IA: agentes, LLMs y apps",
+        "metaDescription": "Desarrollo de software a medida con IA: agentes, automatización de procesos, LLMs y RAG, y apps web y móviles. Hugo Oliva, CTO de Tesora, en Madrid.",
+        "heroCta": "Hablar del proyecto",
+        "heroImage": {
+          "src": "/services/auri-movil.png",
+          "alt": "Auri, el asistente con IA de Tesora, calculando si compensa adelantar un préstamo",
+          "href": "/projects/tesora"
+        },
+        "heroImage2": {
+          "src": "/projects/mimify/mimify-live.png",
+          "alt": "Mimify en directo: 40 agentes probando una web",
+          "href": "/projects/mimify"
+        },
+        "statements": [
+          "CTO de Tesora: finanzas con IA en web, iOS y Android.",
+          "De la idea a producción, sin demos que se quedan en un cajón."
+        ],
+        "lead": "Muchos proyectos de IA se quedan en una demo que impresiona y nadie usa. El reto es que funcione con tus datos, tus herramientas y usuarios reales, a un coste razonable. Ahí es donde trabajo.",
+        "columns": [
+          {
+            "title": "Para quién.",
+            "text": "Empresas que quieren automatizar un proceso, poner un asistente sobre sus datos o lanzar un producto con IA. Y equipos técnicos que necesitan refuerzo para llevarlo a producción."
+          },
+          {
+            "title": "Qué construyo.",
+            "text": "Agentes conectados a tus herramientas, automatizaciones, buscadores y asistentes sobre tu documentación, y aplicaciones web y móviles completas."
+          },
+          {
+            "title": "Cómo trabajo.",
+            "text": "Primero compruebo si la IA aporta en tu caso. Después prototipo con tus datos reales y desarrollo con entregas frecuentes que puedes probar."
+          },
+          {
+            "title": "Cómo empezar.",
+            "text": "Cuéntame el problema que quieres resolver. Tras una llamada te doy un plan con fases, plazos y presupuesto."
+          }
+        ],
+        "rowsTitle": "Qué puedo construir",
+        "rows": [
+          {
+            "title": "Agentes de IA",
+            "detail": "Asistentes que consultan tus sistemas, hacen cálculos y actúan, conectados mediante MCP y tools, con evaluación para saber que aciertan.",
+            "image": {
+              "src": "/services/auri-movil.png",
+              "alt": "Auri, el agente de Tesora, respondiendo con datos bancarios reales",
+              "href": "/projects/tesora",
+              "caption": "Auri, en Tesora.",
+              "shape": "tall"
+            }
+          },
+          {
+            "title": "Automatización de procesos",
+            "detail": "Tareas repetitivas convertidas en flujos automáticos: documentos, correos, datos y operaciones, con IA donde aporta."
+          },
+          {
+            "title": "Asistentes sobre tus datos",
+            "detail": "Buscadores y asistentes que responden con tu documentación y tus datos (RAG), citando las fuentes y con control de calidad."
+          },
+          {
+            "title": "Aplicaciones web y móviles",
+            "detail": "Producto completo con React, Next.js, React Native, Node.js y PostgreSQL, listo para usuarios reales.",
+            "image": {
+              "src": "/projects/tesora/tesora-main.png",
+              "alt": "Pantallas de la app de Tesora",
+              "href": "/projects/tesora",
+              "caption": "Tesora, en web, iOS y Android.",
+              "shape": "wide",
+              "video": "/projects/tesora/tesora-cabecera.mp4"
+            }
+          },
+          {
+            "title": "Prototipos y MVPs",
+            "detail": "Una primera versión funcional para validar la idea rápido antes de invertir en grande.",
+            "image": {
+              "src": "/projects/x-ray/x-ray-main.png",
+              "alt": "X-Ray, motor de salud financiera construido en HackSpain 2026",
+              "href": "/projects/x-ray-embat",
+              "caption": "X-Ray, en un hackathon.",
+              "shape": "small"
+            }
+          }
+        ],
+        "processTitle": "Cómo trabajamos",
+        "process": [
+          {
+            "title": "Descubrimiento",
+            "detail": "El problema, los datos y si la IA es la herramienta adecuada.",
+            "weight": 1
+          },
+          {
+            "title": "Prototipo",
+            "detail": "Una versión mínima que demuestra que funciona con tus datos.",
+            "weight": 1.5
+          },
+          {
+            "title": "Desarrollo iterativo",
+            "detail": "Entregas frecuentes que puedes probar, no una caja negra durante meses.",
+            "weight": 3
+          },
+          {
+            "title": "Producción",
+            "detail": "Despliegue, métricas, evaluaciones y control del coste del modelo.",
+            "weight": 1.3
+          }
+        ],
+        "proofTitle": "Lo que ya está en producción",
+        "proof": [
+          {
+            "kind": "Producto propio",
+            "names": [
+              {
+                "name": "Tesora",
+                "href": "/projects/tesora"
+              },
+              {
+                "name": "Mimify",
+                "href": "/projects/mimify"
+              },
+              {
+                "name": "X-Ray · HackSpain 2026",
+                "href": "/projects/x-ray-embat"
+              }
+            ]
+          },
+          {
+            "kind": "Equipos",
+            "names": [
+              {
+                "name": "Musive, Founding Engineer",
+                "href": "https://musive.io"
+              },
+              {
+                "name": "Globant, cuenta de Iberia"
+              },
+              {
+                "name": "Evolvio, mi agencia (2024–2026)"
+              }
+            ]
+          },
+          {
+            "kind": "Stack",
+            "names": [
+              {
+                "name": "React y Next.js"
+              },
+              {
+                "name": "React Native"
+              },
+              {
+                "name": "Node.js y NestJS"
+              },
+              {
+                "name": "PostgreSQL"
+              },
+              {
+                "name": "OpenAI, Anthropic y Gemini"
+              },
+              {
+                "name": "MCP y RAG"
+              }
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "¿Cuánto cuesta y cuánto tarda?",
+            "a": "Depende del alcance. Tras una primera llamada te doy un plan con fases, plazos y presupuesto. Empezar por un prototipo acotado reduce el riesgo."
+          },
+          {
+            "q": "¿Con qué modelos de IA trabajas?",
+            "a": "Con los de OpenAI, Anthropic y Google, entre otros. Se eligen por calidad, coste y privacidad en cada caso, sin atarte a un proveedor."
+          },
+          {
+            "q": "¿Qué pasa con nuestros datos?",
+            "a": "Se decide al principio: qué proveedor se usa, dónde se procesan los datos y qué se guarda. La privacidad es un requisito de diseño, no un añadido."
+          },
+          {
+            "q": "¿Puedes trabajar con nuestro equipo técnico?",
+            "a": "Sí. Puedo construir el producto entero o trabajar con tu equipo, y combinarlo con formación para que lo mantengan después."
+          }
+        ],
+        "ctaTitle": "Tu idea, en producción",
+        "ctaText": "Cuéntame el problema que quieres resolver. Te digo si la IA tiene sentido y cómo lo construiría.",
+        "ctaButton": "Hablar del proyecto",
+        "formPlaceholder": "Cuéntame el problema que quieres resolver, con qué datos o herramientas, y para cuándo."
+      }
+    ],
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "company": "Empresa (opcional)",
+      "message": "Mensaje",
+      "sending": "Enviando…",
+      "sentTitle": "Recibido.",
+      "sentText": "Gracias. Te contesto yo en cuanto lo lea.",
+      "error": "No se ha podido enviar. Escríbeme directamente a"
+    }
   },
   "experience": {
     "title": "Experiencia",
@@ -884,7 +1350,7 @@
     "proTooltip": "+2 años de experiencia"
   },
   "education": {
-    "title": "Formación",
+    "title": "Estudios",
     "items": [
       {
         "degree": "Instituto de Comunicación",
@@ -924,8 +1390,8 @@
     }
   },
   "contact": {
-    "title": "¿Trabajamos juntos?",
-    "description": "Si tienes un proyecto en mente o simplemente quieres charlar sobre tecnología, estaré encantado de escucharte.",
+    "title": "¿Formación o proyecto a medida?",
+    "description": "Cuéntame qué necesita tu equipo: una charla, una formación en IA o un desarrollo a medida. Te contesto yo, sin intermediarios.",
     "form": {
       "name": "Nombre",
       "email": "Email",
@@ -942,5 +1408,23 @@
   },
   "footer": {
     "rights": "Todos los derechos reservados"
+  },
+  "seo": {
+    "homeTitle": "Hugo Oliva · Formación en IA para empresas y desarrollo a medida",
+    "homeDescription": "Formación en IA para empresas y desarrollo de software a medida con IA en Madrid: agentes, Claude Code, Codex, MCP y n8n. CTO de Tesora y profesor en thePower.",
+    "personDescription": "Ingeniero de software y formador especializado en inteligencia artificial aplicada. Imparte formación en IA para empresas y desarrolla software a medida con IA. Cofundador y CTO de Tesora, Founding Engineer en Musive y profesor de IA en tres másteres de thePower.",
+    "jobTitle": "Formador en IA y desarrollador de software a medida",
+    "ogAlt": "Hugo Oliva · Formación en IA para empresas y desarrollo a medida",
+    "blogTitle": "Blog sobre IA aplicada y desarrollo",
+    "blogDescription": "Artículos de Hugo Oliva sobre inteligencia artificial aplicada a empresas, agentes, desarrollo con IA y producto digital.",
+    "projectsTitle": "Proyectos con IA y casos de estudio",
+    "projectsDescription": "Casos de estudio de software con IA desarrollado por Hugo Oliva: Tesora, Mimify, X-Ray y más. Agentes, LLMs y aplicaciones web y móviles en producción.",
+    "comunicacionTitle": "Docencia y comunicación sobre IA",
+    "comunicacionDescription": "Docencia de IA en tres másteres de thePower, el podcast La Última Versión y vídeo: cómo Hugo Oliva enseña y divulga inteligencia artificial.",
+    "notFoundTitle": "Página no encontrada",
+    "notFoundText": "Esta página no existe o ha cambiado de sitio.",
+    "notFoundCta": "Volver al inicio",
+    "breadcrumbHome": "Inicio",
+    "breadcrumbServices": "Servicios"
   }
 }

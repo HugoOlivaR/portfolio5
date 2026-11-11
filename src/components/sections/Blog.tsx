@@ -1,29 +1,13 @@
-"use client";
-
-import { Link } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import HapticLink from "../ui/HapticLink";
+import { getBlogPosts } from "@/lib/blog";
 
-type BlogPost = {
-  slug: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  image?: string;
-};
-
+// Server component: the latest posts ship in the HTML, so crawlers see the links.
 export default function Blog() {
   const t = useTranslations("blog");
   const locale = useLocale();
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-
-  useEffect(() => {
-    fetch(`/api/blog?locale=${locale}`)
-      .then((res) => res.json())
-      .then((data) => setPosts(data.slice(0, 3)));
-  }, [locale]);
+  const posts = getBlogPosts(locale).slice(0, 3);
 
   return (
     <section id="blog" className="space-y-6">

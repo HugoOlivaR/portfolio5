@@ -9,7 +9,7 @@ const navItems = [
   { key: "experience", href: "#experience" },
   { key: "projects", href: "#projects" },
   { key: "comunicacion", href: "#comunicacion" },
-  { key: "skills", href: "#skills" },
+  { key: "services", href: "#services" },
   { key: "education", href: "#education" },
   { key: "blog", href: "#blog" },
   { key: "contact", href: "#contact" },

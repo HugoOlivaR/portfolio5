@@ -4,30 +4,22 @@ import { Link } from "@/i18n/navigation";
 import SimpleFooter from "@/components/layout/SimpleFooter";
 import ComunicacionRow from "@/components/comunicacion/ComunicacionRow";
 import type { ComItemData } from "@/components/comunicacion/types";
+import { pageMetadata } from "@/lib/site";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://hugooliva.com";
-
-export const metadata: Metadata = {
-  title: "Comunicación & Docencia | Hugo Oliva",
-  description:
-    "Docencia, podcast y vídeo: cómo Hugo Oliva comunica y enseña tecnología e inteligencia artificial más allá del código.",
-  alternates: {
-    canonical: "/comunicacion",
-  },
-  openGraph: {
-    type: "website",
-    url: `${BASE_URL}/comunicacion`,
-    title: "Comunicación & Docencia | Hugo Oliva",
-    description:
-      "Docencia en thePower, el podcast La Última Versión y contenido en vídeo. Sé construir… y sé explicarlo.",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Comunicación & Docencia | Hugo Oliva",
-    description:
-      "Docencia, podcast y vídeo: comunicar y enseñar tecnología con criterio.",
-  },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return pageMetadata({
+    locale,
+    path: "/comunicacion",
+    title: t("comunicacionTitle"),
+    description: t("comunicacionDescription"),
+  });
+}
 
 export default async function ComunicacionPage({
   params,

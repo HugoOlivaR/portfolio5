@@ -9,9 +9,22 @@ import type {
   RelatedProject,
 } from "@/components/projects/types";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://hugooliva.com";
+import { routing } from "@/i18n/routing";
+import { JsonLd, breadcrumbNode } from "@/lib/jsonld";
+import { ID, absoluteUrl, localeUrl, pageMetadata } from "@/lib/site";
 
 type Project = ProjectDetailData;
+
+export async function generateStaticParams() {
+  const params: { locale: string; slug: string }[] = [];
+  for (const locale of routing.locales) {
+    const t = await getTranslations({ locale, namespace: "projects" });
+    for (const p of t.raw("items") as Project[]) {
+      params.push({ locale, slug: p.slug });
+    }
+  }
+  return params;
+}
 
 export async function generateMetadata({
   params,
@@ -19,48 +32,21 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const t = await getTranslations("projects");
+  const t = await getTranslations({ locale, namespace: "projects" });
   const projects = t.raw("items") as Project[];
   const project = projects.find((p) => p.slug === slug);
+  if (!project) return {};
 
-  if (!project) {
-    return {};
-  }
-
-  const url = `${BASE_URL}/${locale}/projects/${slug}`;
-  const title = `${project.title} | Proyecto de Hugo Oliva`;
-  const description =
-    project.description ||
-    "Proyecto desarrollado por Hugo Oliva, ingeniero full‑stack especializado en productos AI‑native.";
-
-  return {
-    title,
-    description,
-    alternates: {
-      canonical: url,
-    },
-    openGraph: {
-      type: "website",
-      url,
-      title,
-      description,
-      images: project.image
-        ? [
-            {
-              url: project.image,
-              alt: project.title,
-            },
-          ]
-        : undefined,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: project.image ? [project.image] : undefined,
-    },
-  };
+  return pageMetadata({
+    locale,
+    path: `/projects/${slug}`,
+    title: `${project.title} · ${(t.raw("detail") as DetailLabels).caseStudy}`,
+    description: project.description,
+    image: project.image,
+    imageAlt: project.title,
+  });
 }
+
 
 export default async function ProjectPage({
   params,
@@ -90,12 +76,42 @@ export default async function ProjectPage({
       description: p.tagline ?? p.description,
     }));
 
+  const seo = await getTranslations({ locale, namespace: "seo" });
+  const url = localeUrl(locale, `/projects/${slug}`);
+
   return (
-    <ProjectDetail
+    <>
+      <JsonLd
+        data={[
+          {
+            "@type": "CreativeWork",
+            "@id": `${url}#work`,
+            name: project.title,
+            headline: project.tagline ?? project.title,
+            description: project.description,
+            url,
+            inLanguage: locale,
+            image: absoluteUrl(project.image),
+            dateCreated: project.year?.match(/\d{4}/)?.[0],
+            keywords: project.tags?.join(", "),
+            creator: { "@id": ID.person },
+            author: { "@id": ID.person },
+            isPartOf: { "@id": ID.website },
+            ...(project.link ? { sameAs: project.link } : {}),
+          },
+          breadcrumbNode([
+            { name: seo("breadcrumbHome"), url: localeUrl(locale) },
+            { name: t("title"), url: localeUrl(locale, "/projects") },
+            { name: project.title, url },
+          ]),
+        ]}
+      />
+      <ProjectDetail
       project={project}
       labels={labels}
       related={related}
       backLabel={t("backToProjects")}
-    />
+      />
+    </>
   );
 }

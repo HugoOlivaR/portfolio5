@@ -9,7 +9,20 @@ import type {
   RelatedComItem,
 } from "@/components/comunicacion/types";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://hugooliva.com";
+import { routing } from "@/i18n/routing";
+import { JsonLd, breadcrumbNode } from "@/lib/jsonld";
+import { ID, absoluteUrl, localeUrl, pageMetadata } from "@/lib/site";
+
+export async function generateStaticParams() {
+  const params: { locale: string; slug: string }[] = [];
+  for (const locale of routing.locales) {
+    const t = await getTranslations({ locale, namespace: "comunicacion" });
+    for (const item of t.raw("items") as ComItemData[]) {
+      params.push({ locale, slug: item.slug });
+    }
+  }
+  return params;
+}
 
 export async function generateMetadata({
   params,
@@ -17,48 +30,21 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const t = await getTranslations("comunicacion");
+  const t = await getTranslations({ locale, namespace: "comunicacion" });
   const items = t.raw("items") as ComItemData[];
   const item = items.find((p) => p.slug === slug);
+  if (!item) return {};
 
-  if (!item) {
-    return {};
-  }
-
-  const url = `${BASE_URL}/${locale}/comunicacion/${slug}`;
-  const title = `${item.title} | Hugo Oliva`;
-  const description =
-    item.tagline ||
-    "Comunicación y docencia de Hugo Oliva: enseñar y divulgar tecnología e inteligencia artificial.";
-
-  return {
-    title,
-    description,
-    alternates: {
-      canonical: url,
-    },
-    openGraph: {
-      type: "website",
-      url,
-      title,
-      description,
-      images: item.image
-        ? [
-            {
-              url: item.image,
-              alt: item.title,
-            },
-          ]
-        : undefined,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: item.image ? [item.image] : undefined,
-    },
-  };
+  return pageMetadata({
+    locale,
+    path: `/comunicacion/${slug}`,
+    title: item.title,
+    description: item.tagline,
+    image: item.image,
+    imageAlt: item.title,
+  });
 }
+
 
 export default async function ComunicacionDetailPage({
   params,
@@ -85,12 +71,38 @@ export default async function ComunicacionDetailPage({
       title: p.title,
     }));
 
+  const seo = await getTranslations({ locale, namespace: "seo" });
+  const url = localeUrl(locale, `/comunicacion/${slug}`);
+
   return (
-    <ComunicacionDetail
+    <>
+      <JsonLd
+        data={[
+          {
+            "@type": "WebPage",
+            "@id": `${url}#webpage`,
+            url,
+            name: item.title,
+            description: item.tagline,
+            inLanguage: locale,
+            isPartOf: { "@id": ID.website },
+            about: { "@id": ID.person },
+            author: { "@id": ID.person },
+            ...(item.image ? { primaryImageOfPage: absoluteUrl(item.image) } : {}),
+          },
+          breadcrumbNode([
+            { name: seo("breadcrumbHome"), url: localeUrl(locale) },
+            { name: t("title"), url: localeUrl(locale, "/comunicacion") },
+            { name: item.title, url },
+          ]),
+        ]}
+      />
+      <ComunicacionDetail
       item={item}
       labels={labels}
       related={related}
       backLabel={t("backToComunicacion")}
-    />
+      />
+    </>
   );
 }

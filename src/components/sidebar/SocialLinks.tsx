@@ -1,5 +1,7 @@
 "use client";
 
+import { SOCIAL } from "@/lib/site";
+
 function GitHubIcon() {
   return (
     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -43,16 +45,16 @@ function YouTubeIcon() {
 }
 
 const socialLinks = [
-  { name: "GitHub", href: "https://github.com/HugoOlivaR", icon: GitHubIcon },
+  { name: "GitHub", href: SOCIAL.github, icon: GitHubIcon },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/hugooliva/",
+    href: SOCIAL.linkedin,
     icon: LinkedInIcon,
   },
-  { name: "Twitter", href: "https://x.com/hugoolivacom", icon: TwitterIcon },
+  { name: "Twitter", href: SOCIAL.x, icon: TwitterIcon },
   {
     name: "YouTube",
-    href: "https://youtube.com/@hugoolivaa",
+    href: SOCIAL.youtube,
     icon: YouTubeIcon,
   },
 ];
@@ -65,7 +67,7 @@ export default function SocialLinks() {
           key={link.name}
           href={link.href}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="me noopener noreferrer"
           className="text-text-secondary hover:text-text-primary transition-colors"
           aria-label={link.name}
         >

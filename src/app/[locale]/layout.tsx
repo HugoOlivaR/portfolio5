@@ -1,43 +1,58 @@
-import type { Metadata } from "next";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
-import { cookies } from "next/headers";
+import type { Metadata, Viewport } from "next";
+import { notFound } from "next/navigation";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { BASE_URL, PERSON, pageMetadata } from "@/lib/site";
 import "../globals.css";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://hugooliva.com";
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) return {};
+  const t = await getTranslations({ locale, namespace: "seo" });
 
-export const metadata: Metadata = {
-  title: "Hugo Oliva | Full Stack Developer",
-  description:
-    "Personal portfolio of Hugo Oliva - Full Stack Developer specializing in React, Node.js, and cloud technologies.",
-  metadataBase: new URL(BASE_URL),
-  openGraph: {
-    type: "website",
-    url: "/",
-    title: "Hugo Oliva | Full Stack Developer & AI-Native Engineer",
-    description:
-      "Portfolio de Hugo Oliva, ingeniero full‑stack especializado en React, Next.js y productos AI‑native. Proyectos reales, blog técnico y casos de uso con IA.",
-    siteName: "Hugo Oliva",
-    images: [
-      {
-        url: "/me.webp",
-        width: 1200,
-        height: 630,
-        alt: "Foto de perfil de Hugo Oliva, ingeniero full‑stack AI‑native",
+  return {
+    metadataBase: new URL(BASE_URL),
+    applicationName: PERSON.name,
+    authors: [{ name: PERSON.name, url: `${BASE_URL}/${locale}` }],
+    creator: PERSON.name,
+    ...pageMetadata({
+      locale,
+      title: t("homeTitle"),
+      description: t("homeDescription"),
+      imageAlt: t("ogAlt"),
+      type: "profile",
+      absoluteTitle: true,
+    }),
+    // Child pages pass plain titles; the template adds the name.
+    title: { default: t("homeTitle"), template: `%s | ${PERSON.name}` },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
       },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Hugo Oliva | Full Stack Developer & AI-Native Engineer",
-    description:
-      "Portfolio de proyectos full‑stack y AI‑native de Hugo Oliva: Next.js, React, Node.js e integraciones de inteligencia artificial.",
-    images: ["/me.webp"],
-  },
-  alternates: {
-    canonical: "/",
-  },
+    },
+  };
+}
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+  ],
 };
 
 export function generateStaticParams() {
@@ -52,51 +67,31 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
   const messages = await getMessages();
-  const cookieStore = await cookies();
-  const themeCookie = cookieStore.get("theme")?.value;
-  const isDark = themeCookie ? themeCookie === "dark" : true;
 
+  // Theme is resolved client-side before paint (script below), not from a
+  // cookie: reading cookies here would force every page to render per request.
   return (
-    <html
-      lang={locale}
-      className={isDark ? "dark" : ""}
-      suppressHydrationWarning
-    >
+    <html lang={locale} className="dark" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                const theme = localStorage.getItem('theme') || 'dark';
+                var theme = 'dark';
+                try { theme = localStorage.getItem('theme') || 'dark'; } catch (e) {}
                 document.documentElement.classList.toggle('dark', theme === 'dark');
-                document.cookie = 'theme=' + theme + ';path=/;max-age=31536000';
               })();
             `,
           }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Hugo Oliva",
-              jobTitle: "Full Stack Developer & AI-Native Engineer",
-              email: "mailto:hugoliva158@gmail.com",
-              url: BASE_URL,
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "Madrid",
-                addressCountry: "ES",
-              },
-              sameAs: [
-                "https://www.linkedin.com/in/hugo-oliva", // ajusta si el perfil es distinto
-                "https://github.com/hugolivaa",
-              ],
-            }),
-          }}
+        <link
+          rel="alternate"
+          type="text/plain"
+          href="/llms.txt"
+          title="llms.txt"
         />
       </head>
       <body className="antialiased">

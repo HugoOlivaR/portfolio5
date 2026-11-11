@@ -5,30 +5,22 @@ import { Link } from "@/i18n/navigation";
 import { getBlogPosts } from "@/lib/blog";
 import Image from "next/image";
 import SimpleFooter from "@/components/layout/SimpleFooter";
+import { pageMetadata } from "@/lib/site";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://hugooliva.com";
-
-export const metadata: Metadata = {
-  title: "Blog de desarrollo y AI-native | Hugo Oliva",
-  description:
-    "Artículos sobre desarrollo full‑stack, Next.js, React y construcción de productos AI‑native por Hugo Oliva.",
-  alternates: {
-    canonical: "/blog",
-  },
-  openGraph: {
-    type: "website",
-    url: `${BASE_URL}/blog`,
-    title: "Blog de desarrollo y AI-native | Hugo Oliva",
-    description:
-      "Guías y reflexiones sobre desarrollo full‑stack moderno, IA aplicada y producto digital.",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Blog de desarrollo y AI-native | Hugo Oliva",
-    description:
-      "Artículos técnicos y estratégicos sobre cómo construir productos AI‑native y aplicaciones full‑stack.",
-  },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "seo" });
+  return pageMetadata({
+    locale,
+    path: "/blog",
+    title: t("blogTitle"),
+    description: t("blogDescription"),
+  });
+}
 
 export default async function BlogPage({
   params,

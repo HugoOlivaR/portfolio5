@@ -8,12 +8,21 @@ import LanguageSwitch from "@/components/ui/LanguageSwitch";
 export default function ProjectTopBar({
   backLabel,
   backHref = "/projects",
+  plain = false,
 }: {
   backLabel: string;
   backHref?: string;
+  /** Solid bar with no rule or blur, for pages built without lines. */
+  plain?: boolean;
 }) {
   return (
-    <header className="sticky top-0 z-30 border-b border-border bg-bg-primary/85 backdrop-blur-md">
+    <header
+      className={
+        plain
+          ? "sticky top-0 z-30 bg-bg-primary"
+          : "sticky top-0 z-30 border-b border-border bg-bg-primary/85 backdrop-blur-md"
+      }
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10 lg:px-16">
         <HapticLink
           href={backHref}

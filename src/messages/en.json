@@ -1,10 +1,10 @@
 {
   "profile": {
     "name": "Hugo Oliva",
-    "title": "Full-Stack Engineer · AI-Native",
+    "title": "Applied AI · Training & custom software",
     "location": "Madrid, Spain",
     "email": "hugoliva158@gmail.com",
-    "availability": "Open for projects",
+    "availability": "Available for training and projects",
     "copied": "Copied!",
     "getTemplate": "Get Template",
     "downloadCV": "Download CV"
@@ -17,12 +17,478 @@
     "skills": "Skills",
     "education": "Education",
     "blog": "Blog",
-    "contact": "Contact"
+    "contact": "Contact",
+    "services": "Services"
   },
   "about": {
     "title": "About Me",
-    "paragraph1": "Full-stack developer focused on AI products, agents, and fintech.",
-    "paragraph2": "I'm currently a Founding Engineer at Musive and CTO of Tesora. I design and build applications with React, TypeScript, and Node.js, taking products from ideation to production with an AI-native workflow: agent orchestration and harness engineering. My focus is on applying AI where it creates real competitive advantages."
+    "paragraph1": "I help companies adopt AI for real: I train their teams and build the custom software that puts it to work.",
+    "paragraph2": "I'm co-founder and CTO of Tesora, Founding Engineer at Musive and an applied AI instructor in three master's programs at thePower. I take AI products from idea to production —agents, orchestration, RAG and MCP— with React, TypeScript and Node.js. What I teach in class I use in production every day, and what I learn in production ends up in class."
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "I train teams to work with AI and build the custom software that puts it to work. Often both at once.",
+    "viewService": "View service",
+    "backToHome": "Back to home",
+    "labels": {
+      "faq": "FAQ",
+      "related": "The other service",
+      "location": "Hugo Oliva · Madrid",
+      "available": "Available for training and projects",
+      "emailMe": "Or email me at"
+    },
+    "builder": {
+      "title": "Build your training",
+      "text": "Pick who it's for and the format. You'll see what's included, and when you request it your choice is added to the contact form on this page.",
+      "audience": "Who is it for?",
+      "format": "Which format?",
+      "for": "for",
+      "proposal": "Your proposal",
+      "ask": "Request this training",
+      "tools": "With the tools you already use: Claude Code, Codex, MCP, n8n, ChatGPT, Claude or Gemini.",
+      "mailIntro": "Hi Hugo,\n\nI'm interested in this training:",
+      "mailOutro": "Team (size and profile):\nWhat we want to achieve:\nApproximate dates:\n\nThanks."
+    },
+    "items": [
+      {
+        "slug": "formacion-ia-empresas",
+        "serviceType": "Artificial intelligence training for companies",
+        "title": "AI training for companies",
+        "summary": "Talks, workshops and in-company programs so your team uses and builds with AI: agents, Claude Code, Codex, MCP and n8n.",
+        "standfirst": "Hands-on workshops so your team works with AI for real: on your cases, with your tools, and with the judgment to know what to automate.",
+        "metaTitle": "AI training for companies: agents, Claude Code and automation",
+        "metaDescription": "Hands-on, tailored AI training for companies: agents, Claude Code, Codex, MCP and n8n automation. Taught by Hugo Oliva, AI instructor at thePower.",
+        "heroCta": "Request a proposal",
+        "heroImage": {
+          "src": "/services/clase-directo-control.jpg",
+          "video": "/services/clase-directo-control.mp4",
+          "alt": "One of my live classes seen from the control room: Claude Code on screen"
+        },
+        "heroImage2": {
+          "src": "/comunicacion/thepower.webp",
+          "alt": "thePower, the school where Hugo Oliva teaches AI",
+          "href": "/comunicacion/thepower"
+        },
+        "statements": [
+          "AI instructor in three master's programs at thePower.",
+          "From no-code profiles to senior developers."
+        ],
+        "lead": "Almost every company already pays for some AI tool, but few use it well. Typical training stops at prompt tricks. Mine starts from your real work and ends with things working.",
+        "columns": [
+          {
+            "title": "Who it's for.",
+            "text": "Leadership and business teams who want to use AI every day with good judgment. Engineering teams moving to agentic development. Operations teams that want to automate processes."
+          },
+          {
+            "title": "What you take away.",
+            "text": "Everyone leaves with flows or automations working on their own tasks, reference material and a clear plan for what to automate or build next."
+          },
+          {
+            "title": "Where.",
+            "text": "On-site in Madrid or remote. A talk to get started, a one-day workshop or a several-week program built around a real company project."
+          },
+          {
+            "title": "How to start.",
+            "text": "Email me with the team size, its profile and what you want to achieve. With that I'll prepare a tailored format and syllabus proposal."
+          }
+        ],
+        "audiences": [
+          {
+            "title": "Leadership and business teams",
+            "detail": "You'll learn to use AI every day with the company's context and documents, and to decide which processes are worth automating."
+          },
+          {
+            "title": "Engineering teams",
+            "detail": "You'll learn to work with Claude Code and Codex in a professional workflow, with permissions, skills, MCP and Git, and to take agents to production."
+          },
+          {
+            "title": "Operations and product",
+            "detail": "You'll turn repetitive processes into automatic flows with n8n, with AI inside the flow and connected to the tools you already use."
+          }
+        ],
+        "formats": [
+          {
+            "title": "AI adoption talk",
+            "detail": "What AI can do for your business today, what it can't and where to start.",
+            "meta": "1–2 hours"
+          },
+          {
+            "title": "Hands-on workshop",
+            "detail": "An intensive laptop session on your own cases; everyone finishes with something working.",
+            "meta": "Half or full day"
+          },
+          {
+            "title": "In-company program",
+            "detail": "Several sessions with a tailored syllabus and a real company project built during the program.",
+            "meta": "Several weeks"
+          }
+        ],
+        "rowsTitle": "What your team learns",
+        "rows": [
+          {
+            "title": "Judgment before tools",
+            "detail": "What an AI model does well, where it fails and how to check whether a solution really works before investing in it."
+          },
+          {
+            "title": "AI in everyday work",
+            "detail": "ChatGPT, Claude and Gemini with the company's context, documents and data, without putting sensitive information at risk."
+          },
+          {
+            "title": "Agentic development",
+            "detail": "Claude Code and Codex in a professional workflow: permissions, skills, MCP, Git and how to review the code AI writes.",
+            "image": {
+              "src": "/services/clase-claude-code.jpg",
+              "video": "/services/clase-claude-code.mp4",
+              "alt": "Hugo Oliva explaining Claude Code hooks in a live class",
+              "caption": "Explaining Claude Code hooks, live.",
+              "shape": "wide"
+            }
+          },
+          {
+            "title": "Agents connected to your tools",
+            "detail": "Agents that query your systems through MCP and do real work, not just conversation.",
+            "image": {
+              "src": "/services/auri-movil.png",
+              "alt": "Auri, Tesora's assistant, checking debts and simulating payments",
+              "href": "/projects/tesora",
+              "caption": "Auri, Tesora's agent, in production.",
+              "shape": "tall"
+            }
+          },
+          {
+            "title": "Automation with n8n and AI",
+            "detail": "Repetitive processes turned into automatic flows, with AI only in the step where it helps."
+          },
+          {
+            "title": "Security and good practice",
+            "detail": "Privacy, risks and clear rules for using AI at work without surprises."
+          }
+        ],
+        "processTitle": "How we work",
+        "process": [
+          {
+            "title": "Diagnosis",
+            "detail": "A call to understand the team, its level and what you want to achieve.",
+            "weight": 1
+          },
+          {
+            "title": "Tailored proposal",
+            "detail": "Format and syllabus built on your company's cases.",
+            "weight": 1.4
+          },
+          {
+            "title": "Hands-on training",
+            "detail": "Sessions with hands on the keyboard, not slides.",
+            "weight": 3
+          },
+          {
+            "title": "Next steps",
+            "detail": "Reference material and a plan for what to automate next.",
+            "weight": 1.2
+          }
+        ],
+        "proofTitle": "Where I teach it and use it",
+        "proof": [
+          {
+            "kind": "Teaching at thePower",
+            "names": [
+              {
+                "name": "AI Maker master's",
+                "href": "https://thepower.education/thepowermba/ia/ai-maker"
+              },
+              {
+                "name": "Agentic Development master's",
+                "href": "https://thepower.education/thepowermba/tech/desarrollo-agentico"
+              },
+              {
+                "name": "Full Stack with AI master's",
+                "href": "https://thepower.education/thepowermba/tech/rock-the-code"
+              },
+              {
+                "name": "Claude Code specialization"
+              },
+              {
+                "name": "Codex specialization"
+              }
+            ]
+          },
+          {
+            "kind": "Products in production",
+            "names": [
+              {
+                "name": "Tesora, co-founder and CTO",
+                "href": "/projects/tesora"
+              },
+              {
+                "name": "Musive, Founding Engineer",
+                "href": "https://musive.io"
+              },
+              {
+                "name": "Mimify",
+                "href": "/projects/mimify"
+              },
+              {
+                "name": "X-Ray · HackSpain 2026",
+                "href": "/projects/x-ray-embat"
+              }
+            ]
+          },
+          {
+            "kind": "Tools",
+            "names": [
+              {
+                "name": "Claude Code"
+              },
+              {
+                "name": "Codex"
+              },
+              {
+                "name": "MCP"
+              },
+              {
+                "name": "n8n"
+              },
+              {
+                "name": "ChatGPT"
+              },
+              {
+                "name": "Claude"
+              },
+              {
+                "name": "Gemini"
+              }
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Do people need to know how to code?",
+            "a": "No. There's no-code training for business profiles and technical training for engineering teams. The syllabus adapts to each group's level."
+          },
+          {
+            "q": "Can it be tailored to our industry and tools?",
+            "a": "Yes. Before the training I learn how you work and build the exercises on your real cases, documents and tools."
+          },
+          {
+            "q": "Which tools are used?",
+            "a": "Whatever makes sense for you: ChatGPT, Claude, Gemini, Claude Code, Codex, n8n and MCP, among others. If the company already has licenses, we use those."
+          },
+          {
+            "q": "Is it on-site or remote?",
+            "a": "Both: on-site in Madrid or remote for teams anywhere."
+          },
+          {
+            "q": "How do I request a proposal?",
+            "a": "Email me with the team size, profile and what you want to achieve. With that I'll put together a format and syllabus proposal."
+          }
+        ],
+        "ctaTitle": "Your team, working with AI",
+        "ctaText": "Tell me who the team is and what you want to achieve. I'll propose a format and syllabus.",
+        "ctaButton": "Request a proposal",
+        "formPlaceholder": "Tell me who the team is, how many people, and what you want to achieve with AI."
+      },
+      {
+        "slug": "desarrollo-ia-a-medida",
+        "serviceType": "Custom software development with artificial intelligence",
+        "title": "Custom software with AI",
+        "summary": "Agents, automations, LLM integrations and complete web and mobile apps, from idea to production.",
+        "standfirst": "Agents, automations and apps that reach production and get used. End to end, with AI only where it helps.",
+        "metaTitle": "Custom AI software development: agents, LLMs and apps",
+        "metaDescription": "Custom software development with AI: agents, process automation, LLMs and RAG, and web and mobile apps. Hugo Oliva, CTO of Tesora, based in Madrid.",
+        "heroCta": "Talk about the project",
+        "heroImage": {
+          "src": "/services/auri-movil.png",
+          "alt": "Auri, Tesora's AI assistant, working out whether paying a loan off early is worth it",
+          "href": "/projects/tesora"
+        },
+        "heroImage2": {
+          "src": "/projects/mimify/mimify-live.png",
+          "alt": "Mimify live: 40 agents testing a website",
+          "href": "/projects/mimify"
+        },
+        "statements": [
+          "CTO of Tesora: AI finance on web, iOS and Android.",
+          "From idea to production, no demos left in a drawer."
+        ],
+        "lead": "Many AI projects end as an impressive demo that nobody uses. The challenge is making it work with your data, your tools and real users, at a reasonable cost. That's where I work.",
+        "columns": [
+          {
+            "title": "Who it's for.",
+            "text": "Companies that want to automate a process, put an assistant on top of their data or launch an AI product. And engineering teams that need help taking it to production."
+          },
+          {
+            "title": "What I build.",
+            "text": "Agents connected to your tools, automations, search and assistants over your documentation, and complete web and mobile applications."
+          },
+          {
+            "title": "How I work.",
+            "text": "First I check whether AI helps in your case. Then I prototype with your real data and build with frequent deliveries you can try."
+          },
+          {
+            "title": "How to start.",
+            "text": "Tell me the problem you want to solve. After a call I'll give you a plan with phases, timelines and budget."
+          }
+        ],
+        "rowsTitle": "What I can build",
+        "rows": [
+          {
+            "title": "AI agents",
+            "detail": "Assistants that query your systems, run calculations and act, connected through MCP and tools, with evaluation to know they get it right.",
+            "image": {
+              "src": "/services/auri-movil.png",
+              "alt": "Auri, Tesora's agent, answering with real banking data",
+              "href": "/projects/tesora",
+              "caption": "Auri, at Tesora.",
+              "shape": "tall"
+            }
+          },
+          {
+            "title": "Process automation",
+            "detail": "Repetitive tasks turned into automatic flows: documents, email, data and operations, with AI where it helps."
+          },
+          {
+            "title": "Assistants over your data",
+            "detail": "Search and assistants that answer from your documentation and data (RAG), citing sources and with quality control."
+          },
+          {
+            "title": "Web and mobile apps",
+            "detail": "Complete products with React, Next.js, React Native, Node.js and PostgreSQL, ready for real users.",
+            "image": {
+              "src": "/projects/tesora/tesora-main.png",
+              "alt": "Screens of the Tesora app",
+              "href": "/projects/tesora",
+              "caption": "Tesora, on web, iOS and Android.",
+              "shape": "wide",
+              "video": "/projects/tesora/tesora-cabecera.mp4"
+            }
+          },
+          {
+            "title": "Prototypes and MVPs",
+            "detail": "A first working version to validate the idea fast before investing big.",
+            "image": {
+              "src": "/projects/x-ray/x-ray-main.png",
+              "alt": "X-Ray, a financial health engine built at HackSpain 2026",
+              "href": "/projects/x-ray-embat",
+              "caption": "X-Ray, at a hackathon.",
+              "shape": "small"
+            }
+          }
+        ],
+        "processTitle": "How we work",
+        "process": [
+          {
+            "title": "Discovery",
+            "detail": "The problem, the data and whether AI is the right tool.",
+            "weight": 1
+          },
+          {
+            "title": "Prototype",
+            "detail": "A minimal version that proves it works with your data.",
+            "weight": 1.5
+          },
+          {
+            "title": "Iterative development",
+            "detail": "Frequent deliveries you can try, not a black box for months.",
+            "weight": 3
+          },
+          {
+            "title": "Production",
+            "detail": "Deployment, metrics, evals and model cost control.",
+            "weight": 1.3
+          }
+        ],
+        "proofTitle": "Already in production",
+        "proof": [
+          {
+            "kind": "My own products",
+            "names": [
+              {
+                "name": "Tesora",
+                "href": "/projects/tesora"
+              },
+              {
+                "name": "Mimify",
+                "href": "/projects/mimify"
+              },
+              {
+                "name": "X-Ray · HackSpain 2026",
+                "href": "/projects/x-ray-embat"
+              }
+            ]
+          },
+          {
+            "kind": "Teams",
+            "names": [
+              {
+                "name": "Musive, Founding Engineer",
+                "href": "https://musive.io"
+              },
+              {
+                "name": "Globant, Iberia account"
+              },
+              {
+                "name": "Evolvio, my agency (2024–2026)"
+              }
+            ]
+          },
+          {
+            "kind": "Stack",
+            "names": [
+              {
+                "name": "React and Next.js"
+              },
+              {
+                "name": "React Native"
+              },
+              {
+                "name": "Node.js and NestJS"
+              },
+              {
+                "name": "PostgreSQL"
+              },
+              {
+                "name": "OpenAI, Anthropic and Gemini"
+              },
+              {
+                "name": "MCP and RAG"
+              }
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "How much does it cost and how long does it take?",
+            "a": "It depends on scope. After a first call I give you a plan with phases, timelines and budget. Starting with a focused prototype lowers the risk."
+          },
+          {
+            "q": "Which AI models do you work with?",
+            "a": "OpenAI, Anthropic and Google models, among others. They're chosen for quality, cost and privacy in each case, with no vendor lock-in."
+          },
+          {
+            "q": "What happens to our data?",
+            "a": "It's decided upfront: which provider is used, where data is processed and what gets stored. Privacy is a design requirement, not an add-on."
+          },
+          {
+            "q": "Can you work with our engineering team?",
+            "a": "Yes. I can build the whole product or work alongside your team, and combine it with training so they can maintain it afterwards."
+          }
+        ],
+        "ctaTitle": "Your idea, in production",
+        "ctaText": "Tell me the problem you want to solve. I'll tell you whether AI makes sense and how I'd build it.",
+        "ctaButton": "Talk about the project",
+        "formPlaceholder": "Tell me the problem you want to solve, the data or tools involved, and the timeline."
+      }
+    ],
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company (optional)",
+      "message": "Message",
+      "sending": "Sending…",
+      "sentTitle": "Received.",
+      "sentText": "Thanks. I'll reply myself as soon as I read it.",
+      "error": "It couldn't be sent. Email me directly at"
+    }
   },
   "experience": {
     "title": "Experience",
@@ -924,8 +1390,8 @@
     }
   },
   "contact": {
-    "title": "Let's work together",
-    "description": "If you have a project in mind or just want to chat about technology, I'd love to hear from you.",
+    "title": "Training or a custom project?",
+    "description": "Tell me what your team needs: a talk, AI training or custom development. I'll reply myself, no middlemen.",
     "form": {
       "name": "Name",
       "email": "Email",
@@ -942,5 +1408,23 @@
   },
   "footer": {
     "rights": "All rights reserved"
+  },
+  "seo": {
+    "homeTitle": "Hugo Oliva · AI training for companies and custom AI software",
+    "homeDescription": "AI training for companies and custom AI software development, based in Madrid: agents, Claude Code, Codex, MCP and n8n. CTO of Tesora, instructor at thePower.",
+    "personDescription": "Software engineer and trainer specialized in applied artificial intelligence. Delivers AI training for companies and builds custom software with AI. Co-founder and CTO of Tesora, Founding Engineer at Musive and AI instructor in three master's programs at thePower.",
+    "jobTitle": "AI trainer and custom software developer",
+    "ogAlt": "Hugo Oliva · AI training for companies and custom software",
+    "blogTitle": "Blog on applied AI and software development",
+    "blogDescription": "Articles by Hugo Oliva on artificial intelligence applied to business, agents, AI-assisted development and digital product.",
+    "projectsTitle": "AI projects and case studies",
+    "projectsDescription": "Case studies of AI software built by Hugo Oliva: Tesora, Mimify, X-Ray and more. Agents, LLMs and web and mobile apps in production.",
+    "comunicacionTitle": "AI teaching and communication",
+    "comunicacionDescription": "Teaching AI in three master's programs at thePower, the La Última Versión podcast and video: how Hugo Oliva teaches and explains artificial intelligence.",
+    "notFoundTitle": "Page not found",
+    "notFoundText": "This page doesn't exist or has moved.",
+    "notFoundCta": "Back to home",
+    "breadcrumbHome": "Home",
+    "breadcrumbServices": "Services"
   }
 }
