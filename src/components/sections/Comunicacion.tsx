@@ -41,12 +41,12 @@ export default function Comunicacion() {
               className="flex items-center gap-4 py-4"
             >
               {item.image && (
-                <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded border border-border">
+                <span className="relative aspect-video w-24 shrink-0 overflow-hidden rounded border border-border">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    sizes="56px"
+                    sizes="96px"
                     className="object-cover"
                   />
                 </span>
