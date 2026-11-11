@@ -71,7 +71,8 @@ export default function ProjectDetail({
   related: RelatedProject[];
   backLabel: string;
 }) {
-  const site = project.link.replace(/^https?:\/\//, "").replace(/\/$/, "");
+  const site = project.link?.replace(/^https?:\/\//, "").replace(/\/$/, "");
+  const repo = project.repo === undefined ? GITHUB_URL : project.repo;
   const hasGallery = !!project.gallery && project.gallery.length > 0;
 
   // Number the case-study blocks dynamically based on which data exists.
@@ -125,21 +126,23 @@ export default function ProjectDetail({
                   </dd>
                 </div>
               )}
-              <div className="flex items-center justify-between gap-4">
-                <dt className="text-text-secondary">
-                  {project.linkLabel ?? labels.site}
-                </dt>
-                <dd>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-text-primary transition-colors hover:text-text-secondary"
-                  >
-                    {site} <ExternalLink className="h-3 w-3" />
-                  </a>
-                </dd>
-              </div>
+              {project.link && (
+                <div className="flex items-center justify-between gap-4">
+                  <dt className="text-text-secondary">
+                    {project.linkLabel ?? labels.site}
+                  </dt>
+                  <dd>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-text-primary transition-colors hover:text-text-secondary"
+                    >
+                      {site} <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </dd>
+                </div>
+              )}
             </dl>
           </div>
         </section>
@@ -313,41 +316,47 @@ export default function ProjectDetail({
         )}
 
         {/* ── Links ───────────────────────────────────────────── */}
-        <section className="mt-16 grid grid-cols-1 gap-6 border-t border-border pt-12 md:grid-cols-12 md:gap-8">
-          <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-text-primary md:col-span-3">
-            {labels.linksTitle}
-          </h2>
-          <div className="grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2 md:col-start-5 md:col-span-8">
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col gap-1.5 bg-bg-primary p-5 transition-colors hover:bg-bg-secondary"
-            >
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-text-primary">
-                  {project.linkCta ?? labels.liveApp}
-                </span>
-                <ExternalLink className="h-3.5 w-3.5 text-text-secondary" />
-              </div>
-              <span className="text-xs text-text-secondary">{site}</span>
-            </a>
-            <a
-              href={project.repo ?? GITHUB_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col gap-1.5 bg-bg-primary p-5 transition-colors hover:bg-bg-secondary"
-            >
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-text-primary">
-                  {labels.viewCode}
-                </span>
-                <Github className="h-3.5 w-3.5 text-text-secondary" />
-              </div>
-              <span className="text-xs text-text-secondary">GitHub</span>
-            </a>
-          </div>
-        </section>
+        {(project.link || repo) && (
+          <section className="mt-16 grid grid-cols-1 gap-6 border-t border-border pt-12 md:grid-cols-12 md:gap-8">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.12em] text-text-primary md:col-span-3">
+              {labels.linksTitle}
+            </h2>
+            <div className="grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2 md:col-start-5 md:col-span-8">
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col gap-1.5 bg-bg-primary p-5 transition-colors hover:bg-bg-secondary"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-text-primary">
+                      {project.linkCta ?? labels.liveApp}
+                    </span>
+                    <ExternalLink className="h-3.5 w-3.5 text-text-secondary" />
+                  </div>
+                  <span className="text-xs text-text-secondary">{site}</span>
+                </a>
+              )}
+              {repo && (
+                <a
+                  href={repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col gap-1.5 bg-bg-primary p-5 transition-colors hover:bg-bg-secondary"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-text-primary">
+                      {labels.viewCode}
+                    </span>
+                    <Github className="h-3.5 w-3.5 text-text-secondary" />
+                  </div>
+                  <span className="text-xs text-text-secondary">GitHub</span>
+                </a>
+              )}
+            </div>
+          </section>
+        )}
 
         {/* ── Related ─────────────────────────────────────────── */}
         {related.length > 0 && (

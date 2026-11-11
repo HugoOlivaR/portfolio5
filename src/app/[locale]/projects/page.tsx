@@ -42,7 +42,7 @@ export default async function ProjectsPage({
     title: string;
     description: string;
     tags: string[];
-    link: string;
+    link?: string;
     image: string;
     category: string;
   }>;
@@ -87,14 +87,16 @@ export default async function ProjectsPage({
                 </h2>
               </Link>
 
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-text-primary transition-colors flex items-center gap-1"
-              >
-                {project.link} <ExternalLink className="w-3 h-3" />
-              </a>
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-text-primary transition-colors flex items-center gap-1"
+                >
+                  {project.link} <ExternalLink className="w-3 h-3" />
+                </a>
+              )}
 
               <Link
                 href={`/projects/${project.slug}`}

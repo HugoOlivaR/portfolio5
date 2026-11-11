@@ -8,12 +8,14 @@ export default function Projects() {
   const projects = t.raw("items") as Array<{
     slug: string;
     title: string;
-    link: string;
+    link?: string;
     description: string;
     category: string;
     tags: string[];
     image: string;
+    featured?: boolean;
   }>;
+  const featured = projects.filter((p) => p.featured);
 
   return (
     <section id="projects" className="space-y-6">
@@ -31,7 +33,7 @@ export default function Projects() {
         </HapticLink>
       </div>
       <div className="grid gap-12">
-        {projects.slice(0, 3).map((project) => (
+        {featured.map((project) => (
           <div
             key={project.slug}
             className="relative hover:cursor-pointer group transition-colors space-y-3"
@@ -74,14 +76,16 @@ export default function Projects() {
               >
                 {t("readMore")}
               </HapticLink>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative z-10 text-sm text-text-primary transition-colors flex items-center gap-1"
-              >
-                {t("viewProject")} <ExternalLink className="w-3 h-3" />
-              </a>
+              {project.link && (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative z-10 text-sm text-text-primary transition-colors flex items-center gap-1"
+                >
+                  {t("viewProject")} <ExternalLink className="w-3 h-3" />
+                </a>
+              )}
             </div>
           </div>
         ))}

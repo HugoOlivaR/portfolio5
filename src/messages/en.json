@@ -100,9 +100,17 @@
         "title": "Tesora",
         "link": "https://tesora.app",
         "year": "2025 - 2026",
-        "image": "/projects/tesora/tesora-main.webp",
-        "video": "/projects/tesora/tesora.mp4",
-        "gallery": [],
+        "featured": true,
+        "image": "/projects/tesora/tesora-main.png",
+        "video": "/projects/tesora/tesora-cabecera.mp4",
+        "gallery": [
+          "/projects/tesora/app-dashboard.png",
+          "/projects/tesora/app-auri.png",
+          "/projects/tesora/app-metas.png",
+          "/projects/tesora/app-deudas.png",
+          "/projects/tesora/app-salud.png",
+          "/projects/tesora/app-academia.png"
+        ],
         "category": "Fintech",
         "description": "AI-powered personal finance platform: connect your banks, unify your wealth, and receive intelligent advice. On web, iOS, and Android.",
         "content": "Tesora is an AI-powered personal finance platform that helps you control, understand, and grow your wealth more intelligently.\n\nSecurely connect banks, investments, and crypto, visualize your real net worth (assets minus debts), and receive personalized guidance from an AI assistant that truly knows your financial situation.\n\nMain features:\n- Secure account aggregation and unified wealth with history\n- Smart expense analysis and automatic categorization\n- Advanced debt management with Avalanche/Snowball simulations and personalized recommendations\n- Marketplace of certified financial advisors with chat and granular permissions\n- Conversational AI assistant with contextual access to your data\n- Savings planning with realistic scenarios and projections\n- Dynamic Financial Health Score and proactive alerts\n\nWith Tesora I've learned to see my money in a completely different way: I no longer just look at scattered balances, but understand how my income, expenses, debts, and investments relate in real time. I've discovered spending patterns I used to ignore, optimized my debt payments saving thousands of euros in interest, and started making much more conscious investment decisions thanks to the simulations and context the AI provides. Most importantly, I've gone from feeling lost with finances to having a real sense of control and clear direction toward my goals.",
@@ -171,6 +179,77 @@
         ],
         "architecture": "Three pieces: a Next.js frontend that also ships as a native app through Capacitor, a modular NestJS API on PostgreSQL, and a separate admin panel. Everything runs on our own VPS behind nginx, with the API under /api on the same domain. The AI assistant works through tools over the user's data and never sees banking credentials; sensitive data is encrypted before it's stored.",
         "learnings": "With Tesora I've learned to see my money in a completely different way: no longer just scattered balances, but how income, expenses, debts and investments relate in real time. And technically, I've internalized that useful AI isn't the biggest model — it's the one with the right context."
+      },
+      {
+        "slug": "mimify",
+        "title": "Mimify",
+        "repo": null,
+        "year": "2026",
+        "featured": true,
+        "image": "/projects/mimify/mimify-live.png",
+        "gallery": [
+          "/projects/mimify/disenador.png",
+          "/projects/mimify/resumen.png",
+          "/projects/mimify/hallazgos.png",
+          "/projects/mimify/avatares.png"
+        ],
+        "status": "beta",
+        "tags": [
+          "Node.js",
+          "Playwright",
+          "Claude Code",
+          "MCP",
+          "SQLite",
+          "Multi-LLM"
+        ],
+        "category": "AI agents",
+        "description": "Synthetic users that browse your real site in Chromium, think out loud and tell you where they get stuck, along with the code file to change.",
+        "content": "Mimify is a synthetic user research team that runs locally. You tell an agent what you want to test and it sets up the study: the URL, the task, the funnel steps, the environment and who takes part. Then it launches dozens of agents, each with a person's profile (age, money, patience, distrust), that browse your actual site and answer an interview at the end.\n\nI built it on my own, in two days with Claude Code, to test Tesora's onboarding. Since then I use it to test major changes before shipping them: 37 studies across five products.",
+        "eyebrow": "Case study · AI agents · Side project",
+        "role": "Product, design and engineering · solo",
+        "tagline": "Agents with real user profiles that browse your site, get stuck where your people would and tell you why.",
+        "thesis": "One false finding makes you distrust all the others.",
+        "thesisNote": "The hard part isn't getting an agent to browse a website. It's making the report reliable enough to change code because of it.",
+        "problem": "Testing a flow with real users is slow and expensive: recruiting, scheduling, recording and drawing conclusions takes weeks, so small products almost never do it before shipping. Analytics arrive later and tell you where people drop off, but not why.\n\nWeb-browsing agents already exist, but a generic agent completing a task is nothing like a 60-year-old who distrusts the internet and opens the app on their phone. And if the report blames the site for a failure of the test itself, nobody trusts it again.\n\nIt needed something in between: as fast as an automated test, with the variety of a sample of people, and honest enough to say when a result doesn't count.",
+        "stack": [
+          {
+            "name": "Node.js",
+            "note": "Local server with just three dependencies. No framework: API, live events over SSE and a UI in plain HTML, CSS and JS."
+          },
+          {
+            "name": "Playwright",
+            "note": "Each agent opens its own Chromium, mobile or desktop, with isolated cookies. It reads the screen as text with numbered elements, including whatever a banner covers."
+          },
+          {
+            "name": "Claude Code",
+            "note": "The agents that set up studies (analyst, designer and profile creator) run the user's own claude headless, on their subscription and without touching their credentials."
+          },
+          {
+            "name": "MCP",
+            "note": "MCP server and CLI to launch studies and read findings from Claude Code in another product's repo, or from CI."
+          },
+          {
+            "name": "SQLite",
+            "note": "Native node:sqlite, one row per study and one per agent. If the server dies mid-run, the study picks up where it left off."
+          },
+          {
+            "name": "Multi-LLM",
+            "note": "Eleven providers (Anthropic, OpenAI, Gemini, Mistral, DeepSeek, Groq, OpenRouter, Jev…). Mixing models is deliberate: lack of variety is the biggest risk with synthetic users."
+          }
+        ],
+        "features": [
+          "Conversational designer: describe what you want to test and an agent reads your site and your code (read-only), picks the avatars and leaves the study ready to launch.",
+          "Avatars with real context: money, tech skills, patience and distrust from 1 to 5, a goal and a device. If a profile is missing, another agent creates it.",
+          "Live tracking of every agent: where it is, what it's thinking and whether it's moving on, stuck or giving up.",
+          "P0–P2 findings with evidence in the agent's own voice, the proposed change and the code file and line to touch, ready for Linear.",
+          "Exit interview: you can ask each agent, in first person, why it left.",
+          "Study health: visits invalidated by the test itself (anti-bot, login, tool errors) are removed from the results, and the report says so.",
+          "Pilot with one or two agents before a large study, so you don't burn 40 visits on a broken environment.",
+          "Local, staging and production profiles: in production everything is look-only, with hard limits such as paying, buying or deleting an account.",
+          "Regression across versions: the same study on every branch or commit, with a command that fails CI if completion drops below a threshold."
+        ],
+        "architecture": "A local Node server orchestrates everything. The setup agents (project analyst, study designer and profile creator) run on Claude Code and produce a declarative config: URL, funnel steps with verifiable rules, environment and avatars. The runner splits agents across the chosen models and launches them in parallel with per-provider limits. Each agent is an observe–decide–act loop over its own Chromium: the reader turns the page into text with numbered elements, the model replies with an action validated against a JSON Schema, and a local SMTP inbox receives verification emails. At the end, an analyst cross-references journeys, interviews and the repo's code to write the findings. Everything is stored in SQLite and streamed live over SSE.",
+        "learnings": "The first studies surfaced more bugs in the engine than in the sites: agents marking a step as done when they were actually hesitating, reports blaming the site for a failure of the test, and agents blind to charts. Each one was a false finding, and one was enough to stop believing the rest. So a good part of the work went into what you don't see: the health report, the pilot run, environment warnings and an optimism correction, because synthetic users drop off far less than real ones. Next up is calibrating it against Tesora's real analytics; until then, what it gives you is friction to review, not facts."
       },
       {
         "slug": "x-ray-embat",
